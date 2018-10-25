@@ -1,0 +1,570 @@
+<!-- <h3>
+   <button class="btn btn-primary pull-right" type="button">
+      <em class="fa fa-plus-circle fa-fw mr-sm"></em>New Invoice</button>Invoice</h3> -->
+
+
+            <div class="page" ng-controller="P9aController">
+         <div class="row">
+   <div class="col-lg-8">
+        <form class="form-inline">
+  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+    <div class="input-group-addon">Period</div>
+  
+         <select name="period" class="slider slider-lg form-control" ng-model="user.year" ng-options="period.year as period.year for period in periods ">
+        <option value="" disabled selected>Periods</option>
+  </select>
+  </div>
+  <button  ng-click="searchP9a(user)"   class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
+</form>
+  
+
+ </div>
+   </div>
+<div class="panel">
+   <div class="panel-body">
+      
+      
+      <div class="table-responsive table-bordered">
+        
+
+<table class="table-bordered horiztbl" >
+            <tbody>
+           
+              <tr >
+                  <td colspan="15"> <div class=" text-center">
+                   <h4><img class="img-responsive center-block" src="app/img/kralogo.jpg"  alt="App Logo" /></h4>
+                 <!--  <address></address>Basilisa 2145
+                  <br/>Mate, Cliff., 20145
+                  <br/>Moon -->
+                </div>
+            </td>
+                 
+                
+               </tr>
+                   <tr>
+                  <td colspan="15" class=" text-center"><h4>INCOME TAX DEPARTMENT</h4></td>
+                 
+               </tr>
+                 <tr>
+                  <td colspan="15" class=" text-center"><h4>TAX DEDUCTION CARD YEAR {{p9as.year}}</h4></td>
+                 
+               </tr>
+               
+               <tr>
+                  <td colspan="15">P9A</td>
+                 
+               </tr>
+               <tr>
+                  <td colspan="2">EMPLOYER'S NAME:</td>
+                  <td colspan="2">{{p9as.employer.employerName}}</td>
+                 <td colspan="7"></td>
+                  <td colspan="2">EMPLOYER'S PIN:</td>
+                  <td colspan="2">{{p9as.employer.pinNumber}}</td>
+               </tr>
+
+                <tr>
+                  <td colspan="2">EMPLOYEE'S NAME:</td>
+                  <td colspan="2">{{p9as.employee.firstName}} {{p9as.employee.middleName}}</td>
+               <td colspan="7"></td>
+                  <td colspan="2">EMPLOYEE'S PIN:</td>
+                  <td colspan="2">{{p9as.employee.pinNumber}}</td>
+               </tr>
+                <tr>
+                  <td colspan="2">EMPLOYEE'S SURNAME:</td>
+                  <td colspan="2">{{p9as.employee.lastName}}</td>
+              
+                  
+               
+               </tr>
+
+             <tr>
+                  <td>MONTH</td>
+                  <td >BASIC PAY</td>
+                  <td >BENEFITS NON CASH</td>
+                  <td>NET VALUE OF HOUSING</td>
+                  <td>TOTAL GROSS PAY A+B+C</td>
+                  <td colspan="3">DEFINED CONTRIBUTION RETIREMENT SCHEME</td>
+                  
+                  <td>OWNER OCCUPIED INTEREST</td>
+                  <td>RETIREMENT CONTRIBUTION AND OWNER OCCUPIED INTEREST</td>
+                  <td>CHARGEABLE
+PAY
+COL D - G</td>
+                  <td >TAX CHARGED</td>
+                  <td>PERSONAL RELIEF</td>
+                  <td>INSURANCE RELIEF</td>
+                  <td>P.A.Y.E. TAX</td>
+               </tr>
+               <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>E1 30% of A</td>
+                  <td>E2 ACTUAL CONTRIBUTION</td>
+                  <td>E3 LEGAL LIMIT</td>
+                  <td></td>
+                  <td ></td>
+                  <td></td>
+                  <td ></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td></td>
+                  <td>(A)</td>
+                  <td>(B)</td>
+                  <td>(C)</td>
+                  <td>(D)</td>
+                  <td>(E1)</td>
+                  <td>(E2)</td>
+                  <td>(E3)</td>
+                  <td>(F)</td>
+                  <td>(G)</td>
+                  <td>(H)</td>
+                  <td>(I)</td>
+                  <td>(J)</td>
+                  <td>(K)</td>
+                  <td>(L)</td>
+               </tr>
+               <tr  ng-repeat="p9a in p9as.p9aReportDataList">
+                  <td>{{p9a.month}}</td>
+                  <td>{{p9a.basicPay}}</td>
+                  <td>{{p9a.nonCashBenefits}}</td>
+                  <td >{{p9a.housingNetValue}}</td>
+                  <td >{{p9a.totalGrossPay}}</td>
+                  <td>{{p9a.definedContributionRetirementScheme.E1}}</td>
+                   <td>{{p9a.definedContributionRetirementScheme.E2}}</td>
+                    <td>{{p9a.definedContributionRetirementScheme.E3}}</td>
+                  <td>{{p9a.ownerOccupiedInterest}}</td>
+                  <td >{{p9a.retirementContributionAndOwnerOccupiedInterest}}</td>
+                  <td>{{p9a.chargeablePay}}</td>
+                  <td>{{p9a.taxCharged}}</td>
+                  <td>{{p9a.personalRelief}}</td>
+                  <td>{{p9a.insuranceRelief}}</td>
+                  <td>{{p9a.payeTax}}</td>
+
+                 
+               </tr>
+         
+             
+            
+           
+
+             
+              
+              
+            
+             
+              
+                 
+           </tbody>
+           <tbody><tr>
+                  <td height="30"  colspan="15"></td>
+                  
+               </tr>
+              
+               <tr>  
+
+                  <td  colspan="4"> To be completed by the Employer at end of year </td>
+                  <td  colspan="4"></td>
+                  <td  colspan="2"> TOTAL TAX (COL L) Kshs.    
+                   </td>
+                    <td  colspan="2"> {{p9as.totalTaxCollected}}   
+                   </td>
+                  
+               </tr>
+                <tr>  
+
+                  <td  colspan="3"> TOTAL CHARGEABLE PAY (COL H) Kshs </td>
+                  <td  colspan="2">{{p9as.totalChargeablePay}}</td>
+                  <td  colspan="3"></td>
+                   <td  colspan="1"> (B) Attach </td>
+                  <td  colspan="6">(i) Photostat copy of interest certificate and statement of account from the Financial Institution.</td>
+                  
+               </tr>
+               <tr>  
+
+                  <td  colspan="8">  </td>
+                   <td  colspan="1">  </td>
+                  <td  colspan="6">(ii) The DECLARATION duly signed by the employee</td>
+                  
+               </tr>
+                <tr>  
+
+                  <td  colspan="15"><b>IMPORTANT</b>  </td>
+                   
+               </tr>
+               <tr>
+                  <td >Use P9A</td>
+                  <td colspan="7">(a) For all liable employees and where the director/employee received benefits in addition to cash emoluments.</td>
+                  <td colspan="7">NAMES OF FINANCIAL INSTITUTION ADVANCING MORTGAGE LOAN 
+                     
+</td>
+                 
+               </tr>
+               <tr>
+                  <td ></td>
+                  <td colspan="7"> (b) Where an employee is eligible to deduction on owner occupied interest.</td>
+                  
+               </tr>
+               <tr>
+                  <td >2. (a)</td>
+                  <td colspan="7"> Allowable interest in respect of any month must not exceed Kshs, 12,500/= or Kshs. 150,000 per year.</td>
+                  
+               </tr>
+                  <tr>
+                  <td colspan="15" height="30"></td>
+                  
+                  
+               </tr>
+                   <tr>
+                  <td colspan="8" ></td>
+                  <td colspan="3"> <b>L.R. NO. OF OWNER OCCUPIED PROPERTY:</b></td>
+                  <td colspan="4"> </td>
+                  
+               </tr>
+                <tr>
+                  <td colspan="15" height="30"></td>
+               </tr>
+              <tr>
+                  <td colspan="8" ></td>
+                  <td colspan="3"> <b>DATE OF OCCUPATION OF HOUSE:</b></td>
+                  <td colspan="4"> </td>
+                  
+               </tr>
+               <tr>
+                  <td colspan="15"> <h4> INFORMATION REQUIRED FROM EMPLOYER AT END OF YEAR : 2014 </h4></td>
+                 </tr>
+                 <tr>
+                  <td colspan="15" height="30"></td>
+               </tr>
+               <tr>
+                  <td colspan="4" >(1)  Date Employee commenced if during the Year:</td>  
+                  <td colspan="2" ></td> 
+                  <td colspan="9" ></td>    
+               </tr>
+               <tr>
+                  <td colspan="4" >Name and Address of Old Employer:</td>  
+                  <td colspan="2" ></td> 
+                  <td colspan="9" ></td>    
+               </tr>
+               <tr>
+                  <td colspan="4" >(2)  Date left if during Year:</td>  
+                  <td colspan="2" ></td> 
+                  <td colspan="9" ></td>    
+               </tr>
+               <tr>
+                  <td colspan="4">(3)  Where housing is provided, state monthly rent:</td>  
+                  <td>   </td> 
+                  <td>   Charged Kshs </td> 
+                  <td>   </td> 
+                  <td>per month</td> 
+                  <td colspan="7" ></td>
+
+               </tr>
+               <tr>
+                  <td colspan="15" height="30"></td>
+               </tr>
+
+               <tr>
+                  <td colspan="4">
+(4)  Where any of the pay relates to a period other than
+       this year, e.g. gratuity, give details of Amounts, Year
+       and Tax.</td>  
+                  <td colspan="3" >  <table class="table table-bordered">
+            <thead>
+               <tr>
+                  <th >Year</th>
+                  <th colspan="2">Amount</th>
+                 
+                  
+               </tr>
+               <tr>
+                  <th ></th>
+                  <th> £</th>
+                 
+                  <th> Sh.</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>20</td>
+                  <td></td>
+                  <td></td>
+                  
+               </tr>
+               <tr>
+                  <td>20</td>
+                  <td></td>
+                  <td></td>
+                 
+               </tr>
+               <tr>
+                  <td>20</td>
+                  <td></td>
+                  <td></td>
+                 
+               </tr>
+               <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  
+               </tr>
+            </tbody>
+         </table>
+          </td> 
+          <td></td>
+               <td colspan="8" >  <table class="table">
+            
+            <tbody>
+               <tr>
+                  <td colspan="8">Where actual cost is higher than given monthly rates of benefits then the actual cost is brought to charge in full.</td>
+               
+                  
+               </tr>
+               <tr>
+                  <td colspan="8">LOW INTEREST RATE BELOW PRESCRIBED RATE OF INTEREST.</td>
+               
+                 
+               </tr>
+               <tr>
+                  <td colspan="4">EMPLOYERS LOAN  =  Kshs</td>
+                  <td>0.00</td>
+                  <td>@</td>
+                 <td>0.00</td>
+                  <td>%  RATE</td>
+               </tr>
+               <tr>
+                  <td colspan="6">RATE DIFFERENCE (PRESCRIBED RATE - EMPLOYERS RATE) =</td>
+                  <td>0.00</td>
+                  <td>% </td>
+                 
+               </tr>
+
+               <tr>
+                  <td colspan="5">MONTHLY BENEFIT (RATE DIFFERENCE X LOAN) =</td>
+                  <td>0.00</td>
+                  <td>% </td>
+                  <td> </td>
+                 
+               </tr>
+            </tbody>
+         </table>
+          </td> 
+            
+
+               </tr>
+               <tr>
+                  <td colspan="15" height="30"></td>
+               </tr>
+
+               <tr>
+                  <td colspan="7" >FOR MONTHLY RATES OF BENEFITS PLEASE REFER TO EMPLOYERS GUIDE TO P.A.Y.E. SYSTEM - P7</td>
+                  <td colspan="7" ></td>
+               </tr>
+               <tr>
+                  <td colspan="15" height="30"></td>
+               </tr>
+               <tr>
+                  <td colspan="7" >CALCULATION OF TAX ON BENEFITS</td>
+                  <td ></td>
+                  <td colspan="7" >MOTOR CARS</td>
+               </tr>
+               <tr>
+                  
+                  <td colspan="7" >  <table class="table table-bordered">
+
+
+            <thead>
+               <tr>
+                  <th  colspan="3" >BENEFIT</th>
+                  <th >NO.</th>
+                 <th >RATE</th>
+                  <th >NO. OF MONTHS</th>
+                  <th >TOTAL AMOUNT</th>
+                 
+                  
+               </tr>
+               
+            </thead>
+            <tbody>
+               <tr>
+                  <td colspan="3">Housing Benefit</td>
+                  <td></td>
+                  <td>175000</td>
+                  <td>12</td>
+                  <td>2100000</td>
+               </tr>
+              
+              
+      
+            </tbody>
+         </table>
+          </td> 
+          <td></td>
+               <td colspan="7" >  <table class="table table-bordered">
+
+
+            <thead>
+               <tr>
+                  <th  colspan="2" >Saloon Hatch Backs and Estates</th>
+                  <th >RATE</th>
+                 <th ></th>
+                  <th >NO. OF MONTHS</th>
+                  <th ></th>
+                  <th >TOTAL AMOUNT</th>
+                 
+                  
+               </tr>
+               
+            </thead>
+            <tbody>
+               <tr>
+                  <td>0-</td>
+                 <td>1200 cc</td>
+                  <td>175000</td>
+                   <td>*</td>
+                  <td>12</td>
+                  <td>=</td>
+                  <td>2100000</td>
+               </tr>
+              <tr>
+                  <td>0-</td>
+                 <td>1200 cc</td>
+                  <td>175000</td>
+                   <td>*</td>
+                  <td>12</td>
+                  <td>=</td>
+                  <td>2100000</td>
+               </tr>
+               <tr>
+                  <td>0-</td>
+                 <td>1200 cc</td>
+                  <td>175000</td>
+                   <td>*</td>
+                  <td>12</td>
+                  <td>=</td>
+                  <td>2100000</td>
+               </tr>
+               <tr>
+                  <td>0-</td>
+                 <td>1200 cc</td>
+                  <td>175000</td>
+                   <td>*</td>
+                  <td>12</td>
+                  <td>=</td>
+                  <td>2100000</td>
+               </tr>
+               <tr>
+                  <td>0-</td>
+                 <td>1200 cc</td>
+                  <td>175000</td>
+                   <td>*</td>
+                  <td>12</td>
+                  <td>=</td>
+                  <td>2100000</td>
+               </tr>
+             <tr>
+               <td colspan="7" height="30"></td>
+                
+               </tr>
+              <tr>
+                  <td colspan="7" height="30"></td>
+                
+               </tr>
+
+
+
+               <tr>
+                  <td colspan="5" >TOTAL BENEFIT IN YEAR</td>
+                  <td colspan="3">2100,000</td>
+                
+               </tr>
+
+               <tr>
+                  <td colspan="7" >If this amount does not agree with total of Col. B overleaf, attach explanation.</td>
+                 
+                
+               </tr>
+               <tr>
+                  <td colspan="7" >FOR PICK_UPS, PANEL VANS AND LAND_ROVERS REFER TO APPENDIX 5 OF EMPLOYER'S GUIDE</td>
+                 
+                
+               </tr>
+               <tr>
+                  <td colspan="7" >CAR BENEFIT - The higher amount of the fixed monthly rate of the prescribed rate of benefits is to be brought to charge:-</td>
+                  
+                
+               </tr>
+               <tr>
+                  <td colspan="2" > PRESCRIBED RATE</td>
+                  <td colspan="5" > 1998  -  2% per month of the initial cost of the vehicle.</td>
+                  
+                
+               </tr>
+               <tr>
+               <td colspan="7" height="30"></td>
+                
+               </tr>
+              <tr>
+                  <td colspan="7" height="30"></td>
+                
+               </tr>
+               <tr>
+                  <td colspan="7" > EMPLOYER'S CERTIFICATE OF PAY AND TAX</td>
+                
+                  
+                
+               </tr>
+               <tr>
+                  <td colspan="2" > NAME</td>
+                  <td colspan="5" > </td>
+               </tr>
+              <tr>
+                  <td colspan="2" > ADDRESS</td>
+                  <td colspan="5" > </td>
+               </tr>
+                <tr>
+                  <td colspan="2" > SIGNATURE</td>
+                  <td colspan="5" > </td>
+               </tr>
+              <tr>
+                  <td colspan="2" > DATE & STAMP</td>
+                  <td colspan="5" > </td>
+               </tr>
+               <tr>
+                  <td colspan="7" height="30"></td>
+                
+               </tr>
+               <tr>
+                  <td colspan="2" > Note:</td>
+                  <td colspan="5" > Employer's certificate to be signed by the person who prepares and submits to the PAYE End of Year Returns and copy of the P9A to be issued to the employee in January.</td>
+               </tr>
+            </tbody>
+         </table>
+          </td> 
+            
+
+               
+               </tbody></table>
+
+
+<br/>
+
+
+         
+      </div>
+    
+      <hr class="hidden-print" />
+      <div class="clearfix">
+         
+         <button class="btn btn-info pull-left mr" type="button" onclick="window.print();">Print</button>
+         <button class="btn btn-success pull-left mr" type="button">Excel</button>
+      </div>
+   </div>
+</div>
+</div>

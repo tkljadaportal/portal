@@ -1,0 +1,351 @@
+<div class="container-md" ng-controller="EmployeeProfileController">
+   <div class="row">
+      <div class="col-md-3">
+         <div class="panel b">
+            <div class="panel-heading bg-gray-lighter text-bold">Personal Settings</div>
+            <div class="list-group" ng-init="settingActive = 1"><a class="list-group-item" href="" ng-click="settingActive=1" ng-class="{'active': (settingActive == 1)}">Basic</a><a class="list-group-item" href="" ng-click="settingActive=2" ng-class="{'active': (settingActive == 2)}">Contact</a><a class="list-group-item"
+               href="" ng-click="settingActive=3" ng-class="{'active': (settingActive == 3)}">Statutory</a><a class="list-group-item" href="" ng-click="settingActive=4" ng-class="{'active': (settingActive == 4)}">Financial</a><a class="list-group-item"
+               href="" ng-click="settingActive=5" ng-class="{'active': (settingActive == 5)}">Other</a>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-9">
+         <div ng-show="settingActive == 1">
+            <div class="panel b">
+               <div class="panel-heading bg-gray-lighter text-bold">Basic Infomation</div>
+               <div class="panel-body">
+                  <form action="">
+<!--                      <div class="form-group col-md-12">
+                        <label>Picture</label>
+                        <input class="form-control" filestyle="" type="file" data-input="false" data-classbutton="btn btn-default" data-classinput="form-control inline" data-button-text="Upload new picture" data-icon-name="fa fa-upload mr"
+                        />
+                     </div> -->
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Name</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.firstName}} {{profile.middleName}} {{profile.lastName}}
+                        </div>
+                        
+                     </div>                                     
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Employee Number</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.employeeNumber}}
+                        </div>
+                     </div>
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>ID Number</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.idNumber}}
+                        </div>
+                     </div>
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Passport Number</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.passportNumber}}
+                        </div>
+                     </div>
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Country Of Issue</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.countryOfIssue}}
+                        </div>
+                     </div>
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Employee Number</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.expiryDate}}
+                        </div>
+                     </div>
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Date Of Birth</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.dateOfBirth}}
+                        </div>
+                     </div> 
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Marital Status</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.maritalStatus}}
+                        </div>
+                     </div>  
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Gender</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.gender}}
+                        </div>
+                     </div>  
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Dependencies</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.dependency}}
+                        </div>
+                     </div>  
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Next Of Kin</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.nextOfKin}}
+                        </div>
+                     </div>   
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Relationship With Next Of Kin</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.relationshipWithNextOfKin}}
+                        </div>
+                     </div>  
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Disability</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.disabilit}}
+                        </div>
+                     </div>                                                                                                             
+
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Nature Of Disability</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.natureOfDisability}}
+                        </div>
+                     </div>                                                            
+                     <!-- <button class="btn btn-info" type="button">Update</button> -->
+
+                  </form>
+               </div>
+            </div>
+         </div>
+         <div ng-show="settingActive == 2">
+            <div class="panel b">
+               <div class="panel-heading bg-gray-lighter text-bold">Contact Information</div>
+               <div class="panel-body">
+                  <form action="">
+
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Phone Number</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.phoneNumber}}
+                        </div>
+                     </div>   
+
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Email Address</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.emailAddress}}
+                        </div>
+                     </div>   
+
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Physical Address</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.physicalAddress}}
+                        </div>
+                     </div>   
+
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Postal Address</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.postalAddress}}
+                        </div>
+                     </div>     
+
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Postal Code</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.postalCode}}
+                        </div>
+                     </div>                                                                                       
+                  </form>
+               </div>
+            </div>
+         </div>
+         <div ng-show="settingActive == 3">
+            <div class="panel b">
+
+               <div class="panel-heading bg-gray-lighter text-bold">Statutory Information</div>
+               <div class="panel-body">
+
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Pin Number</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.pinNumber}}
+                        </div>
+                     </div>   
+
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>NHIF Number</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.nhifNumber}}
+                        </div>
+                     </div>   
+
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>NSSF Number</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.nssfNumber}}
+                        </div>
+                     </div>   
+
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>HELB Number</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.natureOfDisability}}
+                        </div>
+                     </div>                                                                                 
+               </div>
+
+            </div>
+         </div>
+         <div ng-show="settingActive == 4">
+            <form action="">
+               <div class="panel b">
+                  <div class="panel-heading bg-gray-lighter text-bold">Financial Information</div>
+                  <div class="panel-body bb">
+
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Employment Date</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.employmentDate}}
+                        </div>
+                     </div>   
+
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Pay Point</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.payPoint}}
+                        </div>
+                     </div> 
+
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Pay Mode</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.payMode}}
+                        </div>
+                     </div> 
+
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Bank Code</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.bankCode}}
+                        </div>
+                     </div> 
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Bank Name</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.bankName}}
+                        </div>
+                     </div> 
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Bank Branch Name</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.bankBranchName}}
+                        </div>
+                     </div> 
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Bank Account Number</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.bankAccountNumber}}
+                        </div>
+                     </div> 
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Bank Account Name</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.bankAccountName}}
+                        </div>
+                     </div>  
+               </div>
+            </form>
+         </div>
+         <div ng-show="settingActive == 5">
+            <div class="panel b">
+               <div class="panel-heading bg-gray-lighter text-bold">Other Information</div>
+               <div class="panel-body">
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Department</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.department}}
+                        </div>
+                     </div>   
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Cost Center</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.costCenter}}
+                        </div>
+                     </div> 
+                     <div class="form-group col-md-12">
+                        <div class="col-md-6">
+                            <label>Employ Category</label>
+                        </div>
+                        <div class="col-md-6">
+                           {{profile.employeeCategory}}
+                        </div>
+                     </div> 
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

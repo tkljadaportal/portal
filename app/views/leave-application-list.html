@@ -1,0 +1,53 @@
+<h3>Leave Applications
+  
+</h3>
+
+      <!-- START panel-->
+      <div class="panel panel-default" ng-controller="LeaveApprovalController">
+         <div class="panel-heading"></div>
+         <div class="panel-body">
+            <!-- START table-responsive-->
+            <div class="table-responsive">
+
+               <table class="table table-striped" datatable="ng">
+                  <thead>
+                     <tr>
+                      <th>Employee Number</th>
+                        <th>Employee Name</th>
+                        <th>Leave Type</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                          <th>Duration</th>
+                          <th>Available Balance</th>
+                          <th>Balance After Approval</th>
+
+                        <th>Status</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr ng-repeat="leave in leaveapplicationdata">
+                   <td>{{leave.employeeNumber}}</td>
+                        <td>{{leave.employeeName}}</td>
+                         <td>{{leave.leaveTypeDescription}}</td>
+                         <td>{{leave.startDate}}</td>
+                         <td>{{leave.endDate}}</td>
+                        <td>{{leave.duration}}</td>
+                        <td>{{leave.availableBalance}}</td>
+                        <td>{{leave.balanceAfterApproval}}</td>
+                        
+                        <td ng-show="leave.isApproved" class="text-center">
+                          {{leave.isApproved==false || leave.isApproved==null?'NOT APPROVED':'APPROVED'}}
+                        </td>
+                 
+                     </tr>
+                 
+                 
+                  </tbody>
+               </table>
+            </div>
+
+
+
+            <!-- END table-responsive-->
+         </div>
+      </div>

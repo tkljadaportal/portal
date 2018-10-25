@@ -1,0 +1,39 @@
+[
+  {
+    "text": "Main Navigation",
+    "heading": "true",
+    "translate": "sidebar.heading.HEADER"
+  },
+  {
+    "text": "Dashboard",
+    "sref": "#",
+    "icon": "icon-speedometer",
+    "label": "label label-info",
+    "sref": "app.dashboard"
+  },
+  {
+    "text": "Profile",
+    "sref": "#",
+    "icon": "icon-user",
+    "label": "label label-info",
+    "sref": "app.profile"
+  },
+  {
+    "text": "Payroll",
+    "sref": "#",
+    "icon": "icon-wallet",
+    "submenu": [
+      {"text": "Payslips",       "sref": "app.payslip" },
+      {"text": "P9", "sref": "app.p9" }
+    ]
+  },
+  {
+    "text": "Leave",
+    "sref": "#",
+    "icon": "icon-calendar",
+    "submenu": [
+      {"text": "Apply",    "sref": "app.leave-application" },
+      {"text": "My Applications",    "sref": "app.leave-application-list" }
+    ]
+  }
+]

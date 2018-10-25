@@ -1,0 +1,211 @@
+<h3>Leave Application 
+<div class="clearfix">
+
+<!--  <button class="btn btn-primary pull-right mr" type="button">
+      <em class="fa fa-plus-circle fa-fw "></em>Input bulk items</button> &nbsp; &nbsp; 
+<a href="server/jm.csv" class="btn btn-primary pull-right mr" type="button"> 
+
+      <em class="fa fa-download fa-fw "></em>Download the csv format</a>
+       --> </div></h3>
+  
+<div class="panel panel-widget" ng-controller="LeaveProcessController">
+   <div class="panel-body">
+   <div class="col-lg-10">
+   
+<form class="form-horizontal" name="leavepostform" novalidate=""  >
+
+  <div class="form-group">
+                  <label class="col-lg-3">Period
+</label>
+
+                  <div class="col-lg-9">
+                    {{currentPeriod.monthDescription}}-{{currentPeriod.year}}
+                     <input class="form-control" type="hidden"  name="period"  ng-model="leavepost.period" placeholder="Period" value="{{currentPeriod.id}}" />
+                    
+                    
+                     
+            <!--           <select class="form-control" name="period" ng-model="leavepost.period" ng-options="period.id as period.month + ' '+ period.year for period in periods" ng-required="true" disabled=""> 
+    <option value="" disabled selected>Periods</option>
+  </select> -->
+   <span class="text-danger" ng-show="leavepostform.$submitted &amp;&amp; leavepostform.period.$invalid">This field is required</span>
+                  </div>
+               </div>
+
+<div class="form-group">
+                  <label class="col-lg-3">Employee
+</label>
+                  <div class="col-lg-9">
+                    <!--  <input class="form-control" type="text"  name="empNumber"  ng-model="leavepost.employeeNumber" placeholder="Number"/> -->
+                     <!--  <select class="form-control" name="empNumber" ng-model="leavepost.employee" ng-options="employee.id as employee.employeeNumber+'-'+ employee.firstName+' '+employee.lastName for employee in employees" ng-required="true" ng-change="employeeChange(leavepost.employee)">
+    <option value="" disabled selected>All Employees</option>
+  </select> -->
+  {{employeeData.employeeNumber}}   {{employeeData.firstName}} {{employeeData.middleName}} {{employeeData.lastName}}
+  <input type="hidden" name="empNumber" ng-model="leavepost.employee" value="{{employeeData.id}}">
+
+
+                  </div>
+               </div>
+
+              
+<!--                 <div class="form-group">
+                  <label class="col-lg-3 ">Full Name
+</label>
+                  <div class="col-lg-9">
+                     <input class="form-control" type="text"  name="empName"  ng-model="employeeName" placeholder="Name" disabled=""/ >
+                  </div>
+               </div> -->
+               <div class="form-group">
+                  <label class="col-lg-3 ">Department
+</label>
+                  <div class="col-lg-9">
+                    {{ department.description }}
+                     <input class="form-control" type="hidden"  name="empDept" ng-model="department" placeholder="Department" value="{{department.description}}" />
+                    
+                    
+                  </div>
+               </div>
+
+                
+                <div class="form-group">
+                        <label class="col-sm-3 ">Leave Type</label>
+                        <div class="col-lg-5">
+                       
+                  
+
+                                <select class="form-control" name="leavetype" ng-model="leavepost.leaveType" ng-options="leave.id as leave.description for leave in leavetypes" ng-required="true" ng-change="leaveBalance(leavepost)">
+    <option value="" disabled selected>Select Leave Type</option>
+  </select>
+             <span class="text-danger" ng-show="leavepostform.$submitted &amp;&amp; leavepostform.leavetype.$invalid">This field is required</span>
+                           </div>
+
+                      <label class="col-lg-2 ">Leave Balance:  
+                    </label>
+                    <div class="col-lg-2">
+                       
+                    <span class="text-success h4" >
+                      {{leavepost.leavebalance}}
+                      <input type="hidden" name="leavebalance" ng-model='leavepost.leavebalance'/>
+                      
+                    </span> 
+                           </div>
+                        <!-- <div class="col-sm-4">
+                           <small class="text-muted">type='number'</small>
+                        </div> -->
+                  </div>
+
+
+
+<div class="form-group">
+                  <label class="col-lg-3">Leave Transaction Type
+</label>
+                  <div class="col-lg-9">
+                    <!--  <input class="form-control" type="text"  name="empNumber"  ng-model="leavepost.employeeNumber" placeholder="Number"/> -->
+                      <select class="form-control" name="Transactiontype" ng-model="leavepost.leaveTransactionType" ng-options="leaveTtype.id as leaveTtype.description for leaveTtype in leavetransaction" ng-required="true">
+    <option value="" disabled selected>Select Leave Transaction Type</option>
+  </select>
+   <span class="text-danger" ng-show="leavepostform.$submitted &amp;&amp; leavepostform.Transactiontype.$invalid">This field is required</span>
+                  </div>
+               </div>
+                           
+          <div class="form-group" >
+                 <label class="col-lg-3">  Date 
+                   </label>
+                   <div class="col-lg-9" ng-controller="DatepickerDemoCtrl as dpick">
+                      <p class="input-group">
+                              <input class="form-control" type="text" name="date" uib-datepicker-popup="{{dpick.format}}" ng-model="leavepost.date"  is-open="dpick.opened" min-date="dpick.minDate" max-date="'2019-12-22'" uib-datepicker-options="dpick.dateOptions"
+                              date-disabled="dpick.disabled(date, mode)" close-text="Close" ng-required="true"/>
+                              <span class="input-group-btn">
+                                 <button class="btn btn-default" type="button" ng-click="dpick.open($event)">
+                                    <em class="fa fa-calendar"></em>
+                                 </button>
+                              </span>
+                           </p>
+                           <span class="text-danger" ng-show="leavepostform.$submitted &amp;&amp; leavepostform.date.$invalid">This field is required</span>
+                  </div>                       
+              </div>
+                 
+          <div class="form-group" >
+                 <label class="col-lg-3">   Start Date 
+                   </label>
+                   <div class="col-lg-3" ng-controller="DatepickerDemoCtrl as dpick">
+                      <p class="input-group">
+                              <input class="form-control" type="text" name="start_date" uib-datepicker-popup="{{dpick.format}}" ng-model="leavepost.startDate"  is-open="dpick.opened" min-date="dpick.minDate" max-date="'2019-12-22'" uib-datepicker-options="dpick.dateOptions"
+                              date-disabled="dpick.disabled(date, mode)" close-text="Close" ng-required="true"/>
+                              <span class="input-group-btn">
+                                 <button class="btn btn-default" type="button" ng-click="dpick.open($event)">
+                                    <em class="fa fa-calendar"></em>
+                                 </button>
+                              </span>
+                           </p>
+                            <span class="text-danger" ng-show="leavepostform.$submitted &amp;&amp; leavepostform.start_date.$invalid">This field is required</span>
+                  </div>
+
+                   
+                   <label class="col-lg-3 control-label">  End Date
+                   </label>
+                  <div class="col-lg-3" ng-controller="DatepickerDemoCtrl as dpick">
+                      <p class="input-group">
+                              <input class="form-control" type="text" name="end_date"  uib-datepicker-popup="{{dpick.format}}" ng-model="leavepost.endDate" is-open="dpick.opened" min-date="dpick.minDate" max-date="'2019-12-22'" uib-datepicker-options="dpick.dateOptions"
+                              date-disabled="dpick.disabled(date, mode)" close-text="Close" ng-change="dayDiff(leavepost.startDate,leavepost.endDate)"/>
+                              <span class="input-group-btn">
+                                 <button class="btn btn-default" type="button" ng-click="dpick.open($event)">
+                                    <em class="fa fa-calendar"></em>
+                                 </button>
+                              </span>
+                           </p>
+
+                               <span class="text-danger" ng-show="leavepostform.$submitted &amp;&amp; leavepostform.end_date.$invalid">This field is required</span>
+                           
+                  </div>
+               
+</div>
+           
+
+
+<div class="form-group">
+                  <label class="col-lg-3">Duration
+</label>
+                  <div class="col-lg-9">  
+
+                     <input class="form-control" type="text"  name="empNumber"  ng-model="leavepost.duration" placeholder="days" />
+                    
+                  </div>
+               </div>      
+       
+
+                   
+
+                  <div class="form-group">
+  <label class="col-lg-3 ">Comment:</label>
+   <div class="col-lg-9">
+  <textarea class="form-control" name="leaveComment" ng-model="leavepost.applicationComment" id="comment"></textarea>
+  </div>
+</div> 
+                   
+                 
+                  
+                   
+  
+
+           
+              
+          
+              
+               <div class="form-group">
+                  <div class="col-lg-offset-3 col-lg-9">
+                     <button class="btn btn-info btn-sm"  ng-click="leavepostform.$valid && submitLeaveApplication(leavepost,leavepostform)">Send for Approval</button>
+                      <button class="btn btn-warning btn-sm" type="reset">Reset</button>
+                  </div>
+               </div>
+
+              <div class="text-center text-success" margin-top="md" ng-show="SuccessMsg">{{SuccessMsg}}</div>
+             <div class="text-center text-danger"  margin-top="md" ng-show="errorMsg">{{errorMsg}}</div>
+
+            </form>
+      
+            </div>
+       
+   </div>
+   </div>
+
+ 
