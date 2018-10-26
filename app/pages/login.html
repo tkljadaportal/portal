@@ -10,7 +10,7 @@
          <p class="text-center pv">SIGN IN TO CONTINUE.</p>
          <form class="form-validate mb-lg" role="form" ng-submit="login.login()" name="login.loginForm" novalidate="">
             <div class="form-group has-feedback">
-               <input class="form-control" id="exampleInputEmail1" type="email" name="account_email" placeholder="Enter email" autocomplete="off" ng-model="login.account.email" required="" />
+               <input class="form-control" id="exampleInputEmail1" type="text" name="account_email" placeholder="Enter Username" autocomplete="off" ng-model="login.account.email" required="" />
                <span class="fa fa-envelope form-control-feedback text-muted"></span>
                <span class="text-danger" ng-show="login.loginForm.account_email.$dirty &amp;&amp; login.loginForm.account_email.$error.required">This field is required</span>
                <span class="text-danger" ng-show="login.loginForm.account_email.$dirty &amp;&amp; login.loginForm.account_email.$error.email">This field must be a valid email address</span>
