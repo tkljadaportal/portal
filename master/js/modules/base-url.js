@@ -1,2 +1,2 @@
 angular.module('angle').constant('baseURL',
-'http://localhost:56136/');
+'https://ssl-jadabackend.azurewebsites.net/');

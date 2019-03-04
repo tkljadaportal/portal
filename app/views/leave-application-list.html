@@ -36,7 +36,7 @@
                         <td>{{leave.balanceAfterApproval}}</td>
                         
                         <td ng-show="leave.isApproved" class="text-center">
-                          {{leave.isApproved==false || leave.isApproved==null?'NOT APPROVED':'APPROVED'}}
+                          {{leave.isApproved==0?'Pending':leave.isApproved==2?'REJECTED':'APPROVED'}}
                         </td>
                  
                      </tr>

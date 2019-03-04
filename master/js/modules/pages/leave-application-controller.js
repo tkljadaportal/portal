@@ -19,7 +19,7 @@
  $scope.leavetypeprocess=LeaveProcessingService.query();
  console.log( $scope.leavetypeprocess);
 
-
+$scope.leavepost={};
 $http.get(baseURL+'api/employee/'+$window.localStorage.userId).then(function(data) {
               $scope.employeeData = data.data;
               $scope.leavepost.employee=$scope.employeeData.id;

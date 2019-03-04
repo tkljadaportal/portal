@@ -40,7 +40,8 @@
             'app.tables',
             'app.extras',
             'app.mailbox',
-            'app.utils'
+            'app.utils',
+            'ui.filters',
         ]);
 })();
 
@@ -50,12 +51,6 @@
 
     angular
         .module('app.bootstrapui', []);
-})();
-(function() {
-    'use strict';
-
-    angular
-        .module('app.elements', []);
 })();
 (function() {
     'use strict';
@@ -105,13 +100,13 @@
     'use strict';
 
     angular
-        .module('app.lazyload', []);
+        .module('app.flatdoc', []);
 })();
 (function() {
     'use strict';
 
     angular
-        .module('app.flatdoc', []);
+        .module('app.lazyload', []);
 })();
 (function() {
     'use strict';
@@ -123,13 +118,19 @@
     'use strict';
 
     angular
+        .module('app.icons', []);
+})();
+(function() {
+    'use strict';
+
+    angular
         .module('app.loadingbar', []);
 })();
 (function() {
     'use strict';
 
     angular
-        .module('app.maps', []);
+        .module('app.locale', []);
 })();
 (function() {
     'use strict';
@@ -141,7 +142,7 @@
     'use strict';
 
     angular
-        .module('app.icons', []);
+        .module('app.maps', []);
 })();
 (function() {
     'use strict';
@@ -153,13 +154,27 @@
     'use strict';
 
     angular
-        .module('app.panels', []);
+        .module('app.notify', []);
 })();
 (function() {
     'use strict';
 
     angular
         .module('app.pages', []);
+})();
+(function() {
+    'use strict';
+
+    angular
+        .module('app.preloader', []);
+})();
+
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.panels', []);
 })();
 (function() {
     'use strict';
@@ -173,19 +188,13 @@
     'use strict';
 
     angular
-        .module('app.notify', []);
+        .module('app.elements', []);
 })();
 (function() {
     'use strict';
 
     angular
-        .module('app.locale', []);
-})();
-(function() {
-    'use strict';
-
-    angular
-        .module('app.tables', []);
+        .module('app.settings', []);
 })();
 (function() {
     'use strict';
@@ -197,13 +206,7 @@
     'use strict';
 
     angular
-        .module('app.translate', []);
-})();
-(function() {
-    'use strict';
-
-    angular
-        .module('app.settings', []);
+        .module('app.tables', []);
 })();
 (function() {
     'use strict';
@@ -218,12 +221,10 @@
     'use strict';
 
     angular
-        .module('app.preloader', []);
+        .module('app.translate', []);
 })();
-
-
 angular.module('angle').constant('baseURL',
-'http://localhost:56136/');
+'https://ssl-jadabackend.azurewebsites.net/');
 /**=========================================================
  * Module: demo-alerts.js
  * Provides a simple demo for pagination
@@ -781,986 +782,6 @@ angular.module('angle').constant('baseURL',
 
           vm.statesWithFlags = [{'name':'Alabama','flag':'5/5c/Flag_of_Alabama.svg/45px-Flag_of_Alabama.svg.png'},{'name':'Alaska','flag':'e/e6/Flag_of_Alaska.svg/43px-Flag_of_Alaska.svg.png'},{'name':'Arizona','flag':'9/9d/Flag_of_Arizona.svg/45px-Flag_of_Arizona.svg.png'},{'name':'Arkansas','flag':'9/9d/Flag_of_Arkansas.svg/45px-Flag_of_Arkansas.svg.png'},{'name':'California','flag':'0/01/Flag_of_California.svg/45px-Flag_of_California.svg.png'},{'name':'Colorado','flag':'4/46/Flag_of_Colorado.svg/45px-Flag_of_Colorado.svg.png'},{'name':'Connecticut','flag':'9/96/Flag_of_Connecticut.svg/39px-Flag_of_Connecticut.svg.png'},{'name':'Delaware','flag':'c/c6/Flag_of_Delaware.svg/45px-Flag_of_Delaware.svg.png'},{'name':'Florida','flag':'f/f7/Flag_of_Florida.svg/45px-Flag_of_Florida.svg.png'},{'name':'Georgia','flag':'5/54/Flag_of_Georgia_%28U.S._state%29.svg/46px-Flag_of_Georgia_%28U.S._state%29.svg.png'},{'name':'Hawaii','flag':'e/ef/Flag_of_Hawaii.svg/46px-Flag_of_Hawaii.svg.png'},{'name':'Idaho','flag':'a/a4/Flag_of_Idaho.svg/38px-Flag_of_Idaho.svg.png'},{'name':'Illinois','flag':'0/01/Flag_of_Illinois.svg/46px-Flag_of_Illinois.svg.png'},{'name':'Indiana','flag':'a/ac/Flag_of_Indiana.svg/45px-Flag_of_Indiana.svg.png'},{'name':'Iowa','flag':'a/aa/Flag_of_Iowa.svg/44px-Flag_of_Iowa.svg.png'},{'name':'Kansas','flag':'d/da/Flag_of_Kansas.svg/46px-Flag_of_Kansas.svg.png'},{'name':'Kentucky','flag':'8/8d/Flag_of_Kentucky.svg/46px-Flag_of_Kentucky.svg.png'},{'name':'Louisiana','flag':'e/e0/Flag_of_Louisiana.svg/46px-Flag_of_Louisiana.svg.png'},{'name':'Maine','flag':'3/35/Flag_of_Maine.svg/45px-Flag_of_Maine.svg.png'},{'name':'Maryland','flag':'a/a0/Flag_of_Maryland.svg/45px-Flag_of_Maryland.svg.png'},{'name':'Massachusetts','flag':'f/f2/Flag_of_Massachusetts.svg/46px-Flag_of_Massachusetts.svg.png'},{'name':'Michigan','flag':'b/b5/Flag_of_Michigan.svg/45px-Flag_of_Michigan.svg.png'},{'name':'Minnesota','flag':'b/b9/Flag_of_Minnesota.svg/46px-Flag_of_Minnesota.svg.png'},{'name':'Mississippi','flag':'4/42/Flag_of_Mississippi.svg/45px-Flag_of_Mississippi.svg.png'},{'name':'Missouri','flag':'5/5a/Flag_of_Missouri.svg/46px-Flag_of_Missouri.svg.png'},{'name':'Montana','flag':'c/cb/Flag_of_Montana.svg/45px-Flag_of_Montana.svg.png'},{'name':'Nebraska','flag':'4/4d/Flag_of_Nebraska.svg/46px-Flag_of_Nebraska.svg.png'},{'name':'Nevada','flag':'f/f1/Flag_of_Nevada.svg/45px-Flag_of_Nevada.svg.png'},{'name':'New Hampshire','flag':'2/28/Flag_of_New_Hampshire.svg/45px-Flag_of_New_Hampshire.svg.png'},{'name':'New Jersey','flag':'9/92/Flag_of_New_Jersey.svg/45px-Flag_of_New_Jersey.svg.png'},{'name':'New Mexico','flag':'c/c3/Flag_of_New_Mexico.svg/45px-Flag_of_New_Mexico.svg.png'},{'name':'New York','flag':'1/1a/Flag_of_New_York.svg/46px-Flag_of_New_York.svg.png'},{'name':'North Carolina','flag':'b/bb/Flag_of_North_Carolina.svg/45px-Flag_of_North_Carolina.svg.png'},{'name':'North Dakota','flag':'e/ee/Flag_of_North_Dakota.svg/38px-Flag_of_North_Dakota.svg.png'},{'name':'Ohio','flag':'4/4c/Flag_of_Ohio.svg/46px-Flag_of_Ohio.svg.png'},{'name':'Oklahoma','flag':'6/6e/Flag_of_Oklahoma.svg/45px-Flag_of_Oklahoma.svg.png'},{'name':'Oregon','flag':'b/b9/Flag_of_Oregon.svg/46px-Flag_of_Oregon.svg.png'},{'name':'Pennsylvania','flag':'f/f7/Flag_of_Pennsylvania.svg/45px-Flag_of_Pennsylvania.svg.png'},{'name':'Rhode Island','flag':'f/f3/Flag_of_Rhode_Island.svg/32px-Flag_of_Rhode_Island.svg.png'},{'name':'South Carolina','flag':'6/69/Flag_of_South_Carolina.svg/45px-Flag_of_South_Carolina.svg.png'},{'name':'South Dakota','flag':'1/1a/Flag_of_South_Dakota.svg/46px-Flag_of_South_Dakota.svg.png'},{'name':'Tennessee','flag':'9/9e/Flag_of_Tennessee.svg/46px-Flag_of_Tennessee.svg.png'},{'name':'Texas','flag':'f/f7/Flag_of_Texas.svg/45px-Flag_of_Texas.svg.png'},{'name':'Utah','flag':'f/f6/Flag_of_Utah.svg/45px-Flag_of_Utah.svg.png'},{'name':'Vermont','flag':'4/49/Flag_of_Vermont.svg/46px-Flag_of_Vermont.svg.png'},{'name':'Virginia','flag':'4/47/Flag_of_Virginia.svg/44px-Flag_of_Virginia.svg.png'},{'name':'Washington','flag':'5/54/Flag_of_Washington.svg/46px-Flag_of_Washington.svg.png'},{'name':'West Virginia','flag':'2/22/Flag_of_West_Virginia.svg/46px-Flag_of_West_Virginia.svg.png'},{'name':'Wisconsin','flag':'2/22/Flag_of_Wisconsin.svg/45px-Flag_of_Wisconsin.svg.png'},{'name':'Wyoming','flag':'b/bc/Flag_of_Wyoming.svg/43px-Flag_of_Wyoming.svg.png'}];
 
-        }
-    }
-})();
-
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.elements')
-        .controller('AngularCarouselController', AngularCarouselController);
-
-    function AngularCarouselController() {
-        var vm = this;
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-          vm.colors = ['#fc0003', '#f70008', '#f2000d', '#ed0012', '#e80017', '#e3001c', '#de0021', '#d90026', '#d4002b', '#cf0030', '#c90036', '#c4003b', '#bf0040', '#ba0045', '#b5004a', '#b0004f', '#ab0054', '#a60059', '#a1005e', '#9c0063', '#960069', '#91006e', '#8c0073', '#870078', '#82007d', '#7d0082', '#780087', '#73008c', '#6e0091', '#690096', '#63009c', '#5e00a1', '#5900a6', '#5400ab', '#4f00b0', '#4a00b5', '#4500ba', '#4000bf', '#3b00c4', '#3600c9', '#3000cf', '#2b00d4', '#2600d9', '#2100de', '#1c00e3', '#1700e8', '#1200ed', '#0d00f2', '#0800f7', '#0300fc'];
-
-          function getSlide(target, style) {
-              var i = target.length;
-              return {
-                  id: (i + 1),
-                  label: 'slide #' + (i + 1),
-                  img: 'http://lorempixel.com/1200/500/' + style + '/' + ((i + 1) % 10) ,
-                  color: vm.colors[ (i*10) % vm.colors.length],
-                  odd: (i % 2 === 0)
-              };
-          }
-
-          function addSlide(target, style) {
-              target.push(getSlide(target, style));
-          }
-
-          vm.carouselIndex = 3;
-          vm.carouselIndex2 = 0;
-          vm.carouselIndex2 = 1;
-          vm.carouselIndex3 = 5;
-          vm.carouselIndex4 = 5;
-
-          function addSlides(target, style, qty) {
-              for (var i=0; i < qty; i++) {
-                  addSlide(target, style);
-              }
-          }
-
-          // 1st ngRepeat demo
-          vm.slides = [];
-          addSlides(vm.slides, 'sports', 50);
-
-          // 2nd ngRepeat demo
-          vm.slides2 = [];
-          addSlides(vm.slides2, 'sports', 10);
-
-          // 3rd ngRepeat demo
-          vm.slides3 = [];
-          addSlides(vm.slides3, 'people', 50);
-
-          // 4th ngRepeat demo
-          vm.slides4 = [];
-          addSlides(vm.slides4, 'city', 50);
-
-
-          // 5th ngRepeat demo
-          vm.slides6 = [];
-          vm.carouselIndex6 = 0;
-          addSlides(vm.slides6, 'sports', 10);
-          vm.addSlide = function(at) {
-              if(at==='head') {
-                  vm.slides6.unshift(getSlide(vm.slides6, 'people'));
-              } else {
-                  vm.slides6.push(getSlide(vm.slides6, 'people'));
-              }
-          };
-        }
-    }
-})();
-
-/**=========================================================
- * Module: demo-dialog.js
- * Demo for multiple ngDialog Usage
- * - ngDialogProvider for default values not supported 
- *   using lazy loader. Include plugin in base.js instead.
- =========================================================*/
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.elements')
-        .controller('DialogIntroCtrl', DialogIntroCtrl)
-        .controller('DialogMainCtrl', DialogMainCtrl)
-        .controller('InsideCtrl', InsideCtrl)
-        .controller('SecondModalCtrl', SecondModalCtrl);
-
-    DialogIntroCtrl.$inject = ['$scope', 'ngDialog', 'tpl'];
-    // Called from the route state. 'tpl' is resolved before
-    function DialogIntroCtrl($scope, ngDialog, tpl) {
-        
-        activate();
-
-        ////////////////
-
-        function activate() {
-          // share with other controllers
-          $scope.tpl = tpl;
-          // open dialog window
-          ngDialog.open({
-            template: tpl.path,
-            // plain: true,
-            className: 'ngdialog-theme-default'
-          });
-        }
-    }
-
-    DialogMainCtrl.$inject = ['$scope', '$rootScope', 'ngDialog'];
-    // Loads from view
-    function DialogMainCtrl($scope, $rootScope, ngDialog) {
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-          $rootScope.jsonData = '{"foo": "bar"}';
-          $rootScope.theme = 'ngdialog-theme-default';
-
-          $scope.directivePreCloseCallback = function (value) {
-            if(confirm('Close it? MainCtrl.Directive. (Value = ' + value + ')')) {
-              return true;
-            }
-            return false;
-          };
-
-          $scope.preCloseCallbackOnScope = function (value) {
-            if(confirm('Close it? MainCtrl.OnScope (Value = ' + value + ')')) {
-              return true;
-            }
-            return false;
-          };
-
-          $scope.open = function () {
-            ngDialog.open({ template: 'firstDialogId', controller: 'InsideCtrl', data: {foo: 'some data'} });
-          };
-
-          $scope.openDefault = function () {
-            ngDialog.open({
-              template: 'firstDialogId',
-              controller: 'InsideCtrl',
-              className: 'ngdialog-theme-default'
-            });
-          };
-
-          $scope.openDefaultWithPreCloseCallbackInlined = function () {
-            ngDialog.open({
-              template: 'firstDialogId',
-              controller: 'InsideCtrl',
-              className: 'ngdialog-theme-default',
-              preCloseCallback: function(value) {
-                if (confirm('Close it?  (Value = ' + value + ')')) {
-                  return true;
-                }
-                return false;
-              }
-            });
-          };
-
-          $scope.openConfirm = function () {
-            ngDialog.openConfirm({
-              template: 'modalDialogId',
-              className: 'ngdialog-theme-default'
-            }).then(function (value) {
-              console.log('Modal promise resolved. Value: ', value);
-            }, function (reason) {
-              console.log('Modal promise rejected. Reason: ', reason);
-            });
-          };
-
-          $scope.openConfirmWithPreCloseCallbackOnScope = function () {
-            ngDialog.openConfirm({
-              template: 'modalDialogId',
-              className: 'ngdialog-theme-default',
-              preCloseCallback: 'preCloseCallbackOnScope',
-              scope: $scope
-            }).then(function (value) {
-              console.log('Modal promise resolved. Value: ', value);
-            }, function (reason) {
-              console.log('Modal promise rejected. Reason: ', reason);
-            });
-          };
-
-          $scope.openConfirmWithPreCloseCallbackInlinedWithNestedConfirm = function () {
-            ngDialog.openConfirm({
-              template: 'dialogWithNestedConfirmDialogId',
-              className: 'ngdialog-theme-default',
-              preCloseCallback: function(/*value*/) {
-
-                var nestedConfirmDialog = ngDialog.openConfirm({
-                  template:
-                      '<p>Are you sure you want to close the parent dialog?</p>' +
-                      '<div>' +
-                        '<button type="button" class="btn btn-default" ng-click="closeThisDialog(0)">No' +
-                        '<button type="button" class="btn btn-primary" ng-click="confirm(1)">Yes' +
-                      '</button></div>',
-                  plain: true,
-                  className: 'ngdialog-theme-default'
-                });
-
-                return nestedConfirmDialog;
-              },
-              scope: $scope
-            })
-            .then(function(value){
-              console.log('resolved:' + value);
-              // Perform the save here
-            }, function(value){
-              console.log('rejected:' + value);
-
-            });
-          };
-
-          $scope.openInlineController = function () {
-            $rootScope.theme = 'ngdialog-theme-default';
-
-            ngDialog.open({
-              template: 'withInlineController',
-              controller: ['$scope', '$timeout', function ($scope, $timeout) {
-                var counter = 0;
-                var timeout;
-                function count() {
-                  $scope.exampleExternalData = 'Counter ' + (counter++);
-                  timeout = $timeout(count, 450);
-                }
-                count();
-                $scope.$on('$destroy', function () {
-                  $timeout.cancel(timeout);
-                });
-              }],
-              className: 'ngdialog-theme-default'
-            });
-          };
-
-          $scope.openTemplate = function () {
-            $scope.value = true;
-
-            ngDialog.open({
-              template: $scope.tpl.path,
-              className: 'ngdialog-theme-default',
-              scope: $scope
-            });
-          };
-
-          $scope.openTemplateNoCache = function () {
-            $scope.value = true;
-
-            ngDialog.open({
-              template: $scope.tpl.path,
-              className: 'ngdialog-theme-default',
-              scope: $scope,
-              cache: false
-            });
-          };
-
-          $scope.openTimed = function () {
-            var dialog = ngDialog.open({
-              template: '<p>Just passing through!</p>',
-              plain: true,
-              closeByDocument: false,
-              closeByEscape: false
-            });
-            setTimeout(function () {
-              dialog.close();
-            }, 2000);
-          };
-
-          $scope.openNotify = function () {
-            var dialog = ngDialog.open({
-              template:
-                '<p>You can do whatever you want when I close, however that happens.</p>' +
-                '<div><button type="button" class="btn btn-primary" ng-click="closeThisDialog(1)">Close Me</button></div>',
-              plain: true
-            });
-            dialog.closePromise.then(function (data) {
-              console.log('ngDialog closed' + (data.value === 1 ? ' using the button' : '') + ' and notified by promise: ' + data.id);
-            });
-          };
-
-          $scope.openWithoutOverlay = function () {
-            ngDialog.open({
-              template: '<h2>Notice that there is no overlay!</h2>',
-              className: 'ngdialog-theme-default',
-              plain: true,
-              overlay: false
-            });
-          };
-
-          $rootScope.$on('ngDialog.opened', function (e, $dialog) {
-            console.log('ngDialog opened: ' + $dialog.attr('id'));
-          });
-
-          $rootScope.$on('ngDialog.closed', function (e, $dialog) {
-            console.log('ngDialog closed: ' + $dialog.attr('id'));
-          });
-
-          $rootScope.$on('ngDialog.closing', function (e, $dialog) {
-            console.log('ngDialog closing: ' + $dialog.attr('id'));
-          });
-        }
-    
-    } // DialogMainCtrl
-
-
-    InsideCtrl.$inject = ['$scope', 'ngDialog'];
-    function InsideCtrl($scope, ngDialog) {
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-          $scope.dialogModel = {
-            message : 'message from passed scope'
-          };
-          $scope.openSecond = function () {
-            ngDialog.open({
-              template: '<p class="lead m0"><a href="" ng-click="closeSecond()">Close all by click here!</a></h3>',
-              plain: true,
-              closeByEscape: false,
-              controller: 'SecondModalCtrl'
-            });
-          };
-        }
-    }
-
-    SecondModalCtrl.$inject = ['$scope', 'ngDialog'];
-    function SecondModalCtrl($scope, ngDialog) {
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-          $scope.closeSecond = function () {
-            ngDialog.close();
-          };
-        }
-
-    }
-
-
-})();
-
-
-
-
-/**=========================================================
- * Module: calendar-ui.js
- * This script handle the calendar demo with draggable 
- * events and events creations
- =========================================================*/
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.elements')
-        .controller('InfiniteScrollController', InfiniteScrollController)
-        .factory('datasource', datasource);
-
-    function InfiniteScrollController() {
-        var vm = this;
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-          vm.images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-          vm.loadMore = function() {
-            var last = vm.images[vm.images.length - 1];
-            for(var i = 1; i <= 10; i++) {
-              vm.images.push(last + i);
-            }
-          };
-        }
-    }
-    
-    datasource.$inject = ['$log', '$timeout'];
-    function datasource(console, $timeout) {
-
-        var get = function(index, count, success) {
-            return $timeout(function() {
-                var i, result, _i, _ref;
-                result = [];
-                for (i = _i = index, _ref = index + count - 1; index <= _ref ? _i <= _ref : _i >= _ref; i = index <= _ref ? ++_i : --_i) {
-                    result.push('item #' + i);
-                }
-                return success(result);
-            }, 100);
-        };
-        return {
-            get: get
-        };
-    }
-
-})();
-
-/**=========================================================
- * Module: masonry-deck.js
- * Demo for Angular Deck
- =========================================================*/
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.elements')
-        .controller('MasonryDeckController', MasonryDeckController)
-        .directive('imageloaded', imageloaded); // required by demo
-
-    MasonryDeckController.$inject = ['RouteHelpers'];
-    function MasonryDeckController(RouteHelpers) {
-        var vm = this;
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-
-          vm.basepath = RouteHelpers.basepath;
-
-          vm.photos = [
-              {id: 'photo-1', name: 'Awesome photo', src: 'http://lorempixel.com/400/300/abstract'},
-              {id: 'photo-2', name: 'Great photo', src: 'http://lorempixel.com/450/400/city'},
-              {id: 'photo-3', name: 'Strange photo', src: 'http://lorempixel.com/400/300/people'},
-              {id: 'photo-4', name: 'A photo?', src: 'http://lorempixel.com/400/300/transport'},
-              {id: 'photo-5', name: 'What a photo', src: 'http://lorempixel.com/450/300/fashion'},
-              {id: 'photo-6', name: 'Silly photo', src: 'http://lorempixel.com/400/300/technics'},
-              {id: 'photo-7', name: 'Weird photo', src: 'http://lorempixel.com/410/350/sports'},
-              {id: 'photo-8', name: 'Modern photo', src: 'http://lorempixel.com/400/300/nightlife'},
-              {id: 'photo-9', name: 'Classical photo', src: 'http://lorempixel.com/400/300/nature'},
-              {id: 'photo-10', name: 'Dynamic photo', src: 'http://lorempixel.com/420/300/abstract'},
-              {id: 'photo-11', name: 'Neat photo', src: 'http://lorempixel.com/400/300/sports'},
-              {id: 'photo-12', name: 'Bumpy photo', src: 'http://lorempixel.com/400/300/nightlife'},
-              {id: 'photo-13', name: 'Brilliant photo', src: 'http://lorempixel.com/400/380/nature'},
-              {id: 'photo-14', name: 'Excellent photo', src: 'http://lorempixel.com/480/300/technics'},
-              {id: 'photo-15', name: 'Gorgeous photo', src: 'http://lorempixel.com/400/300/sports'},
-              {id: 'photo-16', name: 'Lovely photo', src: 'http://lorempixel.com/400/300/nightlife'},
-              {id: 'photo-17', name: 'A "wow" photo', src: 'http://lorempixel.com/400/300/nature'},
-              {id: 'photo-18', name: 'Bodacious photo', src: 'http://lorempixel.com/400/300/abstract'}
-          ];
-        }
-    }
-
-    // Add class to img element when source is loaded
-    function imageloaded () {
-        // Copyright(c) 2013 André König <akoenig@posteo.de>
-        // MIT Licensed
-        var directive = {
-            link: link,
-            restrict: 'A'
-        };
-        return directive;
-
-        function link(scope, element, attrs) {
-          var cssClass = attrs.loadedclass;
-
-          element.bind('load', function () {
-              angular.element(element).addClass(cssClass);
-          });
-        }
-    }
-
-})();
-
-
-
-/**=========================================================
- * Module: access-login.js
- * Demo for login api
- =========================================================*/
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.elements')
-        .controller('AbnTestController', AbnTestController);
-
-    AbnTestController.$inject = ['$timeout', '$resource'];
-    function AbnTestController($timeout, $resource) {
-        var vm = this;
-
-        activate();
-
-        ////////////////
-
-        /*jshint -W106*/
-        function activate() {
-          vm.my_tree_handler = function(branch) {
-
-            vm.output = 'You selected: ' + branch.label;
-
-            if (branch.data && branch.data.description) {
-              vm.output += '(' + branch.data.description + ')';
-              return vm.output;
-            }
-          };
-
-          // onSelect event handlers
-          var apple_selected = function(branch) {
-            vm.output = 'APPLE! : ' + branch.label;
-            return vm.output;
-          };
-
-          var treedata_avm = [
-            {
-              label: 'Animal',
-              children: [
-                {
-                  label: 'Dog',
-                  data: {
-                    description: 'man\'s best friend'
-                  }
-                }, {
-                  label: 'Cat',
-                  data: {
-                    description: 'Felis catus'
-                  }
-                }, {
-                  label: 'Hippopotamus',
-                  data: {
-                    description: 'hungry, hungry'
-                  }
-                }, {
-                  label: 'Chicken',
-                  children: ['White Leghorn', 'Rhode Island Red', 'Jersey Giant']
-                }
-              ]
-            }, {
-              label: 'Vegetable',
-              data: {
-                definition: 'A plant or part of a plant used as food, typically as accompaniment to meat or fish, such as a cabbage, potato, carrot, or bean.',
-                data_can_contain_anything: true
-              },
-              onSelect: function(branch) {
-                vm.output = 'Vegetable: ' + branch.data.definition;
-                return vm.output;
-              },
-              children: [
-                {
-                  label: 'Oranges'
-                }, {
-                  label: 'Apples',
-                  children: [
-                    {
-                      label: 'Granny Smith',
-                      onSelect: apple_selected
-                    }, {
-                      label: 'Red Delicous',
-                      onSelect: apple_selected
-                    }, {
-                      label: 'Fuji',
-                      onSelect: apple_selected
-                    }
-                  ]
-                }
-              ]
-            }, {
-              label: 'Mineral',
-              children: [
-                {
-                  label: 'Rock',
-                  children: ['Igneous', 'Sedimentary', 'Metamorphic']
-                }, {
-                  label: 'Metal',
-                  children: ['Aluminum', 'Steel', 'Copper']
-                }, {
-                  label: 'Plastic',
-                  children: [
-                    {
-                      label: 'Thermoplastic',
-                      children: ['polyethylene', 'polypropylene', 'polystyrene', ' polyvinyl chloride']
-                    }, {
-                      label: 'Thermosetting Polymer',
-                      children: ['polyester', 'polyurethane', 'vulcanized rubber', 'bakelite', 'urea-formaldehyde']
-                    }
-                  ]
-                }
-              ]
-            }
-          ];
-          
-          var treedata_geography = [
-            {
-              label: 'North America',
-              children: [
-                {
-                  label: 'Canada',
-                  children: ['Toronto', 'Vancouver']
-                }, {
-                  label: 'USA',
-                  children: ['New York', 'Los Angeles']
-                }, {
-                  label: 'Mexico',
-                  children: ['Mexico City', 'Guadalajara']
-                }
-              ]
-            }, {
-              label: 'South America',
-              children: [
-                {
-                  label: 'Venezuela',
-                  children: ['Caracas', 'Maracaibo']
-                }, {
-                  label: 'Brazil',
-                  children: ['Sao Paulo', 'Rio de Janeiro']
-                }, {
-                  label: 'Argentina',
-                  children: ['Buenos Aires', 'Cordoba']
-                }
-              ]
-            }
-          ];
-
-          vm.my_data = treedata_avm;
-          vm.try_changing_the_tree_data = function() {
-            if (vm.my_data === treedata_avm) {
-              vm.my_data = treedata_geography;
-            } else {
-              vm.my_data = treedata_avm;
-            }
-            return vm.my_data;
-          };
-          
-          var tree;
-          // This is our API control variable
-          vm.my_tree = tree = {};
-          vm.try_async_load = function() {
-            
-            vm.my_data = [];
-            vm.doing_async = true;
-            
-            // Request tree data via $resource
-            var remoteTree = $resource('server/treedata.json');
-            
-            return remoteTree.get(function(res){
-              
-              vm.my_data = res.data;
-
-              vm.doing_async = false;
-            
-              return tree.expand_all();
-            
-            // we must return a promise so the plugin 
-            // can watch when it's resolved
-            }).$promise;
-          };
-          
-          // Adds a new branch to the tree
-          vm.try_adding_a_branch = function() {
-            var b;
-            b = tree.get_selected_branch();
-            return tree.add_branch(b, {
-              label: 'New Branch',
-              data: {
-                something: 42,
-                'else': 43
-              }
-            });
-          };
-
-        }
-    }
-})();
-
-
-/**=========================================================
- * Module: nestable.js
- * Nestable controller
- =========================================================*/
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.elements')
-        .controller('NestableController', NestableController);
-
-    function NestableController() {
-        var vm = this;
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-          vm.items =  [
-            {
-              item: {text: 'a'},
-              children: []
-            },
-            {
-              item: {text: 'b'},
-              children: [
-                {
-                  item: {text: 'c'},
-                  children: []
-                },
-                {
-                  item: {text: 'd'},
-                  children: []
-                }
-              ]
-            },
-            {
-              item: {text: 'e'},
-              children: []
-            },
-            {
-              item: {text: 'f'},
-              children: []
-            }
-          ];
-
-          vm.items2 =  [
-            {
-              item: {text: '1'},
-              children: []
-            },
-            {
-              item: {text: '2'},
-              children: [
-                {
-                  item: {text: '3'},
-                  children: []
-                },
-                {
-                  item: {text: '4'},
-                  children: []
-                }
-              ]
-            },
-            {
-              item: {text: '5'},
-              children: []
-            },
-            {
-              item: {text: '6'},
-              children: []
-            }
-          ];
-
-        }
-    }
-})();
-
-/**=========================================================
- * Module: scroll.js
- * Make a content box scrollable
- =========================================================*/
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.elements')
-        .directive('scrollable', scrollable);
-
-    function scrollable () {
-        var directive = {
-            link: link,
-            restrict: 'EA'
-        };
-        return directive;
-
-        function link(scope, element, attrs) {
-          var defaultHeight = 250;
-          element.slimScroll({
-              height: (attrs.height || defaultHeight)
-          });
-        }
-    }
-
-})();
-
-/**=========================================================
- * Module: sortable.js
- * Sortable controller
- =========================================================*/
-(function() {
-    'use strict';
-
-    angular
-        .module('app.elements')
-        .controller('SortableController', SortableController);
-
-    SortableController.$inject = ['$scope'];
-
-    function SortableController($scope) {
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-            // Single List
-            $scope.data1 = [{
-                id: 1,
-                name: 'Donald Hoffman'
-            }, {
-                id: 2,
-                name: 'Wallace Barrett'
-            }, {
-                id: 3,
-                name: 'Marsha Hicks'
-            }, {
-                id: 4,
-                name: 'Roland Brown'
-            }];
-
-            $scope.add = function() {
-                $scope.data1.push({
-                    id: $scope.data1.length + 1,
-                    name: 'Earl Knight'
-                });
-            };
-
-            $scope.sortableOptions = {
-                placeholder: 'box-placeholder m0'
-            };
-        }
-    }
-
-})();
-
-/**=========================================================
- * Module: sweetalert.js
- =========================================================*/
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.elements')
-        .controller('SweetAlertController', SweetAlertController);
-
-    SweetAlertController.$inject = ['SweetAlert'];
-    function SweetAlertController(SweetAlert) {
-        var vm = this;
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-          vm.demo1 = function() {
-            SweetAlert.swal('Here\'s a message');
-          };
-
-          vm.demo2 = function() {
-            SweetAlert.swal('Here\'s a message!', 'It\'s pretty, isn\'t it?');
-          };
-
-          vm.demo3 = function() {
-            SweetAlert.swal('Good job!', 'You clicked the button!', 'success');
-          };
-
-          vm.demo4 = function() {
-            SweetAlert.swal({   
-              title: 'Are you sure?',   
-              text: 'Your will not be able to recover this imaginary file!',   
-              type: 'warning',   
-              showCancelButton: true,   
-              confirmButtonColor: '#DD6B55',   
-              confirmButtonText: 'Yes, delete it!',
-              closeOnConfirm: false
-            },  function(){  
-              SweetAlert.swal('Booyah!');
-            });
-          };
-
-          vm.demo5 = function() {
-            SweetAlert.swal({   
-              title: 'Are you sure?',   
-              text: 'Your will not be able to recover this imaginary file!',   
-              type: 'warning',   
-              showCancelButton: true,   
-              confirmButtonColor: '#DD6B55',   
-              confirmButtonText: 'Yes, delete it!',   
-              cancelButtonText: 'No, cancel plx!',   
-              closeOnConfirm: false,   
-              closeOnCancel: false 
-            }, function(isConfirm){  
-              if (isConfirm) {     
-                SweetAlert.swal('Deleted!', 'Your imaginary file has been deleted.', 'success');   
-              } else {     
-                SweetAlert.swal('Cancelled', 'Your imaginary file is safe :)', 'error');   
-              } 
-            });
-          };
-
-          vm.demo6 = function() {
-            SweetAlert.swal({   
-              title: 'Sweet!',   
-              text: 'Here\'s a custom image.',   
-              imageUrl: 'http://oitozero.com/img/avatar.jpg' 
-            });
-          };
-        }
-    }
-})();
-
-/**=========================================================
- * Module: demo-toaster.js
- * Demos for toaster notifications
- =========================================================*/
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.elements')
-        .controller('ToasterDemoCtrl', ToasterDemoCtrl);
-
-    ToasterDemoCtrl.$inject = ['toaster'];
-    function ToasterDemoCtrl(toaster) {
-        var vm = this;
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-          vm.toaster = {
-              type:  'success',
-              title: 'Title',
-              text:  'Message'
-          };
-
-          vm.pop = function() {
-            toaster.pop(vm.toaster.type, vm.toaster.title, vm.toaster.text);
-          };
-        }
-    }
-})();
-
-/**=========================================================
- * Module: tour.js
- =========================================================*/
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.elements')
-        .controller('TourCtrl', TourCtrl);
-
-    TourCtrl.$inject = ['$scope'];
-    function TourCtrl($scope) {
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-          // BootstrapTour is not compatible with z-index based layout
-          // so adding position:static for this case makes the browser
-          // to ignore the property
-          var section = angular.element('.wrapper > section');
-          section.css({'position': 'static'});
-          // finally restore on destroy and reuse the value declared in stylesheet
-          $scope.$on('$destroy', function(){
-            section.css({'position': ''});
-          });
         }
     }
 })();
@@ -4210,6 +3231,67 @@ angular.module('angle').constant('baseURL',
     }
 })();
 
+/**=========================================================
+ * Module: flatdoc.js
+ * Creates the flatdoc markup and initializes the plugin
+ =========================================================*/
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.flatdoc')
+        .directive('flatdoc', flatdoc);
+
+    function flatdoc() {
+
+        var directive = {
+            template: '<div role="flatdoc"><div role="flatdoc-menu"></div><div role="flatdoc-content"></div></div>',
+            link: link,
+            restrict: 'EA'
+        };
+        return directive;
+
+        function link(scope, element, attrs) {
+
+            Flatdoc.run({
+                fetcher: Flatdoc.file(attrs.src)
+            });
+
+            var $root = $('html, body');
+            var menuLinks;
+
+            var $doc = $(document).on('flatdoc:ready', function() {
+
+                var docMenu = $('[role="flatdoc-menu"]');
+
+                menuLinks = docMenu.find('a').on('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    var $this = $(this);
+
+                    docMenu.find('a.active').removeClass('active');
+                    $this.addClass('active');
+
+                    $root.animate({
+                        scrollTop: $(this.getAttribute('href')).offset().top - ($('.topnavbar').height() + 10)
+                    }, 800);
+                });
+
+            });
+
+            // dettach all events
+            scope.$on('$destroy', function() {
+                menuLinks && menuLinks.off();
+                $doc.off('flatdoc:ready');
+            });
+
+        }
+    }
+
+})();
+
 (function() {
     'use strict';
 
@@ -4377,67 +3459,6 @@ angular.module('angle').constant('baseURL',
           ]
         })
         ;
-
-})();
-
-/**=========================================================
- * Module: flatdoc.js
- * Creates the flatdoc markup and initializes the plugin
- =========================================================*/
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.flatdoc')
-        .directive('flatdoc', flatdoc);
-
-    function flatdoc() {
-
-        var directive = {
-            template: '<div role="flatdoc"><div role="flatdoc-menu"></div><div role="flatdoc-content"></div></div>',
-            link: link,
-            restrict: 'EA'
-        };
-        return directive;
-
-        function link(scope, element, attrs) {
-
-            Flatdoc.run({
-                fetcher: Flatdoc.file(attrs.src)
-            });
-
-            var $root = $('html, body');
-            var menuLinks;
-
-            var $doc = $(document).on('flatdoc:ready', function() {
-
-                var docMenu = $('[role="flatdoc-menu"]');
-
-                menuLinks = docMenu.find('a').on('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-
-                    var $this = $(this);
-
-                    docMenu.find('a.active').removeClass('active');
-                    $this.addClass('active');
-
-                    $root.animate({
-                        scrollTop: $(this.getAttribute('href')).offset().top - ($('.topnavbar').height() + 10)
-                    }, 800);
-                });
-
-            });
-
-            // dettach all events
-            scope.$on('$destroy', function() {
-                menuLinks && menuLinks.off();
-                $doc.off('flatdoc:ready');
-            });
-
-        }
-    }
 
 })();
 
@@ -5413,6 +4434,39 @@ angular.module('angle').constant('baseURL',
     }
 })();
 
+/**=========================================================
+ * Module: skycons.js
+ * Include any animated weather icon from Skycons
+ =========================================================*/
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.icons')
+        .directive('skycon', skycon);
+
+    function skycon () {
+
+        var directive = {
+            link: link,
+            restrict: 'A'
+        };
+        return directive;
+
+        function link(scope, element, attrs) {
+          var skycons = new Skycons({'color': (attrs.color || 'white')});
+
+          element.html('<canvas width="' + attrs.width + '" height="' + attrs.height + '"></canvas>');
+
+          skycons.add(element.children()[0], attrs.skycon);
+
+          skycons.play();
+        }
+    }
+
+})();
+
 (function() {
     'use strict';
 
@@ -5457,6 +4511,197 @@ angular.module('angle').constant('baseURL',
     }
 
 })();
+(function() {
+    'use strict';
+
+    angular
+        .module('app.locale')
+        .config(localeConfig)
+        ;
+    localeConfig.$inject = ['tmhDynamicLocaleProvider'];
+    function localeConfig(tmhDynamicLocaleProvider){
+  
+      tmhDynamicLocaleProvider.localeLocationPattern('vendor/angular-i18n/angular-locale_{{locale}}.js');
+      // tmhDynamicLocaleProvider.useStorage('$cookieStore');
+
+    }
+})();
+/**=========================================================
+ * Module: locale.js
+ * Demo for locale settings
+ =========================================================*/
+(function() {
+    'use strict';
+
+    angular
+        .module('app.locale')
+        .controller('LocalizationController', LocalizationController);
+
+    LocalizationController.$inject = ['$rootScope', 'tmhDynamicLocale', '$locale'];
+    function LocalizationController($rootScope, tmhDynamicLocale, $locale) {
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+          $rootScope.availableLocales = {
+            'en': 'English',
+            'es': 'Spanish',
+            'de': 'German',
+            'fr': 'French',
+            'ar': 'Arabic',
+            'ja': 'Japanese',
+            'ko': 'Korean',
+            'zh': 'Chinese'};
+          
+          $rootScope.model = {selectedLocale: 'en'};
+          
+          $rootScope.$locale = $locale;
+          
+          $rootScope.changeLocale = tmhDynamicLocale.set;
+        }
+    }
+})();
+
+/**=========================================================
+ * Module: demo-pagination.js
+ * Provides a simple demo for pagination
+ =========================================================*/
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.mailbox')
+        .controller('MailboxController', MailboxController);
+
+    function MailboxController() {
+        var vm = this;
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+          vm.folders = [
+            {name: 'Inbox',   folder: 'inbox',   alert: 42, icon: 'fa-inbox' },
+            {name: 'Starred', folder: 'starred', alert: 10, icon: 'fa-star' },
+            {name: 'Sent',    folder: 'sent',    alert: 0,  icon: 'fa-paper-plane-o' },
+            {name: 'Draft',   folder: 'draft',   alert: 5,  icon: 'fa-edit' },
+            {name: 'Trash',   folder: 'trash',   alert: 0,  icon: 'fa-trash'}
+          ];
+
+          vm.labels = [
+            {name: 'Red',     color: 'danger'},
+            {name: 'Pink',    color: 'pink'},
+            {name: 'Blue',    color: 'info'},
+            {name: 'Yellow',  color: 'warning'}
+          ];
+
+          vm.mail = {
+            cc: false,
+            bcc: false
+          };
+          // Mailbox editr initial content
+          vm.content = '<p>Type something..</p>';
+        }
+    }
+})();
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.mailbox')
+        .controller('MailFolderController', MailFolderController);
+
+    MailFolderController.$inject = ['mails', '$stateParams'];
+    function MailFolderController(mails, $stateParams) {
+        var vm = this;
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+          
+          vm.folder = {};
+          // no filter for inbox
+          vm.folder.folder = $stateParams.folder === 'inbox' ? '' : $stateParams.folder;
+
+          mails.all().then(function(mails){
+            vm.mails = mails;
+          });
+        }
+    }
+})();
+
+// A RESTful factory for retrieving mails from json file
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.mailbox')
+        .factory('mails', mails);
+
+    mails.$inject = ['$http'];
+    function mails($http) {
+        var service = {
+            all: all,
+            get: get
+        };
+        return service;
+
+        ////////////////
+        
+        function readMails() {
+          var path = 'server/mails.json';
+          return $http.get(path).then(function (resp) {
+            return resp.data.mails;
+          });
+        }
+
+        function all() {
+          return readMails();
+        }
+
+        function get(id) {
+          return readMails().then(function(mails){
+            for (var i = 0; i < mails.length; i++) {
+              if (+mails[i].id === +id) return mails[i];
+            }
+            return null;
+          });
+        }
+    }
+})();
+
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.mailbox')
+        .controller('MailViewController', MailViewController);
+
+    MailViewController.$inject = ['mails', '$stateParams'];
+    function MailViewController(mails, $stateParams) {
+        var vm = this;
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+          mails.get($stateParams.mid).then(function(mail){
+            vm.mail = mail;
+          });
+        }
+    }
+})();
+
 /**=========================================================
  * Module: modals.js
  * Provides a simple way to implement bootstrap modals from templates
@@ -5794,177 +5039,6 @@ angular.module('angle').constant('baseURL',
 })();
 
 /**=========================================================
- * Module: demo-pagination.js
- * Provides a simple demo for pagination
- =========================================================*/
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.mailbox')
-        .controller('MailboxController', MailboxController);
-
-    function MailboxController() {
-        var vm = this;
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-          vm.folders = [
-            {name: 'Inbox',   folder: 'inbox',   alert: 42, icon: 'fa-inbox' },
-            {name: 'Starred', folder: 'starred', alert: 10, icon: 'fa-star' },
-            {name: 'Sent',    folder: 'sent',    alert: 0,  icon: 'fa-paper-plane-o' },
-            {name: 'Draft',   folder: 'draft',   alert: 5,  icon: 'fa-edit' },
-            {name: 'Trash',   folder: 'trash',   alert: 0,  icon: 'fa-trash'}
-          ];
-
-          vm.labels = [
-            {name: 'Red',     color: 'danger'},
-            {name: 'Pink',    color: 'pink'},
-            {name: 'Blue',    color: 'info'},
-            {name: 'Yellow',  color: 'warning'}
-          ];
-
-          vm.mail = {
-            cc: false,
-            bcc: false
-          };
-          // Mailbox editr initial content
-          vm.content = '<p>Type something..</p>';
-        }
-    }
-})();
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.mailbox')
-        .controller('MailFolderController', MailFolderController);
-
-    MailFolderController.$inject = ['mails', '$stateParams'];
-    function MailFolderController(mails, $stateParams) {
-        var vm = this;
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-          
-          vm.folder = {};
-          // no filter for inbox
-          vm.folder.folder = $stateParams.folder === 'inbox' ? '' : $stateParams.folder;
-
-          mails.all().then(function(mails){
-            vm.mails = mails;
-          });
-        }
-    }
-})();
-
-// A RESTful factory for retrieving mails from json file
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.mailbox')
-        .factory('mails', mails);
-
-    mails.$inject = ['$http'];
-    function mails($http) {
-        var service = {
-            all: all,
-            get: get
-        };
-        return service;
-
-        ////////////////
-        
-        function readMails() {
-          var path = 'server/mails.json';
-          return $http.get(path).then(function (resp) {
-            return resp.data.mails;
-          });
-        }
-
-        function all() {
-          return readMails();
-        }
-
-        function get(id) {
-          return readMails().then(function(mails){
-            for (var i = 0; i < mails.length; i++) {
-              if (+mails[i].id === +id) return mails[i];
-            }
-            return null;
-          });
-        }
-    }
-})();
-
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.mailbox')
-        .controller('MailViewController', MailViewController);
-
-    MailViewController.$inject = ['mails', '$stateParams'];
-    function MailViewController(mails, $stateParams) {
-        var vm = this;
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-          mails.get($stateParams.mid).then(function(mail){
-            vm.mail = mail;
-          });
-        }
-    }
-})();
-
-/**=========================================================
- * Module: skycons.js
- * Include any animated weather icon from Skycons
- =========================================================*/
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.icons')
-        .directive('skycon', skycon);
-
-    function skycon () {
-
-        var directive = {
-            link: link,
-            restrict: 'A'
-        };
-        return directive;
-
-        function link(scope, element, attrs) {
-          var skycons = new Skycons({'color': (attrs.color || 'white')});
-
-          element.html('<canvas width="' + attrs.width + '" height="' + attrs.height + '"></canvas>');
-
-          skycons.add(element.children()[0], attrs.skycon);
-
-          skycons.play();
-        }
-    }
-
-})();
-
-/**=========================================================
  * Module: navbar-search.js
  * Navbar search toggler * Auto dismiss on ESC key
  =========================================================*/
@@ -6073,6 +5147,993 @@ angular.module('angle').constant('baseURL',
     }
 })();
 
+/**=========================================================
+ * Module: demo-notify.js
+ * Provides a simple demo for notify
+ =========================================================*/
+(function() {
+    'use strict';
+
+    angular
+        .module('app.notify')
+        .controller('NotifyDemoCtrl', NotifyDemoCtrl);
+
+    NotifyDemoCtrl.$inject = ['Notify', '$timeout'];
+    function NotifyDemoCtrl(Notify, $timeout) {
+        var vm = this;
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+          vm.msgHtml = '<em class="fa fa-check"></em> Message with icon..';
+
+          vm.notifyMsg = 'Some messages here..';
+          vm.notifyOpts = {
+            status: 'danger',
+            pos: 'bottom-center'
+          };
+
+          // Service usage example
+          $timeout(function(){
+            
+            Notify.alert( 
+                'This is a custom message from notify..', 
+                {status: 'success'}
+            );
+          
+          }, 500);
+        }
+    }
+})();
+
+/**=========================================================
+ * Module: notify.js
+ * Directive for notify plugin
+ =========================================================*/
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.notify')
+        .directive('notify', notify);
+
+    notify.$inject = ['$window', 'Notify'];
+    function notify ($window, Notify) {
+
+        var directive = {
+            link: link,
+            restrict: 'A',
+            scope: {
+              options: '=',
+              message: '='
+            }
+        };
+        return directive;
+
+        function link(scope, element) {
+
+          element.on('click', function (e) {
+            e.preventDefault();
+            Notify.alert(scope.message, scope.options);
+          });
+        }
+
+    }
+
+})();
+
+
+/**=========================================================
+ * Module: notify.js
+ * Create a notifications that fade out automatically.
+ * Based on Notify addon from UIKit (http://getuikit.com/docs/addons_notify.html)
+ =========================================================*/
+
+(function() {
+    'use strict';
+    angular
+        .module('app.notify')
+        .service('Notify', Notify);
+
+    Notify.$inject = ['$timeout'];
+    function Notify($timeout) {
+
+        this.alert = notifyAlert;
+
+        ////////////////
+
+        function notifyAlert(msg, opts) {
+            if ( msg ) {
+                $timeout(function(){
+                    $.notify(msg, opts || {});
+                });
+            }
+        }
+    }
+
+})();
+
+/**
+ * Notify Addon definition as jQuery plugin
+ * Adapted version to work with Bootstrap classes
+ * More information http://getuikit.com/docs/addons_notify.html
+ */
+(function($){
+    'use strict';
+    var containers = {},
+        messages   = {},
+        notify     =  function(options){
+            if ($.type(options) === 'string') {
+                options = { message: options };
+            }
+            if (arguments[1]) {
+                options = $.extend(options, $.type(arguments[1]) === 'string' ? {status:arguments[1]} : arguments[1]);
+            }
+            return (new Message(options)).show();
+        },
+        closeAll  = function(group, instantly){
+            var id;
+            if(group) {
+                for(id in messages) { if(group===messages[id].group) messages[id].close(instantly); }
+            } else {
+                for(id in messages) { messages[id].close(instantly); }
+            }
+        };
+    var Message = function(options){
+        // var $this = this;
+        this.options = $.extend({}, Message.defaults, options);
+        this.uuid    = 'ID'+(new Date().getTime())+'RAND'+(Math.ceil(Math.random() * 100000));
+        this.element = $([
+            // @geedmo: alert-dismissable enables bs close icon
+            '<div class="uk-notify-message alert-dismissable">',
+                '<a class="close">&times;</a>',
+                '<div>'+this.options.message+'</div>',
+            '</div>'
+        ].join('')).data('notifyMessage', this);
+        // status
+        if (this.options.status) {
+            this.element.addClass('alert alert-'+this.options.status);
+            this.currentstatus = this.options.status;
+        }
+        this.group = this.options.group;
+        messages[this.uuid] = this;
+        if(!containers[this.options.pos]) {
+            containers[this.options.pos] = $('<div class="uk-notify uk-notify-'+this.options.pos+'"></div>').appendTo('body').on('click', '.uk-notify-message', function(){
+                $(this).data('notifyMessage').close();
+            });
+        }
+    };
+    $.extend(Message.prototype, {
+        uuid: false,
+        element: false,
+        timout: false,
+        currentstatus: '',
+        group: false,
+        show: function() {
+            if (this.element.is(':visible')) return;
+            var $this = this;
+            containers[this.options.pos].show().prepend(this.element);
+            var marginbottom = parseInt(this.element.css('margin-bottom'), 10);
+            this.element.css({'opacity':0, 'margin-top': -1*this.element.outerHeight(), 'margin-bottom':0}).animate({'opacity':1, 'margin-top': 0, 'margin-bottom':marginbottom}, function(){
+                if ($this.options.timeout) {
+                    var closefn = function(){ $this.close(); };
+                    $this.timeout = setTimeout(closefn, $this.options.timeout);
+                    $this.element.hover(
+                        function() { clearTimeout($this.timeout); },
+                        function() { $this.timeout = setTimeout(closefn, $this.options.timeout);  }
+                    );
+                }
+            });
+            return this;
+        },
+        close: function(instantly) {
+            var $this    = this,
+                finalize = function(){
+                    $this.element.remove();
+                    if(!containers[$this.options.pos].children().length) {
+                        containers[$this.options.pos].hide();
+                    }
+                    delete messages[$this.uuid];
+                };
+            if(this.timeout) clearTimeout(this.timeout);
+            if(instantly) {
+                finalize();
+            } else {
+                this.element.animate({'opacity':0, 'margin-top': -1* this.element.outerHeight(), 'margin-bottom':0}, function(){
+                    finalize();
+                });
+            }
+        },
+        content: function(html){
+            var container = this.element.find('>div');
+            if(!html) {
+                return container.html();
+            }
+            container.html(html);
+            return this;
+        },
+        status: function(status) {
+            if(!status) {
+                return this.currentstatus;
+            }
+            this.element.removeClass('alert alert-'+this.currentstatus).addClass('alert alert-'+status);
+            this.currentstatus = status;
+            return this;
+        }
+    });
+    Message.defaults = {
+        message: '',
+        status: 'normal',
+        timeout: 5000,
+        group: null,
+        pos: 'top-center'
+    };
+    
+    $.notify          = notify;
+    $.notify.message  = Message;
+    $.notify.closeAll = closeAll;
+    
+    return notify;
+}(jQuery));
+
+/**=========================================================
+ * Module: access-login.js
+ * Demo for login api
+ =========================================================*/
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.pages')
+        .controller('LoginFormController', LoginFormController);
+
+    LoginFormController.$inject = ['$http', '$state','$window','baseURL'];
+    function LoginFormController($http, $state,$window,baseURL) {
+        var vm = this;
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+          // bind here all data from the form
+          vm.account = {};
+          // place the message if something goes wrong
+          vm.authMsg = '';
+
+          vm.login = function() {
+            vm.authMsg = '';
+
+            if(vm.loginForm.$valid) {
+
+              $http
+                .post(baseURL+'api/employee-login/', {userName: vm.account.email, password: vm.account.password})
+                .then(function(data) {
+                  var response=angular.fromJson(data.data);
+                  console.log(response);
+                  
+                  // assumes if ok, response is an object with some data, if not, a string with error
+                  // customize according to your api
+                  if ( response.id==null || response==null || response.id=="" ) {
+                    vm.authMsg = 'Incorrect credentials.';
+                  }else{
+
+                    $window.localStorage.userId=response.id;
+                    // console.log($window.localStorage.userId);
+                    $window.localStorage.userName=response.firstName+" "+response.middleName+" "+response.lastName;
+                    $window.localStorage.position=response.position;
+                    $state.go('app.dashboard');
+                  }
+                }, function() {
+                  vm.authMsg = 'Server Request Error';
+                });
+            }
+            else {
+              // set as dirty if the user click directly to login so we show the validation messages
+              /*jshint -W106*/
+              vm.loginForm.account_email.$dirty = true;
+              vm.loginForm.account_password.$dirty = true;
+            }
+          };
+        }
+    }
+})();
+
+/**=========================================================
+ * Module: access-register.js
+ * Demo for register account api
+ =========================================================*/
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.pages')
+        .controller('RegisterFormController', RegisterFormController);
+
+    RegisterFormController.$inject = ['$http', '$state'];
+    function RegisterFormController($http, $state) {
+        var vm = this;
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+          // bind here all data from the form
+          vm.account = {};
+          // place the message if something goes wrong
+          vm.authMsg = '';
+            
+          vm.register = function() {
+            vm.authMsg = '';
+
+            if(vm.registerForm.$valid) {
+
+              $http
+                .post('api/account/register', {email: vm.account.email, password: vm.account.password})
+                .then(function(response) {
+                  // assumes if ok, response is an object with some data, if not, a string with error
+                  // customize according to your api
+                  if ( !response.account ) {
+                    vm.authMsg = response;
+                  }else{
+                    $state.go('app.dashboard');
+                  }
+                }, function() {
+                  vm.authMsg = 'Server Request Error';
+                });
+            }
+            else {
+              // set as dirty if the user click directly to login so we show the validation messages
+              /*jshint -W106*/
+              vm.registerForm.account_email.$dirty = true;
+              vm.registerForm.account_password.$dirty = true;
+              vm.registerForm.account_agreed.$dirty = true;
+              
+            }
+          };
+        }
+    }
+})();
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.pages')
+        .controller('LeaveProcessController', LeaveProcessController);
+
+   LeaveProcessController.$inject = ['$scope','$http','$rootScope', '$uibModal','LeaveProcessingService','$stateParams', '$state','$timeout','baseURL','$window'];
+    function LeaveProcessController($scope,$http, $rootScope,$uibModal, LeaveProcessingService,$stateParams, $state,$timeout,baseURL,$window) {
+        var vm = this;
+
+        activate();
+
+        ////////////////
+
+
+        function activate() {
+
+ $scope.leavetypeprocess=LeaveProcessingService.query();
+ console.log( $scope.leavetypeprocess);
+
+$scope.leavepost={};
+$http.get(baseURL+'api/employee/'+$window.localStorage.userId).then(function(data) {
+              $scope.employeeData = data.data;
+              $scope.leavepost.employee=$scope.employeeData.id;
+            $http.get(baseURL+'api/department/'+$scope.employeeData.department).then(function(data) {
+                $scope.department = data.data;
+            
+              });
+            });
+
+$http.get(baseURL+'api/leavetype').then(function(data) {
+              $scope.leavetypes = data.data;
+              console.log($scope.leavetypes);
+          
+            });
+
+$http.get(baseURL+'api/leavePostingtype').then(function(data) {
+              $scope.leavetransaction = data.data;
+              console.log($scope.leavetypes);
+          
+            });
+
+
+    $http.get(baseURL+'api/period').then(function(data) {
+              $scope.periods = data.data;
+
+            });
+
+
+
+
+$http.get(baseURL+'api/currentperiod').then(function(data) {
+            
+         $scope.leavepost={};
+          $scope.currentPeriod=data.data;
+      
+      $scope.leavepost.periodId=$scope.currentPeriod.id;
+      $scope.period_description=$scope.currentPeriod.month +' '+ $scope.currentPeriod.year; 
+      console.log($scope.currentPeriod);
+  
+            });
+
+// $scope.employeeChange=function(id){
+              
+
+
+                
+//               for(var r=0;r<$scope.employees.length;r++){
+
+//                 if(id==$scope.employees[r].id){
+//                   $scope.department=$scope.employees[r].department;
+//                   $http.get(baseURL+'api/department/'+$scope.department).then(function(data) {
+//                     $scope.department=data.data.description;
+//                 });
+//                   $scope.employeeName=$scope.employees[r].firstName +' '+ $scope.employees[r].lastName;
+//                 }
+
+//               }
+
+//             }
+
+            $scope.leaveBalance=function(leavepost){
+
+                $http.get(baseURL+'api/leavebalance/'+$window.localStorage.userId+'/'+leavepost.periodId+'/'+leavepost.leaveType).then(function(data) {
+                
+
+                $scope.leavepost.leavebalance=data.data.balance;
+                });
+            
+
+  
+            
+            }
+
+
+$scope.dayDiff = function(firstDate, secondDate){
+  console.log(firstDate);
+    var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds    
+    var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
+    if(diffDays>$scope.leavepost.leavebalance){
+      alert("Leave balance is less than the duration selected!");
+    }
+    $scope.leavepost.duration=diffDays+1;
+    console.log(diffDays);
+}
+
+
+
+       $scope.formatString = function(format) {
+    var day   = parseInt(format.substring(0,2));
+    var month  = parseInt(format.substring(3,5));
+    var year   = parseInt(format.substring(6,10));
+    var date = new Date(year, month-1, day);
+    return date;
+  }
+
+
+     
+             $scope.submitLeaveApplication=function(leavepost,leavepostform) {
+              var d = new Date(leavepost.startDate);
+              console.log(d);
+ var leaveposting=new LeaveProcessingService(leavepost);
+          leaveposting.$save().then(function(data){
+
+             var response=angular.fromJson(data);
+
+          
+            if(response.Status=="1"){
+              $scope.errorMsg=false;
+                    $scope.thenMsg =response.Message;
+            }else{
+           
+               $scope.thenMsg=false;
+                   $scope.errorMsg=response.Message;
+           
+            }
+          $scope.leavePostingReset(leavepostform);
+
+          }, 
+          function() {
+             $scope.thenMsg=false;
+                 $scope.errorMsg = 'Server Request Error';
+                });
+     
+          };
+
+
+  $scope.leavePostingReset=function(leavepostform){
+             $scope.leavepostform={};
+            $scope.leavepost="";
+            leavepostform.$setPristine();
+            };
+
+
+      
+        }
+    }
+
+})();
+
+
+      /**=========================================================
+       * Module: modals.js
+       * Provides a simple way to implement bootstrap modals from templates
+       =========================================================*/
+      (function() {
+          'use strict';
+
+          angular
+              .module('app.pages')
+              .controller('LeaveApprovalController', LeaveApprovalController);
+
+          LeaveApprovalController.$inject = ['$scope','$http', '$rootScope','$uibModal', '$state','$resource','baseURL','$window'];
+          function LeaveApprovalController($scope,$http, $rootScope, $uibModal, $state,$resource,baseURL,$window) {
+              var vm = this;
+
+              activate();
+
+              ////////////////
+
+
+              function activate() {
+
+       var thenMsg;
+       var errorMsg;
+
+           
+
+      var currentperiod=0
+
+                 $http.get(baseURL+'api/currentperiod/').then(function(data) {
+                    var period=data.data;
+                     $http.get(baseURL+'api/leaveapplication/'+period.id+'/'+$window.localStorage.userId).then(function(data) {
+                        $scope.leaveapplicationdata=data.data;
+                     
+                      });                    
+                  });
+
+              }
+          }
+
+      })();
+(function() {
+    'use strict';
+
+    angular
+        .module('app.pages')
+        .factory('LeaveProcessingService', LeaveProcessingService);
+
+    LeaveProcessingService.$inject = ['$resource','baseURL'];
+    function LeaveProcessingService($resource,baseURL) {
+     var data=$resource(baseURL+'api/leaveprocessing/:id', {id: '@id'},
+    { 'get':    {method:'GET', isArray:false},
+  'save':   {method:'POST'},
+  'query':  {method:'GET', isArray:true},
+  'update': { method:'PUT' },
+  'remove': {method:'DELETE'},
+  'delete': {method:'DELETE'} 
+});
+     return data
+          
+       
+    }
+
+})();
+(function() {
+    'use strict';
+
+    angular
+        .module('app.pages')
+        .controller('LogoutController', LoginFormController);
+
+    LoginFormController.$inject = ['$scope','$http', '$state','$window','baseURL'];
+    function LoginFormController($scope, $http, $state,$window,baseURL) {
+
+
+ $scope.Logout=function() {
+            // remove user from local storage and clear http auth header
+            delete $window.localStorage.userId;
+            delete $window.localStorage.userName;
+            delete $window.localStorage.position;
+            
+                $state.go('page.login');
+        }
+
+
+    }
+
+
+})();
+(function() {
+    'use strict';
+
+    angular
+        .module('app.pages')
+        .controller('P9aController', P9aController);
+
+    P9aController.$inject = ['$scope','$http','$resource', 'P9aService','baseURL','$window','uniqueFilter'];
+    function P9aController($scope,$http,$resource,P9aService,baseURL,$window,uniqueFilter) {
+        var vm = this;
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+
+
+        // $scope.p9as=P9aService.get({ year: 2017});
+  
+
+console.log( $scope.p9as);
+
+       var year=2017;
+
+
+       var employeeId=$window.localStorage.userId;
+              $http.get(baseURL+'api/currentperiod').then(function(data) {
+              var period = data.data;
+                $http.get(baseURL+'api/p9areport/'+period.year+'/'+$window.localStorage.userId).then(function(data) {
+                $scope.p9as = data.data;
+                      console.log( $scope.p9as);
+
+              });              
+
+            });
+          
+
+
+
+                 $scope.searchP9a=function(user) {
+
+          if(user.year!=null && user.year!=""){
+           
+                  var employeeId=$window.localStorage.userId;
+          var year=user.year;
+          
+        $http.get(baseURL+'api/p9areport/'+year+'/'+employeeId).then(function(data) {
+              $scope.p9as = data.data;
+                    console.log( $scope.p9as);
+
+            });
+
+          }
+          
+  
+
+         };
+          
+              $http.get(baseURL+'api/period').then(function(data) {
+              $scope.periods = data.data;
+
+            });
+
+
+
+        }
+    }
+})();
+(function() {
+    'use strict';
+
+    angular
+        .module('app.pages')
+        .factory('P9aService', P9aService);
+
+    P9aService.$inject = ['$resource','baseURL'];
+    function P9aService($resource,baseURL) {
+     var data=$resource(baseURL+'api/p9areport/:year', {year: '@year'},
+    { 'get':    {method:'GET', isArray:false},
+  'save':   {method:'POST'},
+  'query':  {method:'GET', isArray:true},
+  'update': { method:'PUT' },
+  'remove': {method:'DELETE'},
+  'delete': {method:'DELETE'} 
+});
+     return data
+          
+       
+    }
+
+})();
+
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.pages')
+        .controller('PayslipController', PayslipController);
+
+    PayslipController.$inject = ['$scope','$rootScope','$http','$resource','$window', 'PayslipService','baseURL'];
+    function PayslipController($scope,$rootScope,$http,$resource,$window,PayslipService,baseURL) {
+        var vm = this;
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+
+
+          $http.get(baseURL+'api/currentperiod').then(function(data) {
+    
+         
+         
+          $http.get(baseURL+'api/payslipreport/'+data.data.id+'/'+$window.localStorage.userId).then(function(data) {
+               $scope.persons= data.data;
+               console.log($scope.persons);
+
+
+
+
+
+
+
+            });          
+      
+  
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         $scope.searchPayslip=function(user) {
+ // $scope.persons= null;
+          if(user.period!=null && user.period!=""){
+    
+           var employeeId=user.employeeNumber;
+           var period=user.period;
+
+
+     
+          $http.get(baseURL+'api/payslipreport/'+period+'/'+$window.localStorage.userId).then(function(data) {
+                $scope.persons= data.data;
+
+
+
+
+
+
+
+            });
+
+          }
+          
+
+         };
+
+
+// $http.get(baseURL+'api/currentperiod').then(function(data) {
+//           $scope.user={};
+//           $scope.currentPeriodData=data.data;
+//     $scope.currentperiod=$scope.currentPeriodData.period;
+//       $scope.user.period=$scope.currentperiod;
+     
+
+//       $scope.searchpayslipByperiod($scope.currentperiod);
+//      });
+
+
+
+  $http.get(baseURL+'api/period').then(function(data) {
+              $scope.periods = data.data;
+              console.log($scope.periods);
+
+            });
+
+
+
+
+
+$scope.printDiv = function (div) {
+ 
+  var docHead = document.head.outerHTML;
+  var printContents = document.getElementById(div).outerHTML;
+  var winAttr = "location=yes, statusbar=no, menubar=no, titlebar=no, toolbar=no,dependent=no, width=865, height=600, resizable=yes, screenX=200, screenY=200, personalbar=no, scrollbars=yes";
+
+  var newWin = window.open("", "_blank", winAttr);
+  var writeDoc = newWin.document;
+  writeDoc.open();
+  writeDoc.write('<!doctype html><html>' + docHead + '<body onLoad="window.print()">' + printContents + '</body></html>');
+  writeDoc.close();
+  newWin.focus();
+}
+
+        }
+    }
+})();
+(function() {
+    'use strict';
+
+    angular
+        .module('app.pages')
+        .factory('PayslipService', PayslipService);
+
+    PayslipService.$inject = ['$resource','baseURL'];
+    function PayslipService($resource,baseURL) {
+     var data=$resource(baseURL+'/payslipreport/:id', {id: '@id'},
+    { 'get':    {method:'GET', isArray:false},
+  'save':   {method:'POST'},
+  'query':  {method:'GET', isArray:true},
+  'update': { method:'PUT' },
+  'remove': {method:'DELETE'},
+  'delete': {method:'DELETE'} 
+});
+     return data
+          
+       
+    }
+
+})();
+
+  (function() {
+      'use strict';
+
+      angular
+          .module('app.pages')
+          .controller('EmployeeProfileController', EmployeeProfileController);
+
+  EmployeeProfileController.$inject = ['$stateParams', '$state','$http','$scope','$window','EmployeeProfileService'];
+      function EmployeeProfileController($stateParams, $state,$http,$scope,$window, EmployeeProfileService) {
+        
+          var vm = this;
+
+          activate();
+
+
+          function activate() {
+
+   
+             var empid=$window.localStorage.userId;
+              if(empid!=null){
+             $scope.profile=EmployeeProfileService.get({id:empid});
+            }
+             
+           
+
+          }
+      }
+
+  })();
+
+
+  (function() {
+      'use strict';
+
+      angular
+          .module('app.pages')
+          .factory('EmployeeProfileService', EmployeeProfileService);
+
+      EmployeeProfileService.$inject = ['$resource','baseURL'];
+      function EmployeeProfileService($resource,baseURL) {
+       var data=$resource(baseURL+'api/employee/:id', {id: '@id'},
+      { 'get':    {method:'GET', isArray:false},
+    'save':   {method:'POST'},
+    'query':  {method:'GET', isArray:true},
+    'update': { method:'PUT' },
+    'remove': {method:'DELETE'},
+    'delete': {method:'DELETE'} 
+  });
+       return data
+            
+         
+      }
+
+  })();
+(function() {
+    'use strict';
+
+    angular
+        .module('app.preloader')
+        .directive('preloader', preloader);
+
+    preloader.$inject = ['$animate', '$timeout', '$q'];
+    function preloader ($animate, $timeout, $q) {
+
+        var directive = {
+            restrict: 'EAC',
+            template: 
+              '<div class="preloader-progress">' +
+                  '<div class="preloader-progress-bar" ' +
+                       'ng-style="{width: loadCounter + \'%\'}"></div>' +
+              '</div>'
+            ,
+            link: link
+        };
+        return directive;
+
+        ///////
+
+        function link(scope, el) {
+
+          scope.loadCounter = 0;
+
+          var counter  = 0,
+              timeout;
+
+          // disables scrollbar
+          angular.element('body').css('overflow', 'hidden');
+          // ensure class is present for styling
+          el.addClass('preloader');
+
+          appReady().then(endCounter);
+
+          timeout = $timeout(startCounter);
+
+          ///////
+
+          function startCounter() {
+
+            var remaining = 100 - counter;
+            counter = counter + (0.015 * Math.pow(1 - Math.sqrt(remaining), 2));
+
+            scope.loadCounter = parseInt(counter, 10);
+
+            timeout = $timeout(startCounter, 20);
+          }
+
+          function endCounter() {
+
+            $timeout.cancel(timeout);
+
+            scope.loadCounter = 100;
+
+            $timeout(function(){
+              // animate preloader hiding
+              $animate.addClass(el, 'preloader-hidden');
+              // retore scrollbar
+              angular.element('body').css('overflow', '');
+            }, 300);
+          }
+
+          function appReady() {
+            var deferred = $q.defer();
+            var viewsLoaded = 0;
+            // if this doesn't sync with the real app ready
+            // a custom event must be used instead
+            var off = scope.$on('$viewContentLoaded', function () {
+              viewsLoaded ++;
+              // we know there are at least two views to be loaded 
+              // before the app is ready (1-index.html 2-app*.html)
+              if ( viewsLoaded === 2) {
+                // with resolve this fires only once
+                $timeout(function(){
+                  deferred.resolve();
+                }, 3000);
+
+                off();
+              }
+
+            });
+
+            return deferred.promise;
+          }
+
+        } //link
+    }
+
+})();
 /**=========================================================
  * Collapse panels * [panel-collapse]
  =========================================================*/
@@ -6555,667 +6616,6 @@ angular.module('angle').constant('baseURL',
         }
     }
 })();
-/**=========================================================
- * Module: access-login.js
- * Demo for login api
- =========================================================*/
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.pages')
-        .controller('LoginFormController', LoginFormController);
-
-    LoginFormController.$inject = ['$http', '$state','$window','baseURL'];
-    function LoginFormController($http, $state,$window,baseURL) {
-        var vm = this;
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-          // bind here all data from the form
-          vm.account = {};
-          // place the message if something goes wrong
-          vm.authMsg = '';
-
-          vm.login = function() {
-            vm.authMsg = '';
-
-            if(vm.loginForm.$valid) {
-
-              $http
-                .post(baseURL+'api/employee-login/', {userName: vm.account.email, password: vm.account.password})
-                .then(function(data) {
-                  var response=angular.fromJson(data.data);
-                  console.log(response);
-                  
-                  // assumes if ok, response is an object with some data, if not, a string with error
-                  // customize according to your api
-                  if ( response.id==null || response==null || response.id=="" ) {
-                    vm.authMsg = 'Incorrect credentials.';
-                  }else{
-
-                    $window.localStorage.userId=response.id;
-                    // console.log($window.localStorage.userId);
-                    $window.localStorage.userName=response.firstName+" "+response.middleName+" "+response.lastName;
-                    $window.localStorage.position=response.position;
-                    $state.go('app.dashboard');
-                  }
-                }, function() {
-                  vm.authMsg = 'Server Request Error';
-                });
-            }
-            else {
-              // set as dirty if the user click directly to login so we show the validation messages
-              /*jshint -W106*/
-              vm.loginForm.account_email.$dirty = true;
-              vm.loginForm.account_password.$dirty = true;
-            }
-          };
-        }
-    }
-})();
-
-/**=========================================================
- * Module: access-register.js
- * Demo for register account api
- =========================================================*/
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.pages')
-        .controller('RegisterFormController', RegisterFormController);
-
-    RegisterFormController.$inject = ['$http', '$state'];
-    function RegisterFormController($http, $state) {
-        var vm = this;
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-          // bind here all data from the form
-          vm.account = {};
-          // place the message if something goes wrong
-          vm.authMsg = '';
-            
-          vm.register = function() {
-            vm.authMsg = '';
-
-            if(vm.registerForm.$valid) {
-
-              $http
-                .post('api/account/register', {email: vm.account.email, password: vm.account.password})
-                .then(function(response) {
-                  // assumes if ok, response is an object with some data, if not, a string with error
-                  // customize according to your api
-                  if ( !response.account ) {
-                    vm.authMsg = response;
-                  }else{
-                    $state.go('app.dashboard');
-                  }
-                }, function() {
-                  vm.authMsg = 'Server Request Error';
-                });
-            }
-            else {
-              // set as dirty if the user click directly to login so we show the validation messages
-              /*jshint -W106*/
-              vm.registerForm.account_email.$dirty = true;
-              vm.registerForm.account_password.$dirty = true;
-              vm.registerForm.account_agreed.$dirty = true;
-              
-            }
-          };
-        }
-    }
-})();
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.pages')
-        .controller('LeaveProcessController', LeaveProcessController);
-
-   LeaveProcessController.$inject = ['$scope','$http','$rootScope', '$uibModal','LeaveProcessingService','$stateParams', '$state','$timeout','baseURL','$window'];
-    function LeaveProcessController($scope,$http, $rootScope,$uibModal, LeaveProcessingService,$stateParams, $state,$timeout,baseURL,$window) {
-        var vm = this;
-
-        activate();
-
-        ////////////////
-
-
-        function activate() {
-
- $scope.leavetypeprocess=LeaveProcessingService.query();
- console.log( $scope.leavetypeprocess);
-
-
-$http.get(baseURL+'api/employee/'+$window.localStorage.userId).then(function(data) {
-              $scope.employeeData = data.data;
-              $scope.leavepost.employee=$scope.employeeData.id;
-            $http.get(baseURL+'api/department/'+$scope.employeeData.department).then(function(data) {
-                $scope.department = data.data;
-            
-              });
-            });
-
-$http.get(baseURL+'api/leavetype').then(function(data) {
-              $scope.leavetypes = data.data;
-              console.log($scope.leavetypes);
-          
-            });
-
-$http.get(baseURL+'api/leavePostingtype').then(function(data) {
-              $scope.leavetransaction = data.data;
-              console.log($scope.leavetypes);
-          
-            });
-
-
-    $http.get(baseURL+'api/period').then(function(data) {
-              $scope.periods = data.data;
-
-            });
-
-
-
-
-$http.get(baseURL+'api/currentperiod').then(function(data) {
-            
-         $scope.leavepost={};
-          $scope.currentPeriod=data.data;
-      
-      $scope.leavepost.periodId=$scope.currentPeriod.id;
-      $scope.period_description=$scope.currentPeriod.month +' '+ $scope.currentPeriod.year; 
-      console.log($scope.currentPeriod);
-  
-            });
-
-// $scope.employeeChange=function(id){
-              
-
-
-                
-//               for(var r=0;r<$scope.employees.length;r++){
-
-//                 if(id==$scope.employees[r].id){
-//                   $scope.department=$scope.employees[r].department;
-//                   $http.get(baseURL+'api/department/'+$scope.department).then(function(data) {
-//                     $scope.department=data.data.description;
-//                 });
-//                   $scope.employeeName=$scope.employees[r].firstName +' '+ $scope.employees[r].lastName;
-//                 }
-
-//               }
-
-//             }
-
-            $scope.leaveBalance=function(leavepost){
-
-                $http.get(baseURL+'api/leavebalance/'+$window.localStorage.userId+'/'+leavepost.periodId+'/'+leavepost.leaveType).then(function(data) {
-                
-
-                $scope.leavepost.leavebalance=data.data.balance;
-                });
-            
-
-  
-            
-            }
-
-
-$scope.dayDiff = function(firstDate, secondDate){
-  console.log(firstDate);
-    var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds    
-    var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
-    if(diffDays>$scope.leavepost.leavebalance){
-      alert("Leave balance is less than the duration selected!");
-    }
-    $scope.leavepost.duration=diffDays+1;
-    console.log(diffDays);
-}
-
-
-
-       $scope.formatString = function(format) {
-    var day   = parseInt(format.substring(0,2));
-    var month  = parseInt(format.substring(3,5));
-    var year   = parseInt(format.substring(6,10));
-    var date = new Date(year, month-1, day);
-    return date;
-  }
-
-
-     
-             $scope.submitLeaveApplication=function(leavepost,leavepostform) {
-              var d = new Date(leavepost.startDate);
-              console.log(d);
- var leaveposting=new LeaveProcessingService(leavepost);
-          leaveposting.$save().then(function(data){
-
-             var response=angular.fromJson(data);
-
-          
-            if(response.Status=="1"){
-              $scope.errorMsg=false;
-                    $scope.thenMsg =response.Message;
-            }else{
-           
-               $scope.thenMsg=false;
-                   $scope.errorMsg=response.Message;
-           
-            }
-          $scope.leavePostingReset(leavepostform);
-
-          }, 
-          function() {
-             $scope.thenMsg=false;
-                 $scope.errorMsg = 'Server Request Error';
-                });
-     
-          };
-
-
-  $scope.leavePostingReset=function(leavepostform){
-             $scope.leavepostform={};
-            $scope.leavepost="";
-            leavepostform.$setPristine();
-            };
-
-
-      
-        }
-    }
-
-})();
-
-
-      /**=========================================================
-       * Module: modals.js
-       * Provides a simple way to implement bootstrap modals from templates
-       =========================================================*/
-      (function() {
-          'use strict';
-
-          angular
-              .module('app.pages')
-              .controller('LeaveApprovalController', LeaveApprovalController);
-
-          LeaveApprovalController.$inject = ['$scope','$http', '$rootScope','$uibModal', '$state','$resource','baseURL','$window'];
-          function LeaveApprovalController($scope,$http, $rootScope, $uibModal, $state,$resource,baseURL,$window) {
-              var vm = this;
-
-              activate();
-
-              ////////////////
-
-
-              function activate() {
-
-       var thenMsg;
-       var errorMsg;
-
-           
-
-      var currentperiod=0
-
-                 $http.get(baseURL+'api/currentperiod/').then(function(data) {
-                    var period=data.data;
-                     $http.get(baseURL+'api/leaveapplication/'+period.id+'/'+$window.localStorage.userId).then(function(data) {
-                        $scope.leaveapplicationdata=data.data;
-                     
-                      });                    
-                  });
-
-              }
-          }
-
-      })();
-(function() {
-    'use strict';
-
-    angular
-        .module('app.pages')
-        .factory('LeaveProcessingService', LeaveProcessingService);
-
-    LeaveProcessingService.$inject = ['$resource','baseURL'];
-    function LeaveProcessingService($resource,baseURL) {
-     var data=$resource(baseURL+'api/leaveprocessing/:id', {id: '@id'},
-    { 'get':    {method:'GET', isArray:false},
-  'save':   {method:'POST'},
-  'query':  {method:'GET', isArray:true},
-  'update': { method:'PUT' },
-  'remove': {method:'DELETE'},
-  'delete': {method:'DELETE'} 
-});
-     return data
-          
-       
-    }
-
-})();
-(function() {
-    'use strict';
-
-    angular
-        .module('app.pages')
-        .controller('LogoutController', LoginFormController);
-
-    LoginFormController.$inject = ['$scope','$http', '$state','$window','baseURL'];
-    function LoginFormController($scope, $http, $state,$window,baseURL) {
-
-
- $scope.Logout=function() {
-            // remove user from local storage and clear http auth header
-            delete $window.localStorage.userId;
-            delete $window.localStorage.userName;
-            delete $window.localStorage.position;
-            
-                $state.go('page.login');
-        }
-
-
-    }
-
-
-})();
-(function() {
-    'use strict';
-
-    angular
-        .module('app.pages')
-        .controller('P9aController', P9aController);
-
-    P9aController.$inject = ['$scope','$http','$resource', 'P9aService','baseURL','$window'];
-    function P9aController($scope,$http,$resource,P9aService,baseURL,$window) {
-        var vm = this;
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-
-
-        // $scope.p9as=P9aService.get({ year: 2017});
-  
-
-console.log( $scope.p9as);
-
-       var year=2017;
-
-       var employeeId=0;
-              $http.get(baseURL+'api/currentperiod').then(function(data) {
-              var period = data.data;
-                $http.get(baseURL+'api/p9areport/'+period.year+'/'+$window.localStorage.userId).then(function(data) {
-                $scope.p9as = data.data;
-                      console.log( $scope.p9as);
-
-              });              
-
-            });
-          
-
-
-
-                 $scope.searchP9a=function(user) {
-
-          if(user.year!=null && user.year!=""){
-           
-                  var employeeId=user.employeeId;
-          var year=user.year;
-          
-        $http.get(baseURL+'api/p9areport/'+year+'/'+employeeId).then(function(data) {
-              $scope.p9as = data.data;
-                    console.log( $scope.p9as);
-
-            });
-
-          }
-          
-  
-
-         };
-          
-              $http.get(baseURL+'api/period').then(function(data) {
-              $scope.periods = data.data;
-
-            });
-
-
-
-        }
-    }
-})();
-(function() {
-    'use strict';
-
-    angular
-        .module('app.pages')
-        .factory('P9aService', P9aService);
-
-    P9aService.$inject = ['$resource','baseURL'];
-    function P9aService($resource,baseURL) {
-     var data=$resource(baseURL+'api/p9areport/:year', {year: '@year'},
-    { 'get':    {method:'GET', isArray:false},
-  'save':   {method:'POST'},
-  'query':  {method:'GET', isArray:true},
-  'update': { method:'PUT' },
-  'remove': {method:'DELETE'},
-  'delete': {method:'DELETE'} 
-});
-     return data
-          
-       
-    }
-
-})();
-
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.pages')
-        .controller('PayslipController', PayslipController);
-
-    PayslipController.$inject = ['$scope','$rootScope','$http','$resource','$window', 'PayslipService','baseURL'];
-    function PayslipController($scope,$rootScope,$http,$resource,$window,PayslipService,baseURL) {
-        var vm = this;
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-
-
-          $http.get(baseURL+'api/currentperiod').then(function(data) {
-    
-         
-         
-          $http.get(baseURL+'api/payslipreport/'+data.data.id+'/'+$window.localStorage.userId).then(function(data) {
-               $scope.persons= data.data;
-               console.log($scope.persons);
-
-
-
-
-
-
-
-            });          
-      
-  
-            });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         $scope.searchPayslip=function(user) {
- // $scope.persons= null;
-          if(user.period!=null && user.period!=""){
-    
-           var employeeId=user.employeeNumber;
-           var period=user.period;
-
-
-     
-          $http.get(baseURL+'api/payslipreport/'+period+'/'+$window.localStorage.userId).then(function(data) {
-                $scope.persons= data.data;
-
-
-
-
-
-
-
-            });
-
-          }
-          
-
-         };
-
-
-// $http.get(baseURL+'api/currentperiod').then(function(data) {
-//           $scope.user={};
-//           $scope.currentPeriodData=data.data;
-//     $scope.currentperiod=$scope.currentPeriodData.period;
-//       $scope.user.period=$scope.currentperiod;
-     
-
-//       $scope.searchpayslipByperiod($scope.currentperiod);
-//      });
-
-
-
-  $http.get(baseURL+'api/period').then(function(data) {
-              $scope.periods = data.data;
-              console.log($scope.periods);
-
-            });
-
-
-
-
-
-$scope.printDiv = function (div) {
- 
-  var docHead = document.head.outerHTML;
-  var printContents = document.getElementById(div).outerHTML;
-  var winAttr = "location=yes, statusbar=no, menubar=no, titlebar=no, toolbar=no,dependent=no, width=865, height=600, resizable=yes, screenX=200, screenY=200, personalbar=no, scrollbars=yes";
-
-  var newWin = window.open("", "_blank", winAttr);
-  var writeDoc = newWin.document;
-  writeDoc.open();
-  writeDoc.write('<!doctype html><html>' + docHead + '<body onLoad="window.print()">' + printContents + '</body></html>');
-  writeDoc.close();
-  newWin.focus();
-}
-
-        }
-    }
-})();
-(function() {
-    'use strict';
-
-    angular
-        .module('app.pages')
-        .factory('PayslipService', PayslipService);
-
-    PayslipService.$inject = ['$resource','baseURL'];
-    function PayslipService($resource,baseURL) {
-     var data=$resource(baseURL+'/payslipreport/:id', {id: '@id'},
-    { 'get':    {method:'GET', isArray:false},
-  'save':   {method:'POST'},
-  'query':  {method:'GET', isArray:true},
-  'update': { method:'PUT' },
-  'remove': {method:'DELETE'},
-  'delete': {method:'DELETE'} 
-});
-     return data
-          
-       
-    }
-
-})();
-
-  (function() {
-      'use strict';
-
-      angular
-          .module('app.pages')
-          .controller('EmployeeProfileController', EmployeeProfileController);
-
-  EmployeeProfileController.$inject = ['$stateParams', '$state','$http','$scope','$window','EmployeeProfileService'];
-      function EmployeeProfileController($stateParams, $state,$http,$scope,$window, EmployeeProfileService) {
-        
-          var vm = this;
-
-          activate();
-
-
-          function activate() {
-
-   
-             var empid=$window.localStorage.userId;
-              if(empid!=null){
-             $scope.profile=EmployeeProfileService.get({id:empid});
-            }
-             
-           
-
-          }
-      }
-
-  })();
-
-
-  (function() {
-      'use strict';
-
-      angular
-          .module('app.pages')
-          .factory('EmployeeProfileService', EmployeeProfileService);
-
-      EmployeeProfileService.$inject = ['$resource','baseURL'];
-      function EmployeeProfileService($resource,baseURL) {
-       var data=$resource(baseURL+'api/employee/:id', {id: '@id'},
-      { 'get':    {method:'GET', isArray:false},
-    'save':   {method:'POST'},
-    'query':  {method:'GET', isArray:true},
-    'update': { method:'PUT' },
-    'remove': {method:'DELETE'},
-    'delete': {method:'DELETE'} 
-  });
-       return data
-            
-         
-      }
-
-  })();
 /**=========================================================
  * Module: helpers.js
  * Provides helper functions for routes definition
@@ -7993,19 +7393,15 @@ $scope.printDiv = function (div) {
 })();
 
 
-/**=========================================================
- * Module: demo-notify.js
- * Provides a simple demo for notify
- =========================================================*/
+
 (function() {
     'use strict';
 
     angular
-        .module('app.notify')
-        .controller('NotifyDemoCtrl', NotifyDemoCtrl);
+        .module('app.elements')
+        .controller('AngularCarouselController', AngularCarouselController);
 
-    NotifyDemoCtrl.$inject = ['Notify', '$timeout'];
-    function NotifyDemoCtrl(Notify, $timeout) {
+    function AngularCarouselController() {
         var vm = this;
 
         activate();
@@ -8013,267 +7409,1402 @@ $scope.printDiv = function (div) {
         ////////////////
 
         function activate() {
-          vm.msgHtml = '<em class="fa fa-check"></em> Message with icon..';
+          vm.colors = ['#fc0003', '#f70008', '#f2000d', '#ed0012', '#e80017', '#e3001c', '#de0021', '#d90026', '#d4002b', '#cf0030', '#c90036', '#c4003b', '#bf0040', '#ba0045', '#b5004a', '#b0004f', '#ab0054', '#a60059', '#a1005e', '#9c0063', '#960069', '#91006e', '#8c0073', '#870078', '#82007d', '#7d0082', '#780087', '#73008c', '#6e0091', '#690096', '#63009c', '#5e00a1', '#5900a6', '#5400ab', '#4f00b0', '#4a00b5', '#4500ba', '#4000bf', '#3b00c4', '#3600c9', '#3000cf', '#2b00d4', '#2600d9', '#2100de', '#1c00e3', '#1700e8', '#1200ed', '#0d00f2', '#0800f7', '#0300fc'];
 
-          vm.notifyMsg = 'Some messages here..';
-          vm.notifyOpts = {
-            status: 'danger',
-            pos: 'bottom-center'
+          function getSlide(target, style) {
+              var i = target.length;
+              return {
+                  id: (i + 1),
+                  label: 'slide #' + (i + 1),
+                  img: 'http://lorempixel.com/1200/500/' + style + '/' + ((i + 1) % 10) ,
+                  color: vm.colors[ (i*10) % vm.colors.length],
+                  odd: (i % 2 === 0)
+              };
+          }
+
+          function addSlide(target, style) {
+              target.push(getSlide(target, style));
+          }
+
+          vm.carouselIndex = 3;
+          vm.carouselIndex2 = 0;
+          vm.carouselIndex2 = 1;
+          vm.carouselIndex3 = 5;
+          vm.carouselIndex4 = 5;
+
+          function addSlides(target, style, qty) {
+              for (var i=0; i < qty; i++) {
+                  addSlide(target, style);
+              }
+          }
+
+          // 1st ngRepeat demo
+          vm.slides = [];
+          addSlides(vm.slides, 'sports', 50);
+
+          // 2nd ngRepeat demo
+          vm.slides2 = [];
+          addSlides(vm.slides2, 'sports', 10);
+
+          // 3rd ngRepeat demo
+          vm.slides3 = [];
+          addSlides(vm.slides3, 'people', 50);
+
+          // 4th ngRepeat demo
+          vm.slides4 = [];
+          addSlides(vm.slides4, 'city', 50);
+
+
+          // 5th ngRepeat demo
+          vm.slides6 = [];
+          vm.carouselIndex6 = 0;
+          addSlides(vm.slides6, 'sports', 10);
+          vm.addSlide = function(at) {
+              if(at==='head') {
+                  vm.slides6.unshift(getSlide(vm.slides6, 'people'));
+              } else {
+                  vm.slides6.push(getSlide(vm.slides6, 'people'));
+              }
           };
-
-          // Service usage example
-          $timeout(function(){
-            
-            Notify.alert( 
-                'This is a custom message from notify..', 
-                {status: 'success'}
-            );
-          
-          }, 500);
         }
     }
 })();
 
 /**=========================================================
- * Module: notify.js
- * Directive for notify plugin
+ * Module: demo-dialog.js
+ * Demo for multiple ngDialog Usage
+ * - ngDialogProvider for default values not supported 
+ *   using lazy loader. Include plugin in base.js instead.
  =========================================================*/
 
 (function() {
     'use strict';
 
     angular
-        .module('app.notify')
-        .directive('notify', notify);
+        .module('app.elements')
+        .controller('DialogIntroCtrl', DialogIntroCtrl)
+        .controller('DialogMainCtrl', DialogMainCtrl)
+        .controller('InsideCtrl', InsideCtrl)
+        .controller('SecondModalCtrl', SecondModalCtrl);
 
-    notify.$inject = ['$window', 'Notify'];
-    function notify ($window, Notify) {
-
-        var directive = {
-            link: link,
-            restrict: 'A',
-            scope: {
-              options: '=',
-              message: '='
-            }
-        };
-        return directive;
-
-        function link(scope, element) {
-
-          element.on('click', function (e) {
-            e.preventDefault();
-            Notify.alert(scope.message, scope.options);
-          });
-        }
-
-    }
-
-})();
-
-
-/**=========================================================
- * Module: notify.js
- * Create a notifications that fade out automatically.
- * Based on Notify addon from UIKit (http://getuikit.com/docs/addons_notify.html)
- =========================================================*/
-
-(function() {
-    'use strict';
-    angular
-        .module('app.notify')
-        .service('Notify', Notify);
-
-    Notify.$inject = ['$timeout'];
-    function Notify($timeout) {
-
-        this.alert = notifyAlert;
+    DialogIntroCtrl.$inject = ['$scope', 'ngDialog', 'tpl'];
+    // Called from the route state. 'tpl' is resolved before
+    function DialogIntroCtrl($scope, ngDialog, tpl) {
+        
+        activate();
 
         ////////////////
 
-        function notifyAlert(msg, opts) {
-            if ( msg ) {
-                $timeout(function(){
-                    $.notify(msg, opts || {});
-                });
-            }
+        function activate() {
+          // share with other controllers
+          $scope.tpl = tpl;
+          // open dialog window
+          ngDialog.open({
+            template: tpl.path,
+            // plain: true,
+            className: 'ngdialog-theme-default'
+          });
         }
     }
 
-})();
-
-/**
- * Notify Addon definition as jQuery plugin
- * Adapted version to work with Bootstrap classes
- * More information http://getuikit.com/docs/addons_notify.html
- */
-(function($){
-    'use strict';
-    var containers = {},
-        messages   = {},
-        notify     =  function(options){
-            if ($.type(options) === 'string') {
-                options = { message: options };
-            }
-            if (arguments[1]) {
-                options = $.extend(options, $.type(arguments[1]) === 'string' ? {status:arguments[1]} : arguments[1]);
-            }
-            return (new Message(options)).show();
-        },
-        closeAll  = function(group, instantly){
-            var id;
-            if(group) {
-                for(id in messages) { if(group===messages[id].group) messages[id].close(instantly); }
-            } else {
-                for(id in messages) { messages[id].close(instantly); }
-            }
-        };
-    var Message = function(options){
-        // var $this = this;
-        this.options = $.extend({}, Message.defaults, options);
-        this.uuid    = 'ID'+(new Date().getTime())+'RAND'+(Math.ceil(Math.random() * 100000));
-        this.element = $([
-            // @geedmo: alert-dismissable enables bs close icon
-            '<div class="uk-notify-message alert-dismissable">',
-                '<a class="close">&times;</a>',
-                '<div>'+this.options.message+'</div>',
-            '</div>'
-        ].join('')).data('notifyMessage', this);
-        // status
-        if (this.options.status) {
-            this.element.addClass('alert alert-'+this.options.status);
-            this.currentstatus = this.options.status;
-        }
-        this.group = this.options.group;
-        messages[this.uuid] = this;
-        if(!containers[this.options.pos]) {
-            containers[this.options.pos] = $('<div class="uk-notify uk-notify-'+this.options.pos+'"></div>').appendTo('body').on('click', '.uk-notify-message', function(){
-                $(this).data('notifyMessage').close();
-            });
-        }
-    };
-    $.extend(Message.prototype, {
-        uuid: false,
-        element: false,
-        timout: false,
-        currentstatus: '',
-        group: false,
-        show: function() {
-            if (this.element.is(':visible')) return;
-            var $this = this;
-            containers[this.options.pos].show().prepend(this.element);
-            var marginbottom = parseInt(this.element.css('margin-bottom'), 10);
-            this.element.css({'opacity':0, 'margin-top': -1*this.element.outerHeight(), 'margin-bottom':0}).animate({'opacity':1, 'margin-top': 0, 'margin-bottom':marginbottom}, function(){
-                if ($this.options.timeout) {
-                    var closefn = function(){ $this.close(); };
-                    $this.timeout = setTimeout(closefn, $this.options.timeout);
-                    $this.element.hover(
-                        function() { clearTimeout($this.timeout); },
-                        function() { $this.timeout = setTimeout(closefn, $this.options.timeout);  }
-                    );
-                }
-            });
-            return this;
-        },
-        close: function(instantly) {
-            var $this    = this,
-                finalize = function(){
-                    $this.element.remove();
-                    if(!containers[$this.options.pos].children().length) {
-                        containers[$this.options.pos].hide();
-                    }
-                    delete messages[$this.uuid];
-                };
-            if(this.timeout) clearTimeout(this.timeout);
-            if(instantly) {
-                finalize();
-            } else {
-                this.element.animate({'opacity':0, 'margin-top': -1* this.element.outerHeight(), 'margin-bottom':0}, function(){
-                    finalize();
-                });
-            }
-        },
-        content: function(html){
-            var container = this.element.find('>div');
-            if(!html) {
-                return container.html();
-            }
-            container.html(html);
-            return this;
-        },
-        status: function(status) {
-            if(!status) {
-                return this.currentstatus;
-            }
-            this.element.removeClass('alert alert-'+this.currentstatus).addClass('alert alert-'+status);
-            this.currentstatus = status;
-            return this;
-        }
-    });
-    Message.defaults = {
-        message: '',
-        status: 'normal',
-        timeout: 5000,
-        group: null,
-        pos: 'top-center'
-    };
-    
-    $.notify          = notify;
-    $.notify.message  = Message;
-    $.notify.closeAll = closeAll;
-    
-    return notify;
-}(jQuery));
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.locale')
-        .config(localeConfig)
-        ;
-    localeConfig.$inject = ['tmhDynamicLocaleProvider'];
-    function localeConfig(tmhDynamicLocaleProvider){
-  
-      tmhDynamicLocaleProvider.localeLocationPattern('vendor/angular-i18n/angular-locale_{{locale}}.js');
-      // tmhDynamicLocaleProvider.useStorage('$cookieStore');
-
-    }
-})();
-/**=========================================================
- * Module: locale.js
- * Demo for locale settings
- =========================================================*/
-(function() {
-    'use strict';
-
-    angular
-        .module('app.locale')
-        .controller('LocalizationController', LocalizationController);
-
-    LocalizationController.$inject = ['$rootScope', 'tmhDynamicLocale', '$locale'];
-    function LocalizationController($rootScope, tmhDynamicLocale, $locale) {
+    DialogMainCtrl.$inject = ['$scope', '$rootScope', 'ngDialog'];
+    // Loads from view
+    function DialogMainCtrl($scope, $rootScope, ngDialog) {
 
         activate();
 
         ////////////////
 
         function activate() {
-          $rootScope.availableLocales = {
-            'en': 'English',
-            'es': 'Spanish',
-            'de': 'German',
-            'fr': 'French',
-            'ar': 'Arabic',
-            'ja': 'Japanese',
-            'ko': 'Korean',
-            'zh': 'Chinese'};
+          $rootScope.jsonData = '{"foo": "bar"}';
+          $rootScope.theme = 'ngdialog-theme-default';
+
+          $scope.directivePreCloseCallback = function (value) {
+            if(confirm('Close it? MainCtrl.Directive. (Value = ' + value + ')')) {
+              return true;
+            }
+            return false;
+          };
+
+          $scope.preCloseCallbackOnScope = function (value) {
+            if(confirm('Close it? MainCtrl.OnScope (Value = ' + value + ')')) {
+              return true;
+            }
+            return false;
+          };
+
+          $scope.open = function () {
+            ngDialog.open({ template: 'firstDialogId', controller: 'InsideCtrl', data: {foo: 'some data'} });
+          };
+
+          $scope.openDefault = function () {
+            ngDialog.open({
+              template: 'firstDialogId',
+              controller: 'InsideCtrl',
+              className: 'ngdialog-theme-default'
+            });
+          };
+
+          $scope.openDefaultWithPreCloseCallbackInlined = function () {
+            ngDialog.open({
+              template: 'firstDialogId',
+              controller: 'InsideCtrl',
+              className: 'ngdialog-theme-default',
+              preCloseCallback: function(value) {
+                if (confirm('Close it?  (Value = ' + value + ')')) {
+                  return true;
+                }
+                return false;
+              }
+            });
+          };
+
+          $scope.openConfirm = function () {
+            ngDialog.openConfirm({
+              template: 'modalDialogId',
+              className: 'ngdialog-theme-default'
+            }).then(function (value) {
+              console.log('Modal promise resolved. Value: ', value);
+            }, function (reason) {
+              console.log('Modal promise rejected. Reason: ', reason);
+            });
+          };
+
+          $scope.openConfirmWithPreCloseCallbackOnScope = function () {
+            ngDialog.openConfirm({
+              template: 'modalDialogId',
+              className: 'ngdialog-theme-default',
+              preCloseCallback: 'preCloseCallbackOnScope',
+              scope: $scope
+            }).then(function (value) {
+              console.log('Modal promise resolved. Value: ', value);
+            }, function (reason) {
+              console.log('Modal promise rejected. Reason: ', reason);
+            });
+          };
+
+          $scope.openConfirmWithPreCloseCallbackInlinedWithNestedConfirm = function () {
+            ngDialog.openConfirm({
+              template: 'dialogWithNestedConfirmDialogId',
+              className: 'ngdialog-theme-default',
+              preCloseCallback: function(/*value*/) {
+
+                var nestedConfirmDialog = ngDialog.openConfirm({
+                  template:
+                      '<p>Are you sure you want to close the parent dialog?</p>' +
+                      '<div>' +
+                        '<button type="button" class="btn btn-default" ng-click="closeThisDialog(0)">No' +
+                        '<button type="button" class="btn btn-primary" ng-click="confirm(1)">Yes' +
+                      '</button></div>',
+                  plain: true,
+                  className: 'ngdialog-theme-default'
+                });
+
+                return nestedConfirmDialog;
+              },
+              scope: $scope
+            })
+            .then(function(value){
+              console.log('resolved:' + value);
+              // Perform the save here
+            }, function(value){
+              console.log('rejected:' + value);
+
+            });
+          };
+
+          $scope.openInlineController = function () {
+            $rootScope.theme = 'ngdialog-theme-default';
+
+            ngDialog.open({
+              template: 'withInlineController',
+              controller: ['$scope', '$timeout', function ($scope, $timeout) {
+                var counter = 0;
+                var timeout;
+                function count() {
+                  $scope.exampleExternalData = 'Counter ' + (counter++);
+                  timeout = $timeout(count, 450);
+                }
+                count();
+                $scope.$on('$destroy', function () {
+                  $timeout.cancel(timeout);
+                });
+              }],
+              className: 'ngdialog-theme-default'
+            });
+          };
+
+          $scope.openTemplate = function () {
+            $scope.value = true;
+
+            ngDialog.open({
+              template: $scope.tpl.path,
+              className: 'ngdialog-theme-default',
+              scope: $scope
+            });
+          };
+
+          $scope.openTemplateNoCache = function () {
+            $scope.value = true;
+
+            ngDialog.open({
+              template: $scope.tpl.path,
+              className: 'ngdialog-theme-default',
+              scope: $scope,
+              cache: false
+            });
+          };
+
+          $scope.openTimed = function () {
+            var dialog = ngDialog.open({
+              template: '<p>Just passing through!</p>',
+              plain: true,
+              closeByDocument: false,
+              closeByEscape: false
+            });
+            setTimeout(function () {
+              dialog.close();
+            }, 2000);
+          };
+
+          $scope.openNotify = function () {
+            var dialog = ngDialog.open({
+              template:
+                '<p>You can do whatever you want when I close, however that happens.</p>' +
+                '<div><button type="button" class="btn btn-primary" ng-click="closeThisDialog(1)">Close Me</button></div>',
+              plain: true
+            });
+            dialog.closePromise.then(function (data) {
+              console.log('ngDialog closed' + (data.value === 1 ? ' using the button' : '') + ' and notified by promise: ' + data.id);
+            });
+          };
+
+          $scope.openWithoutOverlay = function () {
+            ngDialog.open({
+              template: '<h2>Notice that there is no overlay!</h2>',
+              className: 'ngdialog-theme-default',
+              plain: true,
+              overlay: false
+            });
+          };
+
+          $rootScope.$on('ngDialog.opened', function (e, $dialog) {
+            console.log('ngDialog opened: ' + $dialog.attr('id'));
+          });
+
+          $rootScope.$on('ngDialog.closed', function (e, $dialog) {
+            console.log('ngDialog closed: ' + $dialog.attr('id'));
+          });
+
+          $rootScope.$on('ngDialog.closing', function (e, $dialog) {
+            console.log('ngDialog closing: ' + $dialog.attr('id'));
+          });
+        }
+    
+    } // DialogMainCtrl
+
+
+    InsideCtrl.$inject = ['$scope', 'ngDialog'];
+    function InsideCtrl($scope, ngDialog) {
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+          $scope.dialogModel = {
+            message : 'message from passed scope'
+          };
+          $scope.openSecond = function () {
+            ngDialog.open({
+              template: '<p class="lead m0"><a href="" ng-click="closeSecond()">Close all by click here!</a></h3>',
+              plain: true,
+              closeByEscape: false,
+              controller: 'SecondModalCtrl'
+            });
+          };
+        }
+    }
+
+    SecondModalCtrl.$inject = ['$scope', 'ngDialog'];
+    function SecondModalCtrl($scope, ngDialog) {
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+          $scope.closeSecond = function () {
+            ngDialog.close();
+          };
+        }
+
+    }
+
+
+})();
+
+
+
+
+/**=========================================================
+ * Module: calendar-ui.js
+ * This script handle the calendar demo with draggable 
+ * events and events creations
+ =========================================================*/
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.elements')
+        .controller('InfiniteScrollController', InfiniteScrollController)
+        .factory('datasource', datasource);
+
+    function InfiniteScrollController() {
+        var vm = this;
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+          vm.images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+          vm.loadMore = function() {
+            var last = vm.images[vm.images.length - 1];
+            for(var i = 1; i <= 10; i++) {
+              vm.images.push(last + i);
+            }
+          };
+        }
+    }
+    
+    datasource.$inject = ['$log', '$timeout'];
+    function datasource(console, $timeout) {
+
+        var get = function(index, count, success) {
+            return $timeout(function() {
+                var i, result, _i, _ref;
+                result = [];
+                for (i = _i = index, _ref = index + count - 1; index <= _ref ? _i <= _ref : _i >= _ref; i = index <= _ref ? ++_i : --_i) {
+                    result.push('item #' + i);
+                }
+                return success(result);
+            }, 100);
+        };
+        return {
+            get: get
+        };
+    }
+
+})();
+
+/**=========================================================
+ * Module: masonry-deck.js
+ * Demo for Angular Deck
+ =========================================================*/
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.elements')
+        .controller('MasonryDeckController', MasonryDeckController)
+        .directive('imageloaded', imageloaded); // required by demo
+
+    MasonryDeckController.$inject = ['RouteHelpers'];
+    function MasonryDeckController(RouteHelpers) {
+        var vm = this;
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+
+          vm.basepath = RouteHelpers.basepath;
+
+          vm.photos = [
+              {id: 'photo-1', name: 'Awesome photo', src: 'http://lorempixel.com/400/300/abstract'},
+              {id: 'photo-2', name: 'Great photo', src: 'http://lorempixel.com/450/400/city'},
+              {id: 'photo-3', name: 'Strange photo', src: 'http://lorempixel.com/400/300/people'},
+              {id: 'photo-4', name: 'A photo?', src: 'http://lorempixel.com/400/300/transport'},
+              {id: 'photo-5', name: 'What a photo', src: 'http://lorempixel.com/450/300/fashion'},
+              {id: 'photo-6', name: 'Silly photo', src: 'http://lorempixel.com/400/300/technics'},
+              {id: 'photo-7', name: 'Weird photo', src: 'http://lorempixel.com/410/350/sports'},
+              {id: 'photo-8', name: 'Modern photo', src: 'http://lorempixel.com/400/300/nightlife'},
+              {id: 'photo-9', name: 'Classical photo', src: 'http://lorempixel.com/400/300/nature'},
+              {id: 'photo-10', name: 'Dynamic photo', src: 'http://lorempixel.com/420/300/abstract'},
+              {id: 'photo-11', name: 'Neat photo', src: 'http://lorempixel.com/400/300/sports'},
+              {id: 'photo-12', name: 'Bumpy photo', src: 'http://lorempixel.com/400/300/nightlife'},
+              {id: 'photo-13', name: 'Brilliant photo', src: 'http://lorempixel.com/400/380/nature'},
+              {id: 'photo-14', name: 'Excellent photo', src: 'http://lorempixel.com/480/300/technics'},
+              {id: 'photo-15', name: 'Gorgeous photo', src: 'http://lorempixel.com/400/300/sports'},
+              {id: 'photo-16', name: 'Lovely photo', src: 'http://lorempixel.com/400/300/nightlife'},
+              {id: 'photo-17', name: 'A "wow" photo', src: 'http://lorempixel.com/400/300/nature'},
+              {id: 'photo-18', name: 'Bodacious photo', src: 'http://lorempixel.com/400/300/abstract'}
+          ];
+        }
+    }
+
+    // Add class to img element when source is loaded
+    function imageloaded () {
+        // Copyright(c) 2013 André König <akoenig@posteo.de>
+        // MIT Licensed
+        var directive = {
+            link: link,
+            restrict: 'A'
+        };
+        return directive;
+
+        function link(scope, element, attrs) {
+          var cssClass = attrs.loadedclass;
+
+          element.bind('load', function () {
+              angular.element(element).addClass(cssClass);
+          });
+        }
+    }
+
+})();
+
+
+
+/**=========================================================
+ * Module: access-login.js
+ * Demo for login api
+ =========================================================*/
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.elements')
+        .controller('AbnTestController', AbnTestController);
+
+    AbnTestController.$inject = ['$timeout', '$resource'];
+    function AbnTestController($timeout, $resource) {
+        var vm = this;
+
+        activate();
+
+        ////////////////
+
+        /*jshint -W106*/
+        function activate() {
+          vm.my_tree_handler = function(branch) {
+
+            vm.output = 'You selected: ' + branch.label;
+
+            if (branch.data && branch.data.description) {
+              vm.output += '(' + branch.data.description + ')';
+              return vm.output;
+            }
+          };
+
+          // onSelect event handlers
+          var apple_selected = function(branch) {
+            vm.output = 'APPLE! : ' + branch.label;
+            return vm.output;
+          };
+
+          var treedata_avm = [
+            {
+              label: 'Animal',
+              children: [
+                {
+                  label: 'Dog',
+                  data: {
+                    description: 'man\'s best friend'
+                  }
+                }, {
+                  label: 'Cat',
+                  data: {
+                    description: 'Felis catus'
+                  }
+                }, {
+                  label: 'Hippopotamus',
+                  data: {
+                    description: 'hungry, hungry'
+                  }
+                }, {
+                  label: 'Chicken',
+                  children: ['White Leghorn', 'Rhode Island Red', 'Jersey Giant']
+                }
+              ]
+            }, {
+              label: 'Vegetable',
+              data: {
+                definition: 'A plant or part of a plant used as food, typically as accompaniment to meat or fish, such as a cabbage, potato, carrot, or bean.',
+                data_can_contain_anything: true
+              },
+              onSelect: function(branch) {
+                vm.output = 'Vegetable: ' + branch.data.definition;
+                return vm.output;
+              },
+              children: [
+                {
+                  label: 'Oranges'
+                }, {
+                  label: 'Apples',
+                  children: [
+                    {
+                      label: 'Granny Smith',
+                      onSelect: apple_selected
+                    }, {
+                      label: 'Red Delicous',
+                      onSelect: apple_selected
+                    }, {
+                      label: 'Fuji',
+                      onSelect: apple_selected
+                    }
+                  ]
+                }
+              ]
+            }, {
+              label: 'Mineral',
+              children: [
+                {
+                  label: 'Rock',
+                  children: ['Igneous', 'Sedimentary', 'Metamorphic']
+                }, {
+                  label: 'Metal',
+                  children: ['Aluminum', 'Steel', 'Copper']
+                }, {
+                  label: 'Plastic',
+                  children: [
+                    {
+                      label: 'Thermoplastic',
+                      children: ['polyethylene', 'polypropylene', 'polystyrene', ' polyvinyl chloride']
+                    }, {
+                      label: 'Thermosetting Polymer',
+                      children: ['polyester', 'polyurethane', 'vulcanized rubber', 'bakelite', 'urea-formaldehyde']
+                    }
+                  ]
+                }
+              ]
+            }
+          ];
           
-          $rootScope.model = {selectedLocale: 'en'};
+          var treedata_geography = [
+            {
+              label: 'North America',
+              children: [
+                {
+                  label: 'Canada',
+                  children: ['Toronto', 'Vancouver']
+                }, {
+                  label: 'USA',
+                  children: ['New York', 'Los Angeles']
+                }, {
+                  label: 'Mexico',
+                  children: ['Mexico City', 'Guadalajara']
+                }
+              ]
+            }, {
+              label: 'South America',
+              children: [
+                {
+                  label: 'Venezuela',
+                  children: ['Caracas', 'Maracaibo']
+                }, {
+                  label: 'Brazil',
+                  children: ['Sao Paulo', 'Rio de Janeiro']
+                }, {
+                  label: 'Argentina',
+                  children: ['Buenos Aires', 'Cordoba']
+                }
+              ]
+            }
+          ];
+
+          vm.my_data = treedata_avm;
+          vm.try_changing_the_tree_data = function() {
+            if (vm.my_data === treedata_avm) {
+              vm.my_data = treedata_geography;
+            } else {
+              vm.my_data = treedata_avm;
+            }
+            return vm.my_data;
+          };
           
-          $rootScope.$locale = $locale;
+          var tree;
+          // This is our API control variable
+          vm.my_tree = tree = {};
+          vm.try_async_load = function() {
+            
+            vm.my_data = [];
+            vm.doing_async = true;
+            
+            // Request tree data via $resource
+            var remoteTree = $resource('server/treedata.json');
+            
+            return remoteTree.get(function(res){
+              
+              vm.my_data = res.data;
+
+              vm.doing_async = false;
+            
+              return tree.expand_all();
+            
+            // we must return a promise so the plugin 
+            // can watch when it's resolved
+            }).$promise;
+          };
           
-          $rootScope.changeLocale = tmhDynamicLocale.set;
+          // Adds a new branch to the tree
+          vm.try_adding_a_branch = function() {
+            var b;
+            b = tree.get_selected_branch();
+            return tree.add_branch(b, {
+              label: 'New Branch',
+              data: {
+                something: 42,
+                'else': 43
+              }
+            });
+          };
+
+        }
+    }
+})();
+
+
+/**=========================================================
+ * Module: nestable.js
+ * Nestable controller
+ =========================================================*/
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.elements')
+        .controller('NestableController', NestableController);
+
+    function NestableController() {
+        var vm = this;
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+          vm.items =  [
+            {
+              item: {text: 'a'},
+              children: []
+            },
+            {
+              item: {text: 'b'},
+              children: [
+                {
+                  item: {text: 'c'},
+                  children: []
+                },
+                {
+                  item: {text: 'd'},
+                  children: []
+                }
+              ]
+            },
+            {
+              item: {text: 'e'},
+              children: []
+            },
+            {
+              item: {text: 'f'},
+              children: []
+            }
+          ];
+
+          vm.items2 =  [
+            {
+              item: {text: '1'},
+              children: []
+            },
+            {
+              item: {text: '2'},
+              children: [
+                {
+                  item: {text: '3'},
+                  children: []
+                },
+                {
+                  item: {text: '4'},
+                  children: []
+                }
+              ]
+            },
+            {
+              item: {text: '5'},
+              children: []
+            },
+            {
+              item: {text: '6'},
+              children: []
+            }
+          ];
+
+        }
+    }
+})();
+
+/**=========================================================
+ * Module: scroll.js
+ * Make a content box scrollable
+ =========================================================*/
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.elements')
+        .directive('scrollable', scrollable);
+
+    function scrollable () {
+        var directive = {
+            link: link,
+            restrict: 'EA'
+        };
+        return directive;
+
+        function link(scope, element, attrs) {
+          var defaultHeight = 250;
+          element.slimScroll({
+              height: (attrs.height || defaultHeight)
+          });
+        }
+    }
+
+})();
+
+/**=========================================================
+ * Module: sortable.js
+ * Sortable controller
+ =========================================================*/
+(function() {
+    'use strict';
+
+    angular
+        .module('app.elements')
+        .controller('SortableController', SortableController);
+
+    SortableController.$inject = ['$scope'];
+
+    function SortableController($scope) {
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+            // Single List
+            $scope.data1 = [{
+                id: 1,
+                name: 'Donald Hoffman'
+            }, {
+                id: 2,
+                name: 'Wallace Barrett'
+            }, {
+                id: 3,
+                name: 'Marsha Hicks'
+            }, {
+                id: 4,
+                name: 'Roland Brown'
+            }];
+
+            $scope.add = function() {
+                $scope.data1.push({
+                    id: $scope.data1.length + 1,
+                    name: 'Earl Knight'
+                });
+            };
+
+            $scope.sortableOptions = {
+                placeholder: 'box-placeholder m0'
+            };
+        }
+    }
+
+})();
+
+/**=========================================================
+ * Module: sweetalert.js
+ =========================================================*/
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.elements')
+        .controller('SweetAlertController', SweetAlertController);
+
+    SweetAlertController.$inject = ['SweetAlert'];
+    function SweetAlertController(SweetAlert) {
+        var vm = this;
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+          vm.demo1 = function() {
+            SweetAlert.swal('Here\'s a message');
+          };
+
+          vm.demo2 = function() {
+            SweetAlert.swal('Here\'s a message!', 'It\'s pretty, isn\'t it?');
+          };
+
+          vm.demo3 = function() {
+            SweetAlert.swal('Good job!', 'You clicked the button!', 'success');
+          };
+
+          vm.demo4 = function() {
+            SweetAlert.swal({   
+              title: 'Are you sure?',   
+              text: 'Your will not be able to recover this imaginary file!',   
+              type: 'warning',   
+              showCancelButton: true,   
+              confirmButtonColor: '#DD6B55',   
+              confirmButtonText: 'Yes, delete it!',
+              closeOnConfirm: false
+            },  function(){  
+              SweetAlert.swal('Booyah!');
+            });
+          };
+
+          vm.demo5 = function() {
+            SweetAlert.swal({   
+              title: 'Are you sure?',   
+              text: 'Your will not be able to recover this imaginary file!',   
+              type: 'warning',   
+              showCancelButton: true,   
+              confirmButtonColor: '#DD6B55',   
+              confirmButtonText: 'Yes, delete it!',   
+              cancelButtonText: 'No, cancel plx!',   
+              closeOnConfirm: false,   
+              closeOnCancel: false 
+            }, function(isConfirm){  
+              if (isConfirm) {     
+                SweetAlert.swal('Deleted!', 'Your imaginary file has been deleted.', 'success');   
+              } else {     
+                SweetAlert.swal('Cancelled', 'Your imaginary file is safe :)', 'error');   
+              } 
+            });
+          };
+
+          vm.demo6 = function() {
+            SweetAlert.swal({   
+              title: 'Sweet!',   
+              text: 'Here\'s a custom image.',   
+              imageUrl: 'http://oitozero.com/img/avatar.jpg' 
+            });
+          };
+        }
+    }
+})();
+
+/**=========================================================
+ * Module: demo-toaster.js
+ * Demos for toaster notifications
+ =========================================================*/
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.elements')
+        .controller('ToasterDemoCtrl', ToasterDemoCtrl);
+
+    ToasterDemoCtrl.$inject = ['toaster'];
+    function ToasterDemoCtrl(toaster) {
+        var vm = this;
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+          vm.toaster = {
+              type:  'success',
+              title: 'Title',
+              text:  'Message'
+          };
+
+          vm.pop = function() {
+            toaster.pop(vm.toaster.type, vm.toaster.title, vm.toaster.text);
+          };
+        }
+    }
+})();
+
+/**=========================================================
+ * Module: tour.js
+ =========================================================*/
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.elements')
+        .controller('TourCtrl', TourCtrl);
+
+    TourCtrl.$inject = ['$scope'];
+    function TourCtrl($scope) {
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+          // BootstrapTour is not compatible with z-index based layout
+          // so adding position:static for this case makes the browser
+          // to ignore the property
+          var section = angular.element('.wrapper > section');
+          section.css({'position': 'static'});
+          // finally restore on destroy and reuse the value declared in stylesheet
+          $scope.$on('$destroy', function(){
+            section.css({'position': ''});
+          });
+        }
+    }
+})();
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.settings')
+        .run(settingsRun);
+
+    settingsRun.$inject = ['$rootScope', '$localStorage'];
+
+    function settingsRun($rootScope, $localStorage){
+
+
+      // User Settings
+      // -----------------------------------
+      $rootScope.user = {
+        name:     'John',
+        job:      'ng-developer',
+        picture:  'app/img/user/02.jpg'
+      };
+
+      // Hides/show user avatar on sidebar from any element
+      $rootScope.toggleUserBlock = function(){
+        $rootScope.$broadcast('toggleUserBlock');
+      };
+
+      // Global Settings
+      // -----------------------------------
+      $rootScope.app = {
+        name: 'Angle',
+        description: 'Angular Bootstrap Admin Template',
+        year: ((new Date()).getFullYear()),
+        layout: {
+          isFixed: true,
+          isCollapsed: false,
+          isBoxed: false,
+          isRTL: false,
+          horizontal: false,
+          isFloat: false,
+          asideHover: false,
+          theme: null,
+          asideScrollbar: false,
+          isCollapsedText: false
+        },
+        useFullLayout: false,
+        hiddenFooter: false,
+        offsidebarOpen: false,
+        asideToggled: false,
+        viewAnimation: 'ng-fadeInUp'
+      };
+
+      // Setup the layout mode
+      $rootScope.app.layout.horizontal = ( $rootScope.$stateParams.layout === 'app-h') ;
+
+      // Restore layout settings
+      if( angular.isDefined($localStorage.layout) )
+        $rootScope.app.layout = $localStorage.layout;
+      else
+        $localStorage.layout = $rootScope.app.layout;
+
+      $rootScope.$watch('app.layout', function () {
+        $localStorage.layout = $rootScope.app.layout;
+      }, true);
+
+      // Close submenu when sidebar change from collapsed to normal
+      $rootScope.$watch('app.layout.isCollapsed', function(newValue) {
+        if( newValue === false )
+          $rootScope.$broadcast('closeSidebarMenu');
+      });
+
+    }
+
+})();
+
+/**=========================================================
+ * Module: sidebar-menu.js
+ * Handle sidebar collapsible elements
+ =========================================================*/
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.sidebar')
+        .controller('SidebarController', SidebarController);
+
+    SidebarController.$inject = ['$rootScope', '$scope', '$state', 'SidebarLoader', 'Utils'];
+    function SidebarController($rootScope, $scope, $state, SidebarLoader,  Utils) {
+
+        activate();
+
+
+        ////////////////
+
+        function activate() {
+          var collapseList = [];
+
+          // demo: when switch from collapse to hover, close all items
+          var watchOff1 = $rootScope.$watch('app.layout.asideHover', function(oldVal, newVal){
+            if ( newVal === false && oldVal === true) {
+              closeAllBut(-1);
+            }
+          });
+
+
+          // Load menu from json file
+          // -----------------------------------
+
+          SidebarLoader.getMenu(sidebarReady);
+
+          function sidebarReady(items) {
+            $scope.menuItems = items.data;
+          }
+
+          // Handle sidebar and collapse items
+          // ----------------------------------
+
+          $scope.getMenuItemPropClasses = function(item) {
+            return (item.heading ? 'nav-heading' : '') +
+                   (isActive(item) ? ' active' : '') ;
+          };
+
+          $scope.addCollapse = function($index, item) {
+            collapseList[$index] = $rootScope.app.layout.asideHover ? true : !isActive(item);
+          };
+
+          $scope.isCollapse = function($index) {
+            return (collapseList[$index]);
+          };
+
+          $scope.toggleCollapse = function($index, isParentItem) {
+
+            // collapsed sidebar doesn't toggle drodopwn
+            if( Utils.isSidebarCollapsed() || $rootScope.app.layout.asideHover ) return true;
+
+            // make sure the item index exists
+            if( angular.isDefined( collapseList[$index] ) ) {
+              if ( ! $scope.lastEventFromChild ) {
+                collapseList[$index] = !collapseList[$index];
+                closeAllBut($index);
+              }
+            }
+            else if ( isParentItem ) {
+              closeAllBut(-1);
+            }
+
+            $scope.lastEventFromChild = isChild($index);
+
+            return true;
+
+          };
+
+          // Controller helpers
+          // -----------------------------------
+
+            // Check item and children active state
+            function isActive(item) {
+
+              if(!item) return;
+
+              if( !item.sref || item.sref === '#') {
+                var foundActive = false;
+                angular.forEach(item.submenu, function(value) {
+                  if(isActive(value)) foundActive = true;
+                });
+                return foundActive;
+              }
+              else
+                return $state.is(item.sref) || $state.includes(item.sref);
+            }
+
+            function closeAllBut(index) {
+              index += '';
+              for(var i in collapseList) {
+                if(index < 0 || index.indexOf(i) < 0)
+                  collapseList[i] = true;
+              }
+            }
+
+            function isChild($index) {
+              /*jshint -W018*/
+              return (typeof $index === 'string') && !($index.indexOf('-') < 0);
+            }
+
+            $scope.$on('$destroy', function() {
+                watchOff1();
+            });
+
+        } // activate
+    }
+
+})();
+
+/**=========================================================
+ * Module: sidebar.js
+ * Wraps the sidebar and handles collapsed state
+ =========================================================*/
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.sidebar')
+        .directive('sidebar', sidebar);
+
+    sidebar.$inject = ['$rootScope', '$timeout', '$window', 'Utils'];
+    function sidebar ($rootScope, $timeout, $window, Utils) {
+        var $win = angular.element($window);
+        var directive = {
+            // bindToController: true,
+            // controller: Controller,
+            // controllerAs: 'vm',
+            link: link,
+            restrict: 'EA',
+            template: '<nav class="sidebar" ng-transclude></nav>',
+            transclude: true,
+            replace: true
+            // scope: {}
+        };
+        return directive;
+
+        function link(scope, element, attrs) {
+
+          var currentState = $rootScope.$state.current.name;
+          var $sidebar = element;
+
+          var eventName = Utils.isTouch() ? 'click' : 'mouseenter' ;
+          var subNav = $();
+
+          $sidebar.on( eventName, '.nav > li', function() {
+
+            if( Utils.isSidebarCollapsed() || $rootScope.app.layout.asideHover ) {
+
+              subNav.trigger('mouseleave');
+              subNav = toggleMenuItem( $(this), $sidebar);
+
+              // Used to detect click and touch events outside the sidebar
+              sidebarAddBackdrop();
+
+            }
+
+          });
+
+          var eventOff1 = scope.$on('closeSidebarMenu', function() {
+            removeFloatingNav();
+          });
+
+          // Normalize state when resize to mobile
+          $win.on('resize.sidebar', function() {
+            if( ! Utils.isMobile() )
+          	asideToggleOff();
+          });
+
+          // Adjustment on route changes
+          var eventOff2 = $rootScope.$on('$stateChangeStart', function(event, toState) {
+            currentState = toState.name;
+            // Hide sidebar automatically on mobile
+            asideToggleOff();
+
+            $rootScope.$broadcast('closeSidebarMenu');
+          });
+
+      	  // Autoclose when click outside the sidebar
+          if ( angular.isDefined(attrs.sidebarAnyclickClose) ) {
+
+            var wrapper = $('.wrapper');
+            var sbclickEvent = 'click.sidebar';
+
+            var watchOff1 = $rootScope.$watch('app.asideToggled', watchExternalClicks);
+
+          }
+
+          //////
+
+          function watchExternalClicks(newVal) {
+            // if sidebar becomes visible
+            if ( newVal === true ) {
+              $timeout(function(){ // render after current digest cycle
+                wrapper.on(sbclickEvent, function(e){
+                  // if not child of sidebar
+                  if( ! $(e.target).parents('.aside').length ) {
+                    asideToggleOff();
+                  }
+                });
+              });
+            }
+            else {
+              // dettach event
+              wrapper.off(sbclickEvent);
+            }
+          }
+
+          function asideToggleOff() {
+            $rootScope.app.asideToggled = false;
+            if(!scope.$$phase) scope.$apply(); // anti-pattern but sometimes necessary
+      	  }
+
+          scope.$on('$destroy', function() {
+            // detach scope events
+            eventOff1();
+            eventOff2();
+            watchOff1();
+            // detach dom events
+            $sidebar.off(eventName);
+            $win.off('resize.sidebar');
+            wrapper.off(sbclickEvent);
+          });
+
+        }
+
+        ///////
+
+        function sidebarAddBackdrop() {
+          var $backdrop = $('<div/>', { 'class': 'dropdown-backdrop'} );
+          $backdrop.insertAfter('.aside-inner').on('click mouseenter', function () {
+            removeFloatingNav();
+          });
+        }
+
+        // Open the collapse sidebar submenu items when on touch devices
+        // - desktop only opens on hover
+        function toggleTouchItem($element){
+          $element
+            .siblings('li')
+            .removeClass('open')
+            .end()
+            .toggleClass('open');
+        }
+
+        // Handles hover to open items under collapsed menu
+        // -----------------------------------
+        function toggleMenuItem($listItem, $sidebar) {
+
+          removeFloatingNav();
+
+          var ul = $listItem.children('ul');
+
+          if( !ul.length ) return $();
+          if( $listItem.hasClass('open') ) {
+            toggleTouchItem($listItem);
+            return $();
+          }
+
+          var $aside = $('.aside');
+          var $asideInner = $('.aside-inner'); // for top offset calculation
+          // float aside uses extra padding on aside
+          var mar = parseInt( $asideInner.css('padding-top'), 0) + parseInt( $aside.css('padding-top'), 0);
+          var subNav = ul.clone().appendTo( $aside );
+
+          toggleTouchItem($listItem);
+
+          var itemTop = ($listItem.position().top + mar) - $sidebar.scrollTop();
+          var vwHeight = $win.height();
+
+          subNav
+            .addClass('nav-floating')
+            .css({
+              position: $rootScope.app.layout.isFixed ? 'fixed' : 'absolute',
+              top:      itemTop,
+              bottom:   (subNav.outerHeight(true) + itemTop > vwHeight) ? 0 : 'auto'
+            });
+
+          subNav.on('mouseleave', function() {
+            toggleTouchItem($listItem);
+            subNav.remove();
+          });
+
+          return subNav;
+        }
+
+        function removeFloatingNav() {
+          $('.dropdown-backdrop').remove();
+          $('.sidebar-subnav.nav-floating').remove();
+          $('.sidebar li.open').removeClass('open');
+        }
+    }
+
+
+})();
+
+
+(function() {
+    'use strict';
+
+    angular
+        .module('app.sidebar')
+        .service('SidebarLoader', SidebarLoader);
+
+    SidebarLoader.$inject = ['$http'];
+    function SidebarLoader($http) {
+        this.getMenu = getMenu;
+
+        ////////////////
+
+        function getMenu(onReady, onError) {
+          var menuJson = 'server/sidebar-menu.json',
+              menuURL  = menuJson + '?v=' + (new Date().getTime()); // jumps cache
+
+          onError = onError || function() { alert('Failure loading menu'); };
+
+          $http
+            .get(menuURL)
+            .then(onReady, onError);
+        }
+    }
+})();
+(function() {
+    'use strict';
+
+    angular
+        .module('app.sidebar')
+        .controller('UserBlockController', UserBlockController);
+
+    UserBlockController.$inject = ['$scope','$window'];
+    function UserBlockController($scope,$window) {
+
+        activate();
+
+        ////////////////
+
+        function activate() {
+
+          $scope.userBlockVisible = true;
+          $scope.userName=$window.localStorage.userName;
+          $scope.position=$window.localStorage.position;
+
+          var detach = $scope.$on('toggleUserBlock', function(/*event, args*/) {
+
+            $scope.userBlockVisible = ! $scope.userBlockVisible;
+
+          });
+
+          $scope.$on('$destroy', detach);
         }
     }
 })();
@@ -9167,506 +9698,1467 @@ $scope.printDiv = function (div) {
         }
     }
 })();
-/**=========================================================
- * Module: sidebar-menu.js
- * Handle sidebar collapsible elements
- =========================================================*/
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.sidebar')
-        .controller('SidebarController', SidebarController);
-
-    SidebarController.$inject = ['$rootScope', '$scope', '$state', 'SidebarLoader', 'Utils'];
-    function SidebarController($rootScope, $scope, $state, SidebarLoader,  Utils) {
-
-        activate();
+/**
+ * AngularUI - The companion suite for AngularJS
+ * @version v0.4.0 - 2013-02-15
+ * @link http://angular-ui.github.com
+ * @license MIT License, http://www.opensource.org/licenses/MIT
+ */
 
 
-        ////////////////
+angular.module('ui.config', []).value('ui.config', {});
+angular.module('ui.filters', ['ui.config']);
+angular.module('ui.directives', ['ui.config']);
+angular.module('ui', ['ui.filters', 'ui.directives', 'ui.config']);
 
-        function activate() {
-          var collapseList = [];
+/**
+ * Animates the injection of new DOM elements by simply creating the DOM with a class and then immediately removing it
+ * Animations must be done using CSS3 transitions, but provide excellent flexibility
+ *
+ * @todo Add proper support for animating out
+ * @param [options] {mixed} Can be an object with multiple options, or a string with the animation class
+ *    class {string} the CSS class(es) to use. For example, 'ui-hide' might be an excellent alternative class.
+ * @example <li ng-repeat="item in items" ui-animate=" 'ui-hide' ">{{item}}</li>
+ */
+angular.module('ui.directives').directive('uiAnimate', ['ui.config', '$timeout', function (uiConfig, $timeout) {
+  var options = {};
+  if (angular.isString(uiConfig.animate)) {
+    options['class'] = uiConfig.animate;
+  } else if (uiConfig.animate) {
+    options = uiConfig.animate;
+  }
+  return {
+    restrict: 'A', // supports using directive as element, attribute and class
+    link: function ($scope, element, attrs) {
+      var opts = {};
+      if (attrs.uiAnimate) {
+        opts = $scope.$eval(attrs.uiAnimate);
+        if (angular.isString(opts)) {
+          opts = {'class': opts};
+        }
+      }
+      opts = angular.extend({'class': 'ui-animate'}, options, opts);
 
-          // demo: when switch from collapse to hover, close all items
-          var watchOff1 = $rootScope.$watch('app.layout.asideHover', function(oldVal, newVal){
-            if ( newVal === false && oldVal === true) {
-              closeAllBut(-1);
-            }
-          });
-
-
-          // Load menu from json file
-          // -----------------------------------
-
-          SidebarLoader.getMenu(sidebarReady);
-
-          function sidebarReady(items) {
-            $scope.menuItems = items.data;
-          }
-
-          // Handle sidebar and collapse items
-          // ----------------------------------
-
-          $scope.getMenuItemPropClasses = function(item) {
-            return (item.heading ? 'nav-heading' : '') +
-                   (isActive(item) ? ' active' : '') ;
-          };
-
-          $scope.addCollapse = function($index, item) {
-            collapseList[$index] = $rootScope.app.layout.asideHover ? true : !isActive(item);
-          };
-
-          $scope.isCollapse = function($index) {
-            return (collapseList[$index]);
-          };
-
-          $scope.toggleCollapse = function($index, isParentItem) {
-
-            // collapsed sidebar doesn't toggle drodopwn
-            if( Utils.isSidebarCollapsed() || $rootScope.app.layout.asideHover ) return true;
-
-            // make sure the item index exists
-            if( angular.isDefined( collapseList[$index] ) ) {
-              if ( ! $scope.lastEventFromChild ) {
-                collapseList[$index] = !collapseList[$index];
-                closeAllBut($index);
-              }
-            }
-            else if ( isParentItem ) {
-              closeAllBut(-1);
-            }
-
-            $scope.lastEventFromChild = isChild($index);
-
-            return true;
-
-          };
-
-          // Controller helpers
-          // -----------------------------------
-
-            // Check item and children active state
-            function isActive(item) {
-
-              if(!item) return;
-
-              if( !item.sref || item.sref === '#') {
-                var foundActive = false;
-                angular.forEach(item.submenu, function(value) {
-                  if(isActive(value)) foundActive = true;
-                });
-                return foundActive;
-              }
-              else
-                return $state.is(item.sref) || $state.includes(item.sref);
-            }
-
-            function closeAllBut(index) {
-              index += '';
-              for(var i in collapseList) {
-                if(index < 0 || index.indexOf(i) < 0)
-                  collapseList[i] = true;
-              }
-            }
-
-            function isChild($index) {
-              /*jshint -W018*/
-              return (typeof $index === 'string') && !($index.indexOf('-') < 0);
-            }
-
-            $scope.$on('$destroy', function() {
-                watchOff1();
-            });
-
-        } // activate
+      element.addClass(opts['class']);
+      $timeout(function () {
+        element.removeClass(opts['class']);
+      }, 20, false);
     }
+  };
+}]);
 
-})();
 
-/**=========================================================
- * Module: sidebar.js
- * Wraps the sidebar and handles collapsed state
- =========================================================*/
+/*
+*  AngularJs Fullcalendar Wrapper for the JQuery FullCalendar
+*  API @ http://arshaw.com/fullcalendar/ 
+*  
+*  Angular Calendar Directive that takes in the [eventSources] nested array object as the ng-model and watches (eventSources.length + eventSources[i].length) for changes. 
+*       Can also take in multiple event urls as a source object(s) and feed the events per view.
+*       The calendar will watch any eventSource array and update itself when a delta is created  
+*       An equalsTracker attrs has been added for use cases that would render the overall length tracker the same even though the events have changed to force updates.
+*
+*/
 
-(function() {
-    'use strict';
-
-    angular
-        .module('app.sidebar')
-        .directive('sidebar', sidebar);
-
-    sidebar.$inject = ['$rootScope', '$timeout', '$window', 'Utils'];
-    function sidebar ($rootScope, $timeout, $window, Utils) {
-        var $win = angular.element($window);
-        var directive = {
-            // bindToController: true,
-            // controller: Controller,
-            // controllerAs: 'vm',
-            link: link,
-            restrict: 'EA',
-            template: '<nav class="sidebar" ng-transclude></nav>',
-            transclude: true,
-            replace: true
-            // scope: {}
-        };
-        return directive;
-
-        function link(scope, element, attrs) {
-
-          var currentState = $rootScope.$state.current.name;
-          var $sidebar = element;
-
-          var eventName = Utils.isTouch() ? 'click' : 'mouseenter' ;
-          var subNav = $();
-
-          $sidebar.on( eventName, '.nav > li', function() {
-
-            if( Utils.isSidebarCollapsed() || $rootScope.app.layout.asideHover ) {
-
-              subNav.trigger('mouseleave');
-              subNav = toggleMenuItem( $(this), $sidebar);
-
-              // Used to detect click and touch events outside the sidebar
-              sidebarAddBackdrop();
-
-            }
-
-          });
-
-          var eventOff1 = scope.$on('closeSidebarMenu', function() {
-            removeFloatingNav();
-          });
-
-          // Normalize state when resize to mobile
-          $win.on('resize.sidebar', function() {
-            if( ! Utils.isMobile() )
-          	asideToggleOff();
-          });
-
-          // Adjustment on route changes
-          var eventOff2 = $rootScope.$on('$stateChangeStart', function(event, toState) {
-            currentState = toState.name;
-            // Hide sidebar automatically on mobile
-            asideToggleOff();
-
-            $rootScope.$broadcast('closeSidebarMenu');
-          });
-
-      	  // Autoclose when click outside the sidebar
-          if ( angular.isDefined(attrs.sidebarAnyclickClose) ) {
-
-            var wrapper = $('.wrapper');
-            var sbclickEvent = 'click.sidebar';
-
-            var watchOff1 = $rootScope.$watch('app.asideToggled', watchExternalClicks);
-
-          }
-
-          //////
-
-          function watchExternalClicks(newVal) {
-            // if sidebar becomes visible
-            if ( newVal === true ) {
-              $timeout(function(){ // render after current digest cycle
-                wrapper.on(sbclickEvent, function(e){
-                  // if not child of sidebar
-                  if( ! $(e.target).parents('.aside').length ) {
-                    asideToggleOff();
-                  }
-                });
+angular.module('ui.directives').directive('uiCalendar',['ui.config', '$parse', function (uiConfig,$parse) {
+     uiConfig.uiCalendar = uiConfig.uiCalendar || {};       
+     //returns calendar     
+     return {
+        require: 'ngModel',
+        restrict: 'A',
+          link: function(scope, elm, attrs, $timeout) {
+            var sources = scope.$eval(attrs.ngModel);
+            var tracker = 0;
+            /* returns the length of all source arrays plus the length of eventSource itself */
+            var getSources = function () {
+              var equalsTracker = scope.$eval(attrs.equalsTracker);
+              tracker = 0;
+              angular.forEach(sources,function(value,key){
+                if(angular.isArray(value)){
+                  tracker += value.length;
+                }
               });
+               if(angular.isNumber(equalsTracker)){
+                return tracker + sources.length + equalsTracker;
+               }else{
+                return tracker + sources.length;
+              }
+            };
+            /* update the calendar with the correct options */
+            function update() {
+              //calendar object exposed on scope
+              scope.calendar = elm.html('');
+              var view = scope.calendar.fullCalendar('getView');
+              if(view){
+                view = view.name; //setting the default view to be whatever the current view is. This can be overwritten. 
+              }
+              /* If the calendar has options added then render them */
+              var expression,
+                options = {
+                  defaultView : view,
+                  eventSources: sources
+                };
+              if (attrs.uiCalendar) {
+                expression = scope.$eval(attrs.uiCalendar);
+              } else {
+                expression = {};
+              }
+              angular.extend(options, uiConfig.uiCalendar, expression);
+              scope.calendar.fullCalendar(options);
             }
-            else {
-              // dettach event
-              wrapper.off(sbclickEvent);
+            update();
+              /* watches all eventSources */
+              scope.$watch(getSources, function( newVal, oldVal )
+              {
+                update();
+              });
+         }
+    };
+}]);
+/*global angular, CodeMirror, Error*/
+/**
+ * Binds a CodeMirror widget to a <textarea> element.
+ */
+angular.module('ui.directives').directive('uiCodemirror', ['ui.config', '$timeout', function (uiConfig, $timeout) {
+	'use strict';
+
+	var events = ["cursorActivity", "viewportChange", "gutterClick", "focus", "blur", "scroll", "update"];
+	return {
+		restrict:'A',
+		require:'ngModel',
+		link:function (scope, elm, attrs, ngModel) {
+			var options, opts, onChange, deferCodeMirror, codeMirror;
+
+			if (elm[0].type !== 'textarea') {
+				throw new Error('uiCodemirror3 can only be applied to a textarea element');
+			}
+
+			options = uiConfig.codemirror || {};
+			opts = angular.extend({}, options, scope.$eval(attrs.uiCodemirror));
+
+			onChange = function (aEvent) {
+				return function (instance, changeObj) {
+					var newValue = instance.getValue();
+					if (newValue !== ngModel.$viewValue) {
+						ngModel.$setViewValue(newValue);
+						scope.$apply();
+					}
+					if (typeof aEvent === "function")
+						aEvent(instance, changeObj);
+				};
+			};
+
+			deferCodeMirror = function () {
+				codeMirror = CodeMirror.fromTextArea(elm[0], opts);
+				codeMirror.on("change", onChange(opts.onChange));
+
+				for (var i = 0, n = events.length, aEvent; i < n; ++i) {
+					aEvent = opts["on" + events[i].charAt(0).toUpperCase() + events[i].slice(1)];
+					if (aEvent === void 0) continue;
+					if (typeof aEvent !== "function") continue;
+					codeMirror.on(events[i], aEvent);
+				}
+
+				// CodeMirror expects a string, so make sure it gets one.
+				// This does not change the model.
+				ngModel.$formatters.push(function (value) {
+					if (angular.isUndefined(value) || value === null) {
+						return '';
+					}
+					else if (angular.isObject(value) || angular.isArray(value)) {
+						throw new Error('ui-codemirror cannot use an object or an array as a model');
+					}
+					return value;
+				});
+
+				// Override the ngModelController $render method, which is what gets called when the model is updated.
+				// This takes care of the synchronizing the codeMirror element with the underlying model, in the case that it is changed by something else.
+				ngModel.$render = function () {
+					codeMirror.setValue(ngModel.$viewValue);
+				};
+
+				// Watch ui-refresh and refresh the directive
+				if (attrs.uiRefresh) {
+					scope.$watch(attrs.uiRefresh, function(newVal, oldVal){
+						// Skip the initial watch firing
+						if (newVal !== oldVal)
+							$timeout(codeMirror.refresh);
+					});
+				}
+			};
+
+			$timeout(deferCodeMirror);
+
+		}
+	};
+}]);
+
+/*
+ Gives the ability to style currency based on its sign.
+ */
+angular.module('ui.directives').directive('uiCurrency', ['ui.config', 'currencyFilter' , function (uiConfig, currencyFilter) {
+  var options = {
+    pos: 'ui-currency-pos',
+    neg: 'ui-currency-neg',
+    zero: 'ui-currency-zero'
+  };
+  if (uiConfig.currency) {
+    angular.extend(options, uiConfig.currency);
+  }
+  return {
+    restrict: 'EAC',
+    require: 'ngModel',
+    link: function (scope, element, attrs, controller) {
+      var opts, // instance-specific options
+        renderview,
+        value;
+
+      opts = angular.extend({}, options, scope.$eval(attrs.uiCurrency));
+
+      renderview = function (viewvalue) {
+        var num;
+        num = viewvalue * 1;
+        element.toggleClass(opts.pos, (num > 0) );
+        element.toggleClass(opts.neg, (num < 0) );
+        element.toggleClass(opts.zero, (num === 0) );
+        if (viewvalue === '') {
+          element.text('');
+        } else {
+          element.text(currencyFilter(num, opts.symbol));
+        }
+        return true;
+      };
+
+      controller.$render = function () {
+        value = controller.$viewValue;
+        element.val(value);
+        renderview(value);
+      };
+
+    }
+  };
+}]);
+
+/*global angular */
+/*
+ jQuery UI Datepicker plugin wrapper
+
+ @note If ≤ IE8 make sure you have a polyfill for Date.toISOString()
+ @param [ui-date] {object} Options to pass to $.fn.datepicker() merged onto ui.config
+ */
+
+angular.module('ui.directives')
+
+.directive('uiDate', ['ui.config', function (uiConfig) {
+  'use strict';
+  var options;
+  options = {};
+  if (angular.isObject(uiConfig.date)) {
+    angular.extend(options, uiConfig.date);
+  }
+  return {
+    require:'?ngModel',
+    link:function (scope, element, attrs, controller) {
+      var getOptions = function () {
+        return angular.extend({}, uiConfig.date, scope.$eval(attrs.uiDate));
+      };
+      var initDateWidget = function () {
+        var opts = getOptions();
+
+        // If we have a controller (i.e. ngModelController) then wire it up
+        if (controller) {
+          var updateModel = function () {
+            scope.$apply(function () {
+              var date = element.datepicker("getDate");
+              element.datepicker("setDate", element.val());
+              controller.$setViewValue(date);
+              element.blur();
+            });
+          };
+          if (opts.onSelect) {
+            // Caller has specified onSelect, so call this as well as updating the model
+            var userHandler = opts.onSelect;
+            opts.onSelect = function (value, picker) {
+              updateModel();
+              scope.$apply(function() {
+                userHandler(value, picker);
+              });
+            };
+          } else {
+            // No onSelect already specified so just update the model
+            opts.onSelect = updateModel;
+          }
+          // In case the user changes the text directly in the input box
+          element.bind('change', updateModel);
+
+          // Update the date picker when the model changes
+          controller.$render = function () {
+            var date = controller.$viewValue;
+            if ( angular.isDefined(date) && date !== null && !angular.isDate(date) ) {
+              throw new Error('ng-Model value must be a Date object - currently it is a ' + typeof date + ' - use ui-date-format to convert it from a string');
             }
+            element.datepicker("setDate", date);
+          };
+        }
+        // If we don't destroy the old one it doesn't update properly when the config changes
+        element.datepicker('destroy');
+        // Create the new datepicker widget
+        element.datepicker(opts);
+        if ( controller ) {
+          // Force a render to override whatever is in the input text box
+          controller.$render();
+        }
+      };
+      // Watch for changes to the directives options
+      scope.$watch(getOptions, initDateWidget, true);
+    }
+  };
+}
+])
+
+.directive('uiDateFormat', ['ui.config', function(uiConfig) {
+  var directive = {
+    require:'ngModel',
+    link: function(scope, element, attrs, modelCtrl) {
+      var dateFormat = attrs.uiDateFormat || uiConfig.dateFormat;
+      if ( dateFormat ) {
+        // Use the datepicker with the attribute value as the dateFormat string to convert to and from a string
+        modelCtrl.$formatters.push(function(value) {
+          if (angular.isString(value) ) {
+            return $.datepicker.parseDate(dateFormat, value);
+          }
+        });
+        modelCtrl.$parsers.push(function(value){
+          if (value) {
+            return $.datepicker.formatDate(dateFormat, value);
+          }
+        });
+      } else {
+        // Default to ISO formatting
+        modelCtrl.$formatters.push(function(value) {
+          if (angular.isString(value) ) {
+            return new Date(value);
+          }
+        });
+        modelCtrl.$parsers.push(function(value){
+          if (value) {
+            return value.toISOString();
+          }
+        });
+      }
+    }
+  };
+  return directive;
+}]);
+
+/**
+ * General-purpose Event binding. Bind any event not natively supported by Angular
+ * Pass an object with keynames for events to ui-event
+ * Allows $event object and $params object to be passed
+ *
+ * @example <input ui-event="{ focus : 'counter++', blur : 'someCallback()' }">
+ * @example <input ui-event="{ myCustomEvent : 'myEventHandler($event, $params)'}">
+ *
+ * @param ui-event {string|object literal} The event to bind to as a string or a hash of events with their callbacks
+ */
+angular.module('ui.directives').directive('uiEvent', ['$parse',
+  function ($parse) {
+    return function (scope, elm, attrs) {
+      var events = scope.$eval(attrs.uiEvent);
+      angular.forEach(events, function (uiEvent, eventName) {
+        var fn = $parse(uiEvent);
+        elm.bind(eventName, function (evt) {
+          var params = Array.prototype.slice.call(arguments);
+          //Take out first paramater (event object);
+          params = params.splice(1);
+          scope.$apply(function () {
+            fn(scope, {$event: evt, $params: params});
+          });
+        });
+      });
+    };
+  }]);
+
+/*
+ * Defines the ui-if tag. This removes/adds an element from the dom depending on a condition
+ * Originally created by @tigbro, for the @jquery-mobile-angular-adapter
+ * https://github.com/tigbro/jquery-mobile-angular-adapter
+ */
+angular.module('ui.directives').directive('uiIf', [function () {
+  return {
+    transclude: 'element',
+    priority: 1000,
+    terminal: true,
+    restrict: 'A',
+    compile: function (element, attr, transclude) {
+      return function (scope, element, attr) {
+
+        var childElement;
+        var childScope;
+ 
+        scope.$watch(attr['uiIf'], function (newValue) {
+          if (childElement) {
+            childElement.remove();
+            childElement = undefined;
+          }
+          if (childScope) {
+            childScope.$destroy();
+            childScope = undefined;
           }
 
-          function asideToggleOff() {
-            $rootScope.app.asideToggled = false;
-            if(!scope.$$phase) scope.$apply(); // anti-pattern but sometimes necessary
-      	  }
+          if (newValue) {
+            childScope = scope.$new();
+            transclude(childScope, function (clone) {
+              childElement = clone;
+              element.after(clone);
+            });
+          }
+        });
+      };
+    }
+  };
+}]);
+/**
+ * General-purpose jQuery wrapper. Simply pass the plugin name as the expression.
+ *
+ * It is possible to specify a default set of parameters for each jQuery plugin.
+ * Under the jq key, namespace each plugin by that which will be passed to ui-jq.
+ * Unfortunately, at this time you can only pre-define the first parameter.
+ * @example { jq : { datepicker : { showOn:'click' } } }
+ *
+ * @param ui-jq {string} The $elm.[pluginName]() to call.
+ * @param [ui-options] {mixed} Expression to be evaluated and passed as options to the function
+ *     Multiple parameters can be separated by commas
+ * @param [ui-refresh] {expression} Watch expression and refire plugin on changes
+ *
+ * @example <input ui-jq="datepicker" ui-options="{showOn:'click'},secondParameter,thirdParameter" ui-refresh="iChange">
+ */
+angular.module('ui.directives').directive('uiJq', ['ui.config', '$timeout', function uiJqInjectingFunction(uiConfig, $timeout) {
 
-          scope.$on('$destroy', function() {
-            // detach scope events
-            eventOff1();
-            eventOff2();
-            watchOff1();
-            // detach dom events
-            $sidebar.off(eventName);
-            $win.off('resize.sidebar');
-            wrapper.off(sbclickEvent);
+  return {
+    restrict: 'A',
+    compile: function uiJqCompilingFunction(tElm, tAttrs) {
+
+      if (!angular.isFunction(tElm[tAttrs.uiJq])) {
+        throw new Error('ui-jq: The "' + tAttrs.uiJq + '" function does not exist');
+      }
+      var options = uiConfig.jq && uiConfig.jq[tAttrs.uiJq];
+
+      return function uiJqLinkingFunction(scope, elm, attrs) {
+
+        var linkOptions = [];
+
+        // If ui-options are passed, merge (or override) them onto global defaults and pass to the jQuery method
+        if (attrs.uiOptions) {
+          linkOptions = scope.$eval('[' + attrs.uiOptions + ']');
+          if (angular.isObject(options) && angular.isObject(linkOptions[0])) {
+            linkOptions[0] = angular.extend({}, options, linkOptions[0]);
+          }
+        } else if (options) {
+          linkOptions = [options];
+        }
+        // If change compatibility is enabled, the form input's "change" event will trigger an "input" event
+        if (attrs.ngModel && elm.is('select,input,textarea')) {
+          elm.on('change', function() {
+            elm.trigger('input');
           });
-
         }
 
-        ///////
+        // Call jQuery method and pass relevant options
+        function callPlugin() {
+          $timeout(function() {
+            elm[attrs.uiJq].apply(elm, linkOptions);
+          }, 0, false);
+        }
 
-        function sidebarAddBackdrop() {
-          var $backdrop = $('<div/>', { 'class': 'dropdown-backdrop'} );
-          $backdrop.insertAfter('.aside-inner').on('click mouseenter', function () {
-            removeFloatingNav();
+        // If ui-refresh is used, re-fire the the method upon every change
+        if (attrs.uiRefresh) {
+          scope.$watch(attrs.uiRefresh, function(newVal) {
+            callPlugin();
           });
         }
+        callPlugin();
+      };
+    }
+  };
+}]);
 
-        // Open the collapse sidebar submenu items when on touch devices
-        // - desktop only opens on hover
-        function toggleTouchItem($element){
-          $element
-            .siblings('li')
-            .removeClass('open')
-            .end()
-            .toggleClass('open');
+angular.module('ui.directives').factory('keypressHelper', ['$parse', function keypress($parse){
+  var keysByCode = {
+    8: 'backspace',
+    9: 'tab',
+    13: 'enter',
+    27: 'esc',
+    32: 'space',
+    33: 'pageup',
+    34: 'pagedown',
+    35: 'end',
+    36: 'home',
+    37: 'left',
+    38: 'up',
+    39: 'right',
+    40: 'down',
+    45: 'insert',
+    46: 'delete'
+  };
+
+  var capitaliseFirstLetter = function (string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
+  return function(mode, scope, elm, attrs) {
+    var params, combinations = [];
+    params = scope.$eval(attrs['ui'+capitaliseFirstLetter(mode)]);
+
+    // Prepare combinations for simple checking
+    angular.forEach(params, function (v, k) {
+      var combination, expression;
+      expression = $parse(v);
+
+      angular.forEach(k.split(' '), function(variation) {
+        combination = {
+          expression: expression,
+          keys: {}
+        };
+        angular.forEach(variation.split('-'), function (value) {
+          combination.keys[value] = true;
+        });
+        combinations.push(combination);
+      });
+    });
+
+    // Check only matching of pressed keys one of the conditions
+    elm.bind(mode, function (event) {
+      // No need to do that inside the cycle
+      var altPressed = event.metaKey || event.altKey;
+      var ctrlPressed = event.ctrlKey;
+      var shiftPressed = event.shiftKey;
+      var keyCode = event.keyCode;
+
+      // normalize keycodes
+      if (mode === 'keypress' && !shiftPressed && keyCode >= 97 && keyCode <= 122) {
+        keyCode = keyCode - 32;
+      }
+
+      // Iterate over prepared combinations
+      angular.forEach(combinations, function (combination) {
+
+        var mainKeyPressed = (combination.keys[keysByCode[event.keyCode]] || combination.keys[event.keyCode.toString()]) || false;
+
+        var altRequired = combination.keys.alt || false;
+        var ctrlRequired = combination.keys.ctrl || false;
+        var shiftRequired = combination.keys.shift || false;
+
+        if (
+          mainKeyPressed &&
+          ( altRequired == altPressed ) &&
+          ( ctrlRequired == ctrlPressed ) &&
+          ( shiftRequired == shiftPressed )
+        ) {
+          // Run the function
+          scope.$apply(function () {
+            combination.expression(scope, { '$event': event });
+          });
         }
+      });
+    });
+  };
+}]);
 
-        // Handles hover to open items under collapsed menu
-        // -----------------------------------
-        function toggleMenuItem($listItem, $sidebar) {
+/**
+ * Bind one or more handlers to particular keys or their combination
+ * @param hash {mixed} keyBindings Can be an object or string where keybinding expression of keys or keys combinations and AngularJS Exspressions are set. Object syntax: "{ keys1: expression1 [, keys2: expression2 [ , ... ]]}". String syntax: ""expression1 on keys1 [ and expression2 on keys2 [ and ... ]]"". Expression is an AngularJS Expression, and key(s) are dash-separated combinations of keys and modifiers (one or many, if any. Order does not matter). Supported modifiers are 'ctrl', 'shift', 'alt' and key can be used either via its keyCode (13 for Return) or name. Named keys are 'backspace', 'tab', 'enter', 'esc', 'space', 'pageup', 'pagedown', 'end', 'home', 'left', 'up', 'right', 'down', 'insert', 'delete'.
+ * @example <input ui-keypress="{enter:'x = 1', 'ctrl-shift-space':'foo()', 'shift-13':'bar()'}" /> <input ui-keypress="foo = 2 on ctrl-13 and bar('hello') on shift-esc" />
+ **/
+angular.module('ui.directives').directive('uiKeydown', ['keypressHelper', function(keypressHelper){
+  return {
+    link: function (scope, elm, attrs) {
+      keypressHelper('keydown', scope, elm, attrs);
+    }
+  };
+}]);
 
-          removeFloatingNav();
+angular.module('ui.directives').directive('uiKeypress', ['keypressHelper', function(keypressHelper){
+  return {
+    link: function (scope, elm, attrs) {
+      keypressHelper('keypress', scope, elm, attrs);
+    }
+  };
+}]);
 
-          var ul = $listItem.children('ul');
+angular.module('ui.directives').directive('uiKeyup', ['keypressHelper', function(keypressHelper){
+  return {
+    link: function (scope, elm, attrs) {
+      keypressHelper('keyup', scope, elm, attrs);
+    }
+  };
+}]);
+(function () {
+  var app = angular.module('ui.directives');
 
-          if( !ul.length ) return $();
-          if( $listItem.hasClass('open') ) {
-            toggleTouchItem($listItem);
-            return $();
+  //Setup map events from a google map object to trigger on a given element too,
+  //then we just use ui-event to catch events from an element
+  function bindMapEvents(scope, eventsStr, googleObject, element) {
+    angular.forEach(eventsStr.split(' '), function (eventName) {
+      //Prefix all googlemap events with 'map-', so eg 'click' 
+      //for the googlemap doesn't interfere with a normal 'click' event
+      var $event = { type: 'map-' + eventName };
+      google.maps.event.addListener(googleObject, eventName, function (evt) {
+        element.triggerHandler(angular.extend({}, $event, evt));
+        //We create an $apply if it isn't happening. we need better support for this
+        //We don't want to use timeout because tons of these events fire at once,
+        //and we only need one $apply
+        if (!scope.$$phase) scope.$apply();
+      });
+    });
+  }
+
+  app.directive('uiMap',
+    ['ui.config', '$parse', function (uiConfig, $parse) {
+
+      var mapEvents = 'bounds_changed center_changed click dblclick drag dragend ' +
+        'dragstart heading_changed idle maptypeid_changed mousemove mouseout ' +
+        'mouseover projection_changed resize rightclick tilesloaded tilt_changed ' +
+        'zoom_changed';
+      var options = uiConfig.map || {};
+
+      return {
+        restrict: 'A',
+        //doesn't work as E for unknown reason
+        link: function (scope, elm, attrs) {
+          var opts = angular.extend({}, options, scope.$eval(attrs.uiOptions));
+          var map = new google.maps.Map(elm[0], opts);
+          var model = $parse(attrs.uiMap);
+
+          //Set scope variable for the map
+          model.assign(scope, map);
+
+          bindMapEvents(scope, mapEvents, map, elm);
+        }
+      };
+    }]);
+
+  app.directive('uiMapInfoWindow',
+    ['ui.config', '$parse', '$compile', function (uiConfig, $parse, $compile) {
+
+      var infoWindowEvents = 'closeclick content_change domready ' +
+        'position_changed zindex_changed';
+      var options = uiConfig.mapInfoWindow || {};
+
+      return {
+        link: function (scope, elm, attrs) {
+          var opts = angular.extend({}, options, scope.$eval(attrs.uiOptions));
+          opts.content = elm[0];
+          var model = $parse(attrs.uiMapInfoWindow);
+          var infoWindow = model(scope);
+
+          if (!infoWindow) {
+            infoWindow = new google.maps.InfoWindow(opts);
+            model.assign(scope, infoWindow);
           }
 
-          var $aside = $('.aside');
-          var $asideInner = $('.aside-inner'); // for top offset calculation
-          // float aside uses extra padding on aside
-          var mar = parseInt( $asideInner.css('padding-top'), 0) + parseInt( $aside.css('padding-top'), 0);
-          var subNav = ul.clone().appendTo( $aside );
+          bindMapEvents(scope, infoWindowEvents, infoWindow, elm);
 
-          toggleTouchItem($listItem);
+          /* The info window's contents dont' need to be on the dom anymore,
+           google maps has them stored.  So we just replace the infowindow element
+           with an empty div. (we don't just straight remove it from the dom because
+           straight removing things from the dom can mess up angular) */
+          elm.replaceWith('<div></div>');
 
-          var itemTop = ($listItem.position().top + mar) - $sidebar.scrollTop();
-          var vwHeight = $win.height();
+          //Decorate infoWindow.open to $compile contents before opening
+          var _open = infoWindow.open;
+          infoWindow.open = function open(a1, a2, a3, a4, a5, a6) {
+            $compile(elm.contents())(scope);
+            _open.call(infoWindow, a1, a2, a3, a4, a5, a6);
+          };
+        }
+      };
+    }]);
 
-          subNav
-            .addClass('nav-floating')
-            .css({
-              position: $rootScope.app.layout.isFixed ? 'fixed' : 'absolute',
-              top:      itemTop,
-              bottom:   (subNav.outerHeight(true) + itemTop > vwHeight) ? 0 : 'auto'
+  /* 
+   * Map overlay directives all work the same. Take map marker for example
+   * <ui-map-marker="myMarker"> will $watch 'myMarker' and each time it changes,
+   * it will hook up myMarker's events to the directive dom element.  Then
+   * ui-event will be able to catch all of myMarker's events. Super simple.
+   */
+  function mapOverlayDirective(directiveName, events) {
+    app.directive(directiveName, [function () {
+      return {
+        restrict: 'A',
+        link: function (scope, elm, attrs) {
+          scope.$watch(attrs[directiveName], function (newObject) {
+            bindMapEvents(scope, events, newObject, elm);
+          });
+        }
+      };
+    }]);
+  }
+
+  mapOverlayDirective('uiMapMarker',
+    'animation_changed click clickable_changed cursor_changed ' +
+      'dblclick drag dragend draggable_changed dragstart flat_changed icon_changed ' +
+      'mousedown mouseout mouseover mouseup position_changed rightclick ' +
+      'shadow_changed shape_changed title_changed visible_changed zindex_changed');
+
+  mapOverlayDirective('uiMapPolyline',
+    'click dblclick mousedown mousemove mouseout mouseover mouseup rightclick');
+
+  mapOverlayDirective('uiMapPolygon',
+    'click dblclick mousedown mousemove mouseout mouseover mouseup rightclick');
+
+  mapOverlayDirective('uiMapRectangle',
+    'bounds_changed click dblclick mousedown mousemove mouseout mouseover ' +
+      'mouseup rightclick');
+
+  mapOverlayDirective('uiMapCircle',
+    'center_changed click dblclick mousedown mousemove ' +
+      'mouseout mouseover mouseup radius_changed rightclick');
+
+  mapOverlayDirective('uiMapGroundOverlay',
+    'click dblclick');
+
+})();
+/*
+ Attaches jquery-ui input mask onto input element
+ */
+angular.module('ui.directives').directive('uiMask', [
+  function () {
+    return {
+      require:'ngModel',
+      link:function ($scope, element, attrs, controller) {
+
+        /* We override the render method to run the jQuery mask plugin
+         */
+        controller.$render = function () {
+          var value = controller.$viewValue || '';
+          element.val(value);
+          element.mask($scope.$eval(attrs.uiMask));
+        };
+
+        /* Add a parser that extracts the masked value into the model but only if the mask is valid
+         */
+        controller.$parsers.push(function (value) {
+          //the second check (or) is only needed due to the fact that element.isMaskValid() will keep returning undefined
+          //until there was at least one key event
+          var isValid = element.isMaskValid() || angular.isUndefined(element.isMaskValid()) && element.val().length>0;
+          controller.$setValidity('mask', isValid);
+          return isValid ? value : undefined;
+        });
+
+        /* When keyup, update the view value
+         */
+        element.bind('keyup', function () {
+          $scope.$apply(function () {
+            controller.$setViewValue(element.mask());
+          });
+        });
+      }
+    };
+  }
+]);
+
+/**
+ * Add a clear button to form inputs to reset their value
+ */
+angular.module('ui.directives').directive('uiReset', ['ui.config', function (uiConfig) {
+  var resetValue = null;
+  if (uiConfig.reset !== undefined)
+      resetValue = uiConfig.reset;
+  return {
+    require: 'ngModel',
+    link: function (scope, elm, attrs, ctrl) {
+      var aElement;
+      aElement = angular.element('<a class="ui-reset" />');
+      elm.wrap('<span class="ui-resetwrap" />').after(aElement);
+      aElement.bind('click', function (e) {
+        e.preventDefault();
+        scope.$apply(function () {
+          if (attrs.uiReset)
+            ctrl.$setViewValue(scope.$eval(attrs.uiReset));
+          else
+            ctrl.$setViewValue(resetValue);
+          ctrl.$render();
+        });
+      });
+    }
+  };
+}]);
+
+/**
+ * Set a $uiRoute boolean to see if the current route matches
+ */
+angular.module('ui.directives').directive('uiRoute', ['$location', '$parse', function ($location, $parse) {
+  return {
+    restrict: 'AC',
+    compile: function(tElement, tAttrs) {
+      var useProperty;
+      if (tAttrs.uiRoute) {
+        useProperty = 'uiRoute';
+      } else if (tAttrs.ngHref) {
+        useProperty = 'ngHref';
+      } else if (tAttrs.href) {
+        useProperty = 'href';
+      } else {
+        throw new Error('uiRoute missing a route or href property on ' + tElement[0]);
+      }
+      return function ($scope, elm, attrs) {
+        var modelSetter = $parse(attrs.ngModel || attrs.routeModel || '$uiRoute').assign;
+        var watcher = angular.noop;
+
+        // Used by href and ngHref
+        function staticWatcher(newVal) {
+          if ((hash = newVal.indexOf('#')) > -1)
+            newVal = newVal.substr(hash + 1);
+          watcher = function watchHref() {
+            modelSetter($scope, ($location.path().indexOf(newVal) > -1));
+          };
+          watcher();
+        }
+        // Used by uiRoute
+        function regexWatcher(newVal) {
+          if ((hash = newVal.indexOf('#')) > -1)
+            newVal = newVal.substr(hash + 1);
+          watcher = function watchRegex() {
+            var regexp = new RegExp('^' + newVal + '$', ['i']);
+            modelSetter($scope, regexp.test($location.path()));
+          };
+          watcher();
+        }
+
+        switch (useProperty) {
+          case 'uiRoute':
+            // if uiRoute={{}} this will be undefined, otherwise it will have a value and $observe() never gets triggered
+            if (attrs.uiRoute)
+              regexWatcher(attrs.uiRoute);
+            else
+              attrs.$observe('uiRoute', regexWatcher);
+            break;
+          case 'ngHref':
+            // Setup watcher() every time ngHref changes
+            if (attrs.ngHref)
+              staticWatcher(attrs.ngHref);
+            else
+              attrs.$observe('ngHref', staticWatcher);
+            break;
+          case 'href':
+            // Setup watcher()
+            staticWatcher(attrs.href);
+        }
+
+        $scope.$on('$routeChangeSuccess', function(){
+          watcher();
+        });
+      }
+    }
+  };
+}]);
+
+/*global angular, $, document*/
+/**
+ * Adds a 'ui-scrollfix' class to the element when the page scrolls past it's position.
+ * @param [offset] {int} optional Y-offset to override the detected offset.
+ *   Takes 300 (absolute) or -300 or +300 (relative to detected)
+ */
+angular.module('ui.directives').directive('uiScrollfix', ['$window', function ($window) {
+  'use strict';
+  return {
+    link: function (scope, elm, attrs) {
+      var top = elm.offset().top;
+      if (!attrs.uiScrollfix) {
+        attrs.uiScrollfix = top;
+      } else {
+        // chartAt is generally faster than indexOf: http://jsperf.com/indexof-vs-chartat
+        if (attrs.uiScrollfix.charAt(0) === '-') {
+          attrs.uiScrollfix = top - attrs.uiScrollfix.substr(1);
+        } else if (attrs.uiScrollfix.charAt(0) === '+') {
+          attrs.uiScrollfix = top + parseFloat(attrs.uiScrollfix.substr(1));
+        }
+      }
+      angular.element($window).on('scroll.ui-scrollfix', function () {
+        // if pageYOffset is defined use it, otherwise use other crap for IE
+        var offset;
+        if (angular.isDefined($window.pageYOffset)) {
+          offset = $window.pageYOffset;
+        } else {
+          var iebody = (document.compatMode && document.compatMode !== "BackCompat") ? document.documentElement : document.body;
+          offset = iebody.scrollTop;
+        }
+        if (!elm.hasClass('ui-scrollfix') && offset > attrs.uiScrollfix) {
+          elm.addClass('ui-scrollfix');
+        } else if (elm.hasClass('ui-scrollfix') && offset < attrs.uiScrollfix) {
+          elm.removeClass('ui-scrollfix');
+        }
+      });
+    }
+  };
+}]);
+
+/**
+ * Enhanced Select2 Dropmenus
+ *
+ * @AJAX Mode - When in this mode, your value will be an object (or array of objects) of the data used by Select2
+ *     This change is so that you do not have to do an additional query yourself on top of Select2's own query
+ * @params [options] {object} The configuration options passed to $.fn.select2(). Refer to the documentation
+ */
+angular.module('ui.directives').directive('uiSelect2', ['ui.config', '$timeout', function (uiConfig, $timeout) {
+  var options = {};
+  if (uiConfig.select2) {
+    angular.extend(options, uiConfig.select2);
+  }
+  return {
+    require: '?ngModel',
+    compile: function (tElm, tAttrs) {
+      var watch,
+        repeatOption,
+        repeatAttr,
+        isSelect = tElm.is('select'),
+        isMultiple = (tAttrs.multiple !== undefined);
+
+      // Enable watching of the options dataset if in use
+      if (tElm.is('select')) {
+        repeatOption = tElm.find('option[ng-repeat], option[data-ng-repeat]');
+
+        if (repeatOption.length) {
+          repeatAttr = repeatOption.attr('ng-repeat') || repeatOption.attr('data-ng-repeat');
+          watch = jQuery.trim(repeatAttr.split('|')[0]).split(' ').pop();
+        }
+      }
+
+      return function (scope, elm, attrs, controller) {
+        // instance-specific options
+        var opts = angular.extend({}, options, scope.$eval(attrs.uiSelect2));
+
+        if (isSelect) {
+          // Use <select multiple> instead
+          delete opts.multiple;
+          delete opts.initSelection;
+        } else if (isMultiple) {
+          opts.multiple = true;
+        }
+
+        if (controller) {
+          // Watch the model for programmatic changes
+          controller.$render = function () {
+            if (isSelect) {
+              elm.select2('val', controller.$modelValue);
+            } else {
+              if (isMultiple) {
+                if (!controller.$modelValue) {
+                  elm.select2('data', []);
+                } else if (angular.isArray(controller.$modelValue)) {
+                  elm.select2('data', controller.$modelValue);
+                } else {
+                  elm.select2('val', controller.$modelValue);
+                }
+              } else {
+                if (angular.isObject(controller.$modelValue)) {
+                  elm.select2('data', controller.$modelValue);
+                } else {
+                  elm.select2('val', controller.$modelValue);
+                }
+              }
+            }
+          };
+
+          // Watch the options dataset for changes
+          if (watch) {
+            scope.$watch(watch, function (newVal, oldVal, scope) {
+              if (!newVal) return;
+              // Delayed so that the options have time to be rendered
+              $timeout(function () {
+                elm.select2('val', controller.$viewValue);
+                // Refresh angular to remove the superfluous option
+                elm.trigger('change');
+              });
+            });
+          }
+
+          if (!isSelect) {
+            // Set the view and model value and update the angular template manually for the ajax/multiple select2.
+            elm.bind("change", function () {
+              scope.$apply(function () {
+                controller.$setViewValue(elm.select2('data'));
+              });
             });
 
-          subNav.on('mouseleave', function() {
-            toggleTouchItem($listItem);
-            subNav.remove();
+            if (opts.initSelection) {
+              var initSelection = opts.initSelection;
+              opts.initSelection = function (element, callback) {
+                initSelection(element, function (value) {
+                  controller.$setViewValue(value);
+                  callback(value);
+                });
+              };
+            }
+          }
+        }
+
+        attrs.$observe('disabled', function (value) {
+          elm.select2(value && 'disable' || 'enable');
+        });
+
+        if (attrs.ngMultiple) {
+          scope.$watch(attrs.ngMultiple, function(newVal) {
+            elm.select2(opts);
           });
-
-          return subNav;
         }
 
-        function removeFloatingNav() {
-          $('.dropdown-backdrop').remove();
-          $('.sidebar-subnav.nav-floating').remove();
-          $('.sidebar li.open').removeClass('open');
-        }
+        // Set initial value since Angular doesn't
+        elm.val(scope.$eval(attrs.ngModel));
+
+        // Initialize the plugin late so that the injected DOM does not disrupt the template compiler
+        $timeout(function () {
+          elm.select2(opts);
+          // Not sure if I should just check for !isSelect OR if I should check for 'tags' key
+          if (!opts.initSelection && !isSelect)
+            controller.$setViewValue(elm.select2('data'));
+        });
+      };
     }
+  };
+}]);
 
+/**
+ * uiShow Directive
+ *
+ * Adds a 'ui-show' class to the element instead of display:block
+ * Created to allow tighter control  of CSS without bulkier directives
+ *
+ * @param expression {boolean} evaluated expression to determine if the class should be added
+ */
+angular.module('ui.directives').directive('uiShow', [function () {
+  return function (scope, elm, attrs) {
+    scope.$watch(attrs.uiShow, function (newVal, oldVal) {
+      if (newVal) {
+        elm.addClass('ui-show');
+      } else {
+        elm.removeClass('ui-show');
+      }
+    });
+  };
+}])
 
-})();
+/**
+ * uiHide Directive
+ *
+ * Adds a 'ui-hide' class to the element instead of display:block
+ * Created to allow tighter control  of CSS without bulkier directives
+ *
+ * @param expression {boolean} evaluated expression to determine if the class should be added
+ */
+  .directive('uiHide', [function () {
+  return function (scope, elm, attrs) {
+    scope.$watch(attrs.uiHide, function (newVal, oldVal) {
+      if (newVal) {
+        elm.addClass('ui-hide');
+      } else {
+        elm.removeClass('ui-hide');
+      }
+    });
+  };
+}])
 
+/**
+ * uiToggle Directive
+ *
+ * Adds a class 'ui-show' if true, and a 'ui-hide' if false to the element instead of display:block/display:none
+ * Created to allow tighter control  of CSS without bulkier directives. This also allows you to override the
+ * default visibility of the element using either class.
+ *
+ * @param expression {boolean} evaluated expression to determine if the class should be added
+ */
+  .directive('uiToggle', [function () {
+  return function (scope, elm, attrs) {
+    scope.$watch(attrs.uiToggle, function (newVal, oldVal) {
+      if (newVal) {
+        elm.removeClass('ui-hide').addClass('ui-show');
+      } else {
+        elm.removeClass('ui-show').addClass('ui-hide');
+      }
+    });
+  };
+}]);
 
-(function() {
-    'use strict';
+/*
+ jQuery UI Sortable plugin wrapper
 
-    angular
-        .module('app.sidebar')
-        .service('SidebarLoader', SidebarLoader);
+ @param [ui-sortable] {object} Options to pass to $.fn.sortable() merged onto ui.config
+*/
+angular.module('ui.directives').directive('uiSortable', [
+  'ui.config', function(uiConfig) {
+    return {
+      require: '?ngModel',
+      link: function(scope, element, attrs, ngModel) {
+        var onReceive, onRemove, onStart, onUpdate, opts, _receive, _remove, _start, _update;
 
-    SidebarLoader.$inject = ['$http'];
-    function SidebarLoader($http) {
-        this.getMenu = getMenu;
+        opts = angular.extend({}, uiConfig.sortable, scope.$eval(attrs.uiSortable));
 
-        ////////////////
+        if (ngModel) {
 
-        function getMenu(onReady, onError) {
-          var menuJson = 'server/sidebar-menu.json',
-              menuURL  = menuJson + '?v=' + (new Date().getTime()); // jumps cache
+          ngModel.$render = function() {
+            element.sortable( "refresh" );
+          };
 
-          onError = onError || function() { alert('Failure loading menu'); };
+          onStart = function(e, ui) {
+            // Save position of dragged item
+            ui.item.sortable = { index: ui.item.index() };
+          };
 
-          $http
-            .get(menuURL)
-            .then(onReady, onError);
+          onUpdate = function(e, ui) {
+            // For some reason the reference to ngModel in stop() is wrong
+            ui.item.sortable.resort = ngModel;
+          };
+
+          onReceive = function(e, ui) {
+            ui.item.sortable.relocate = true;
+            // added item to array into correct position and set up flag
+            ngModel.$modelValue.splice(ui.item.index(), 0, ui.item.sortable.moved);
+          };
+
+          onRemove = function(e, ui) {
+            // copy data into item
+            if (ngModel.$modelValue.length === 1) {
+              ui.item.sortable.moved = ngModel.$modelValue.splice(0, 1)[0];
+            } else {
+              ui.item.sortable.moved =  ngModel.$modelValue.splice(ui.item.sortable.index, 1)[0];
+            }
+          };
+
+          onStop = function(e, ui) {
+            // digest all prepared changes
+            if (ui.item.sortable.resort && !ui.item.sortable.relocate) {
+
+              // Fetch saved and current position of dropped element
+              var end, start;
+              start = ui.item.sortable.index;
+              end = ui.item.index();
+              if (start < end)
+                end--;
+
+              // Reorder array and apply change to scope
+              ui.item.sortable.resort.$modelValue.splice(end, 0, ui.item.sortable.resort.$modelValue.splice(start, 1)[0]);
+
+            }
+            if (ui.item.sortable.resort || ui.item.sortable.relocate) {
+              scope.$apply();
+            }
+          };
+
+          // If user provided 'start' callback compose it with onStart function
+          _start = opts.start;
+          opts.start = function(e, ui) {
+            onStart(e, ui);
+            if (typeof _start === "function")
+              _start(e, ui);
+          };
+
+          // If user provided 'start' callback compose it with onStart function
+          _stop = opts.stop;
+          opts.stop = function(e, ui) {
+            onStop(e, ui);
+            if (typeof _stop === "function")
+              _stop(e, ui);
+          };
+
+          // If user provided 'update' callback compose it with onUpdate function
+          _update = opts.update;
+          opts.update = function(e, ui) {
+            onUpdate(e, ui);
+            if (typeof _update === "function")
+              _update(e, ui);
+          };
+
+          // If user provided 'receive' callback compose it with onReceive function
+          _receive = opts.receive;
+          opts.receive = function(e, ui) {
+            onReceive(e, ui);
+            if (typeof _receive === "function")
+              _receive(e, ui);
+          };
+
+          // If user provided 'remove' callback compose it with onRemove function
+          _remove = opts.remove;
+          opts.remove = function(e, ui) {
+            onRemove(e, ui);
+            if (typeof _remove === "function")
+              _remove(e, ui);
+          };
         }
+
+        // Create sortable
+        element.sortable(opts);
+      }
+    };
+  }
+]);
+
+/**
+ * Binds a TinyMCE widget to <textarea> elements.
+ */
+angular.module('ui.directives').directive('uiTinymce', ['ui.config', function (uiConfig) {
+  uiConfig.tinymce = uiConfig.tinymce || {};
+  return {
+    require: 'ngModel',
+    link: function (scope, elm, attrs, ngModel) {
+      var expression,
+        options = {
+          // Update model on button click
+          onchange_callback: function (inst) {
+            if (inst.isDirty()) {
+              inst.save();
+              ngModel.$setViewValue(elm.val());
+              if (!scope.$$phase)
+                scope.$apply();
+            }
+          },
+          // Update model on keypress
+          handle_event_callback: function (e) {
+            if (this.isDirty()) {
+              this.save();
+              ngModel.$setViewValue(elm.val());
+              if (!scope.$$phase)
+                scope.$apply();
+            }
+            return true; // Continue handling
+          },
+          // Update model when calling setContent (such as from the source editor popup)
+          setup: function (ed) {
+            ed.onSetContent.add(function (ed, o) {
+              if (ed.isDirty()) {
+                ed.save();
+                ngModel.$setViewValue(elm.val());
+                if (!scope.$$phase)
+                  scope.$apply();
+              }
+            });
+          }
+        };
+      if (attrs.uiTinymce) {
+        expression = scope.$eval(attrs.uiTinymce);
+      } else {
+        expression = {};
+      }
+      angular.extend(options, uiConfig.tinymce, expression);
+      setTimeout(function () {
+        elm.tinymce(options);
+      });
     }
-})();
-(function() {
-    'use strict';
+  };
+}]);
 
-    angular
-        .module('app.sidebar')
-        .controller('UserBlockController', UserBlockController);
+/**
+ * General-purpose validator for ngModel.
+ * angular.js comes with several built-in validation mechanism for input fields (ngRequired, ngPattern etc.) but using
+ * an arbitrary validation function requires creation of a custom formatters and / or parsers.
+ * The ui-validate directive makes it easy to use any function(s) defined in scope as a validator function(s).
+ * A validator function will trigger validation on both model and input changes.
+ *
+ * @example <input ui-validate=" 'myValidatorFunction($value)' ">
+ * @example <input ui-validate="{ foo : '$value > anotherModel', bar : 'validateFoo($value)' }">
+ * @example <input ui-validate="{ foo : '$value > anotherModel' }" ui-validate-watch=" 'anotherModel' ">
+ * @example <input ui-validate="{ foo : '$value > anotherModel', bar : 'validateFoo($value)' }" ui-validate-watch=" { foo : 'anotherModel' } ">
+ *
+ * @param ui-validate {string|object literal} If strings is passed it should be a scope's function to be used as a validator.
+ * If an object literal is passed a key denotes a validation error key while a value should be a validator function.
+ * In both cases validator function should take a value to validate as its argument and should return true/false indicating a validation result.
+ */
+angular.module('ui.directives').directive('uiValidate', function () {
 
-    UserBlockController.$inject = ['$scope','$window'];
-    function UserBlockController($scope,$window) {
+  return {
+    restrict: 'A',
+    require: 'ngModel',
+    link: function (scope, elm, attrs, ctrl) {
+      var validateFn, watch, validators = {},
+        validateExpr = scope.$eval(attrs.uiValidate);
 
-        activate();
+      if (!validateExpr) return;
 
-        ////////////////
+      if (angular.isString(validateExpr)) {
+        validateExpr = { validator: validateExpr };
+      }
 
-        function activate() {
-
-          $scope.userBlockVisible = true;
-          $scope.userName=$window.localStorage.userName;
-          $scope.position=$window.localStorage.position;
-
-          var detach = $scope.$on('toggleUserBlock', function(/*event, args*/) {
-
-            $scope.userBlockVisible = ! $scope.userBlockVisible;
-
-          });
-
-          $scope.$on('$destroy', detach);
-        }
-    }
-})();
-
-(function() {
-    'use strict';
-
-    angular
-        .module('app.translate')
-        .config(translateConfig)
-        ;
-    translateConfig.$inject = ['$translateProvider'];
-    function translateConfig($translateProvider){
-
-      $translateProvider.useStaticFilesLoader({
-          prefix : 'app/i18n/',
-          suffix : '.json'
+      angular.forEach(validateExpr, function (expression, key) {
+        validateFn = function (valueToValidate) {
+          if (scope.$eval(expression, { '$value' : valueToValidate })) {
+            ctrl.$setValidity(key, true);
+            return valueToValidate;
+          } else {
+            ctrl.$setValidity(key, false);
+            return undefined;
+          }
+        };
+        validators[key] = validateFn;
+        ctrl.$formatters.push(validateFn);
+        ctrl.$parsers.push(validateFn);
       });
 
-      $translateProvider.preferredLanguage('en');
-      $translateProvider.useLocalStorage();
-      $translateProvider.usePostCompiling(true);
-      $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
-
+      // Support for ui-validate-watch
+      if (attrs.uiValidateWatch) {
+        watch = scope.$eval(attrs.uiValidateWatch);
+        if (angular.isString(watch)) {
+          scope.$watch(watch, function(){
+            angular.forEach(validators, function(validatorFn, key){
+              validatorFn(ctrl.$modelValue);
+            });
+          });
+        } else {
+          angular.forEach(watch, function(expression, key){
+            scope.$watch(expression, function(){
+              validators[key](ctrl.$modelValue);
+            });
+          });
+        }
+      }
     }
-})();
-(function() {
-    'use strict';
+  };
+});
 
-    angular
-        .module('app.translate')
-        .run(translateRun)
-        ;
-    translateRun.$inject = ['$rootScope', '$translate'];
-    
-    function translateRun($rootScope, $translate){
 
-      // Internationalization
-      // ----------------------
+/**
+ * A replacement utility for internationalization very similar to sprintf.
+ *
+ * @param replace {mixed} The tokens to replace depends on type
+ *  string: all instances of $0 will be replaced
+ *  array: each instance of $0, $1, $2 etc. will be placed with each array item in corresponding order
+ *  object: all attributes will be iterated through, with :key being replaced with its corresponding value
+ * @return string
+ *
+ * @example: 'Hello :name, how are you :day'.format({ name:'John', day:'Today' })
+ * @example: 'Records $0 to $1 out of $2 total'.format(['10', '20', '3000'])
+ * @example: '$0 agrees to all mentions $0 makes in the event that $0 hits a tree while $0 is driving drunk'.format('Bob')
+ */
+angular.module('ui.filters').filter('format', function(){
+  return function(value, replace) {
+    if (!value) {
+      return value;
+    }
+    var target = value.toString(), token;
+    if (replace === undefined) {
+      return target;
+    }
+    if (!angular.isArray(replace) && !angular.isObject(replace)) {
+      return target.split('$0').join(replace);
+    }
+    token = angular.isArray(replace) && '$' || ':';
 
-      $rootScope.language = {
-        // Handles language dropdown
-        listIsOpen: false,
-        // list of available languages
-        available: {
-          'en':       'English',
-          'es_AR':    'Español'
-        },
-        // display always the current ui language
-        init: function () {
-          var proposedLanguage = $translate.proposedLanguage() || $translate.use();
-          var preferredLanguage = $translate.preferredLanguage(); // we know we have set a preferred one in app.config
-          $rootScope.language.selected = $rootScope.language.available[ (proposedLanguage || preferredLanguage) ];
-        },
-        set: function (localeId) {
-          // Set the new idiom
-          $translate.use(localeId);
-          // save a reference for the current language
-          $rootScope.language.selected = $rootScope.language.available[localeId];
-          // finally toggle dropdown
-          $rootScope.language.listIsOpen = ! $rootScope.language.listIsOpen;
+    angular.forEach(replace, function(value, key){
+      target = target.split(token+key).join(value);
+    });
+    return target;
+  };
+});
+
+/**
+ * Wraps the
+ * @param text {string} haystack to search through
+ * @param search {string} needle to search for
+ * @param [caseSensitive] {boolean} optional boolean to use case-sensitive searching
+ */
+angular.module('ui.filters').filter('highlight', function () {
+  return function (text, search, caseSensitive) {
+    if (search || angular.isNumber(search)) {
+      text = text.toString();
+      search = search.toString();
+      if (caseSensitive) {
+        return text.split(search).join('<span class="ui-match">' + search + '</span>');
+      } else {
+        return text.replace(new RegExp(search, 'gi'), '<span class="ui-match">$&</span>');
+      }
+    } else {
+      return text;
+    }
+  };
+});
+
+/**
+ * Converts variable-esque naming conventions to something presentational, capitalized words separated by space.
+ * @param {String} value The value to be parsed and prettified.
+ * @param {String} [inflector] The inflector to use. Default: humanize.
+ * @return {String}
+ * @example {{ 'Here Is my_phoneNumber' | inflector:'humanize' }} => Here Is My Phone Number
+ *          {{ 'Here Is my_phoneNumber' | inflector:'underscore' }} => here_is_my_phone_number
+ *          {{ 'Here Is my_phoneNumber' | inflector:'variable' }} => hereIsMyPhoneNumber
+ */
+angular.module('ui.filters').filter('inflector', function () {
+  function ucwords(text) {
+    return text.replace(/^([a-z])|\s+([a-z])/g, function ($1) {
+      return $1.toUpperCase();
+    });
+  }
+
+  function breakup(text, separator) {
+    return text.replace(/[A-Z]/g, function (match) {
+      return separator + match;
+    });
+  }
+
+  var inflectors = {
+    humanize: function (value) {
+      return ucwords(breakup(value, ' ').split('_').join(' '));
+    },
+    underscore: function (value) {
+      return value.substr(0, 1).toLowerCase() + breakup(value.substr(1), '_').toLowerCase().split(' ').join('_');
+    },
+    variable: function (value) {
+      value = value.substr(0, 1).toLowerCase() + ucwords(value.split('_').join(' ')).substr(1).split(' ').join('');
+      return value;
+    }
+  };
+
+  return function (text, inflector, separator) {
+    if (inflector !== false && angular.isString(text)) {
+      inflector = inflector || 'humanize';
+      return inflectors[inflector](text);
+    } else {
+      return text;
+    }
+  };
+});
+
+/**
+ * Filters out all duplicate items from an array by checking the specified key
+ * @param [key] {string} the name of the attribute of each object to compare for uniqueness
+ if the key is empty, the entire object will be compared
+ if the key === false then no filtering will be performed
+ * @return {array}
+ */
+angular.module('ui.filters').filter('unique', function () {
+
+  return function (items, filterOn) {
+
+    if (filterOn === false) {
+      return items;
+    }
+
+    if ((filterOn || angular.isUndefined(filterOn)) && angular.isArray(items)) {
+      var hashCheck = {}, newItems = [];
+
+      var extractValueToCompare = function (item) {
+        if (angular.isObject(item) && angular.isString(filterOn)) {
+          return item[filterOn];
+        } else {
+          return item;
         }
       };
 
-      $rootScope.language.init();
+      angular.forEach(items, function (item) {
+        var valueToCheck, isDuplicate = false;
 
-    }
-})();
-(function() {
-    'use strict';
+        for (var i = 0; i < newItems.length; i++) {
+          if (angular.equals(extractValueToCompare(newItems[i]), extractValueToCompare(item))) {
+            isDuplicate = true;
+            break;
+          }
+        }
+        if (!isDuplicate) {
+          newItems.push(item);
+        }
 
-    angular
-        .module('app.settings')
-        .run(settingsRun);
-
-    settingsRun.$inject = ['$rootScope', '$localStorage'];
-
-    function settingsRun($rootScope, $localStorage){
-
-
-      // User Settings
-      // -----------------------------------
-      $rootScope.user = {
-        name:     'John',
-        job:      'ng-developer',
-        picture:  'app/img/user/02.jpg'
-      };
-
-      // Hides/show user avatar on sidebar from any element
-      $rootScope.toggleUserBlock = function(){
-        $rootScope.$broadcast('toggleUserBlock');
-      };
-
-      // Global Settings
-      // -----------------------------------
-      $rootScope.app = {
-        name: 'Angle',
-        description: 'Angular Bootstrap Admin Template',
-        year: ((new Date()).getFullYear()),
-        layout: {
-          isFixed: true,
-          isCollapsed: false,
-          isBoxed: false,
-          isRTL: false,
-          horizontal: false,
-          isFloat: false,
-          asideHover: false,
-          theme: null,
-          asideScrollbar: false,
-          isCollapsedText: false
-        },
-        useFullLayout: false,
-        hiddenFooter: false,
-        offsidebarOpen: false,
-        asideToggled: false,
-        viewAnimation: 'ng-fadeInUp'
-      };
-
-      // Setup the layout mode
-      $rootScope.app.layout.horizontal = ( $rootScope.$stateParams.layout === 'app-h') ;
-
-      // Restore layout settings
-      if( angular.isDefined($localStorage.layout) )
-        $rootScope.app.layout = $localStorage.layout;
-      else
-        $localStorage.layout = $rootScope.app.layout;
-
-      $rootScope.$watch('app.layout', function () {
-        $localStorage.layout = $rootScope.app.layout;
-      }, true);
-
-      // Close submenu when sidebar change from collapsed to normal
-      $rootScope.$watch('app.layout.isCollapsed', function(newValue) {
-        if( newValue === false )
-          $rootScope.$broadcast('closeSidebarMenu');
       });
-
+      items = newItems;
     }
-
-})();
-
+    return items;
+  };
+});
 /**=========================================================
  * Module: animate-enabled.js
  * Enable or disables ngAnimate for element with directive
@@ -10101,94 +11593,65 @@ $scope.printDiv = function (div) {
     'use strict';
 
     angular
-        .module('app.preloader')
-        .directive('preloader', preloader);
+        .module('app.translate')
+        .config(translateConfig)
+        ;
+    translateConfig.$inject = ['$translateProvider'];
+    function translateConfig($translateProvider){
 
-    preloader.$inject = ['$animate', '$timeout', '$q'];
-    function preloader ($animate, $timeout, $q) {
+      $translateProvider.useStaticFilesLoader({
+          prefix : 'app/i18n/',
+          suffix : '.json'
+      });
 
-        var directive = {
-            restrict: 'EAC',
-            template: 
-              '<div class="preloader-progress">' +
-                  '<div class="preloader-progress-bar" ' +
-                       'ng-style="{width: loadCounter + \'%\'}"></div>' +
-              '</div>'
-            ,
-            link: link
-        };
-        return directive;
+      $translateProvider.preferredLanguage('en');
+      $translateProvider.useLocalStorage();
+      $translateProvider.usePostCompiling(true);
+      $translateProvider.useSanitizeValueStrategy('sanitizeParameters');
 
-        ///////
-
-        function link(scope, el) {
-
-          scope.loadCounter = 0;
-
-          var counter  = 0,
-              timeout;
-
-          // disables scrollbar
-          angular.element('body').css('overflow', 'hidden');
-          // ensure class is present for styling
-          el.addClass('preloader');
-
-          appReady().then(endCounter);
-
-          timeout = $timeout(startCounter);
-
-          ///////
-
-          function startCounter() {
-
-            var remaining = 100 - counter;
-            counter = counter + (0.015 * Math.pow(1 - Math.sqrt(remaining), 2));
-
-            scope.loadCounter = parseInt(counter, 10);
-
-            timeout = $timeout(startCounter, 20);
-          }
-
-          function endCounter() {
-
-            $timeout.cancel(timeout);
-
-            scope.loadCounter = 100;
-
-            $timeout(function(){
-              // animate preloader hiding
-              $animate.addClass(el, 'preloader-hidden');
-              // retore scrollbar
-              angular.element('body').css('overflow', '');
-            }, 300);
-          }
-
-          function appReady() {
-            var deferred = $q.defer();
-            var viewsLoaded = 0;
-            // if this doesn't sync with the real app ready
-            // a custom event must be used instead
-            var off = scope.$on('$viewContentLoaded', function () {
-              viewsLoaded ++;
-              // we know there are at least two views to be loaded 
-              // before the app is ready (1-index.html 2-app*.html)
-              if ( viewsLoaded === 2) {
-                // with resolve this fires only once
-                $timeout(function(){
-                  deferred.resolve();
-                }, 3000);
-
-                off();
-              }
-
-            });
-
-            return deferred.promise;
-          }
-
-        } //link
     }
+})();
+(function() {
+    'use strict';
 
+    angular
+        .module('app.translate')
+        .run(translateRun)
+        ;
+    translateRun.$inject = ['$rootScope', '$translate'];
+    
+    function translateRun($rootScope, $translate){
+
+      // Internationalization
+      // ----------------------
+
+      $rootScope.language = {
+        // Handles language dropdown
+        listIsOpen: false,
+        // list of available languages
+        available: {
+          'en':       'English',
+          'es_AR':    'Español'
+        },
+        // display always the current ui language
+        init: function () {
+          var proposedLanguage = $translate.proposedLanguage() || $translate.use();
+          var preferredLanguage = $translate.preferredLanguage(); // we know we have set a preferred one in app.config
+          $rootScope.language.selected = $rootScope.language.available[ (proposedLanguage || preferredLanguage) ];
+        },
+        set: function (localeId) {
+          // Set the new idiom
+          $translate.use(localeId);
+          // save a reference for the current language
+          $rootScope.language.selected = $rootScope.language.available[localeId];
+          // finally toggle dropdown
+          $rootScope.language.listIsOpen = ! $rootScope.language.listIsOpen;
+        }
+      };
+
+      $rootScope.language.init();
+
+    }
 })();
 (function() {
     'use strict';

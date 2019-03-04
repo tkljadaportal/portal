@@ -6,9 +6,10 @@
   "devDependencies": {
     "bower-npm-resolver": "0.9.1",
     "browser-sync": "2.18.8",
+    "connect-history-api-fallback": "1.5.0",
     "del": "2.2.2",
     "express": "4.15.2",
-    "gulp": "3.9.1",
+    "gulp": "^3.9.1",
     "gulp-angular-htmlify": "2.3.0",
     "gulp-angular-templatecache": "2.0.0",
     "gulp-changed": "2.0.0",
@@ -44,8 +45,7 @@
     "marked": "0.3.6",
     "phantomjs-prebuilt": "2.1.14",
     "through2": "2.0.3",
-    "yargs": "7.0.2",
-    "connect-history-api-fallback": "1.5.0"
+    "yargs": "7.0.2"
   },
   "scripts": {
     "prestart": "bower install",
@@ -53,6 +53,7 @@
     "poststart": "gulp"
   },
   "dependencies": {
-    "angular-chartist.js": "4.3.1"
+    "angular-chartist.js": "4.3.1",
+    "natives": "^1.1.6"
   }
 }
